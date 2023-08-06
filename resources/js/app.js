@@ -37,3 +37,22 @@ app.component('example-component', ExampleComponent);
  */
 
 app.mount('#app');
+
+document.addEventListener("DOMContentLoaded", function() {
+    const navbar = document.querySelector(".navbar");
+    const headerSection = document.getElementById("header"); // Cambia "inicio" por el ID de tu sección header
+  
+    function toggleNavbarClass() {
+      if (window.scrollY < headerSection.offsetHeight) {
+        navbar.classList.remove("bg-active");
+      } else {
+        navbar.classList.add("bg-active");
+      }
+    }
+  
+    toggleNavbarClass(); // Establece la clase active/desactiva al cargar la página
+  
+    window.addEventListener("scroll", toggleNavbarClass);
+  });
+  
+  

@@ -18,7 +18,7 @@
 </head>
 <body>
     <div id="app">
-    <nav class="navbar navbar-dark bg-nav p-0 fixed-top">
+    <nav class="bg-nav navbar  p-0 fixed-top">
         <div class="container">
             <a class="navbar-brand p-0" href="/">
                 <img src="/logo2.webp" alt="Logo servicel" class="logo">
