@@ -124,11 +124,35 @@
     border-radius: 0% 0% 5% 5%;
 }
 
-.card:hover {
+.card-effect:hover {
     transform: translateY(-10px);
     transition: 0.4s ease-out;
     box-shadow: 0rem 0 2rem rgb(27, 10, 175);
   }
+
+.img-galeria{
+    position: absolute;
+}
+
+.card-img-overlay-custom{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0.35rem;
+}
+
+.zoom-container {
+    overflow: hidden; /* Para ocultar cualquier parte de la imagen que se salga del contenedor */
+}
+
+.zoom {
+    transition: transform .3s; 
+}
+ 
+.zoom:hover {
+    transform: scale(1.1); 
+}
 
 @media (max-width: 960px) {
     .content{

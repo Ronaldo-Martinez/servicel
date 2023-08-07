@@ -46,7 +46,7 @@
     <div class="container-fluid pt-2">
         <div class="row">
             <div class="col-6 col-lg-3 pt-3">
-                <div class="card">
+                <div class="card card-effect">
                     <img src="/img/excavadora.webp" class="card-img-top img-card" alt="excavadora servicel" loading="lazy">
                     <div class="card-body btn btn-secondary text-white card-bottom">
                         <h3 class="fs-5 fw-bold">ALQUILER DE MAQUINARIA</h3>
@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="col-6 col-lg-3 pt-3">
-                <div class="card">
+                <div class="card card-effect">
                     <img src="/img/bulldozer.webp" class="card-img-top img-card" alt="bulldozer terracería servicel" loading="lazy">
                     <div class="card-body btn btn-warning text-secondary card-bottom">
                         <h3 class="fs-5 fw-bold">SERVICIOS DE TERRACERÍA</h3>
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="col-6 col-lg-3 pt-3">
-                <div class="card">
+                <div class="card card-effect">
                     <img src="/img/tractor.webp" class="card-img-top img-card" alt="tractor servicel" loading="lazy">
                     <div class="card-body btn btn-secondary text-white card-bottom">
                         <h3 class="fs-5 fw-bold">SERVICIOS DE AGROINDUSTRIA</h3>
@@ -70,7 +70,7 @@
                 </div>
             </div>
             <div class="col-6 col-lg-3 pt-3">
-                <div class="card">
+                <div class="card card-effect">
                     <img src="/img/tierra_blanca.webp" class="card-img-top img-card" alt="Tierra blanca servicel" loading="lazy">
                     <div class="card-body btn btn-warning text-secondary card-bottom">
                         <h3 class="fs-5 fw-bold">VENTA DE TIERRA BLANCA</h3>
@@ -82,17 +82,45 @@
 </article>
 <!--Nuestra maquinaria-->
 <div>
-    <div class="bg-secondary text-white text-center p-3 my-5 px-5">
+    <div class="bg-secondary text-white text-center p-3 mt-4 mb-3 px-5">
         <h2 class="fw-bold">NUESTRA MAQUINARIA</h2>
     </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-lg-8">
-                <img class="img-fluid" src="/img/retroexcavadora.webp" alt="retroexcavadora servicel">
+                <div class="card zoom-container mt-3" style="max-height: 80vh;">
+                    <img class="card-img zoom" src="/img/retroexcavadora.webp" alt="retroexcavadora servicel" loading="lazy">
+                    <div class="card-img-overlay-custom">
+                        <div class="container row">
+                            <div class="col-6 bg-white d-grid gap-2 p-0">
+                                <a class="btn btn-outline-secondary rounded-0 fs-4" href="#">Excavadoras</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-12 col-lg-4">
-                <img class="img-fluid" src="/img/montacargas.webp" alt="montacargas servicel">
-                <img class="img-fluid" src="/img/motoniveladora.webp" alt="montacargas servicel">
+                <div class="card zoom-container mt-3" style="max-height: 39vh;">
+                    <img class="card-img zoom" src="/img/montacargas.webp" alt="montacargas servicel" loading="lazy">
+                    <div class="card-img-overlay-custom">
+                        <div class="container row">
+                            <div class="col-6 bg-white d-grid gap-2 p-0">
+                                <a class="btn btn-outline-secondary rounded-0 fs-4" href="#">Excavadoras</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card zoom-container mt-3" style="max-height: 39vh;">
+                    <img class="card-img zoom" src="/img/motoniveladora.webp" alt="motoniveladora servicel" loading="lazy">
+                    <div class="card-img-overlay-custom">
+                        <div class="container row">
+                            <div class="col-6 bg-white d-grid gap-2 p-0">
+                                <a class="btn btn-outline-secondary rounded-0 fs-4" href="#">Excavadoras</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -112,7 +140,6 @@
         <div class="header-content">
             <img src="/logo2.webp" alt="Logo servicel">
         </div>
-        
     </article>
 </div>
 
