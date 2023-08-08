@@ -144,10 +144,10 @@
 </div>
 <!--Sección Ubicaciones-->
 <div>
-    <div class="bg-secondary text-white text-center p-3 my-5 px-5">
+    <div class="bg-secondary text-white text-center p-3 my-3 px-5">
         <h2 class="fw-bold">NUESTRAS UBICACIONES GEOGRÁFICAS</h2>
     </div>
-    <div class="container-fluid my-3">
+    <div class="container-fluid my-5">
         <div class="row">
             <div class="col-12 col-lg-6">
                 <h3 class="fw-bold text-warning bg-secondary fs-4 text-center">El Salvador</h3>
