@@ -43,12 +43,16 @@
                     </div>
                     <div class="offcanvas-body justify-content-center align-items-center d-flex">
                         <ul class=" flex-grow-1 pe-3">
-                        <a class="nav-link {{ request()->routeIs('inicio') ? 'active' : 'text-white' }}" aria-current="page" href="#">INICIO</a>
-                        <a class="nav-link {{ request()->routeIs('nosotros') ? 'active' : 'text-white' }}" href="#">NOSOTROS</a>
-                        <a class="nav-link {{ request()->routeIs('alquiler') ? 'active' : 'text-white' }}" href="#">ALQUILER</a>
-                        <a class="nav-link {{ request()->routeIs('contacto') ? 'active' : 'text-white' }}" href="#">CONTACTO</a>
-                        </ul>
-                        
+                            <a class="nav-link {{ request()->routeIs('inicio') ? 'active' : 'text-white' }}" aria-current="page" href="#">INICIO</a>
+                            <a class="nav-link {{ request()->routeIs('nosotros') ? 'active' : 'text-white' }}" href="#">NOSOTROS</a>
+                            <a class="nav-link {{ request()->routeIs('alquiler') ? 'active' : 'text-white' }}" href="#">ALQUILER</a>
+                            <a class="nav-link {{ request()->routeIs('contacto') ? 'active' : 'text-white' }}" href="#">CONTACTO</a>
+                            <div class="text-white pt-5">
+                                <p class="text-center fs-6 text-uppercase fw-bold">Ubicación de nuestra oficina central</p>
+                                <p class="text-center m-0">Residencial utila, senda Isis casa G-2 Santa Tecla</p>
+                                <p class="text-center">La Libertad, El Salvador</p>
+                            </div>
+                        </ul>            
                     </div>
                 </div>
             </div>
