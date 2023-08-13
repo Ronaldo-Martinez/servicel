@@ -52,7 +52,17 @@
     padding-right: 2rem;
     margin: auto;
     text-align: center;
-    justify-content: right;
+    justify-content: end;
+    
+}
+
+.content-nosotros{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: end;
 }
 
 .header-video{
@@ -84,16 +94,49 @@
     z-index: 2;
 }
 
-.header-content:hover{
-    transform: translateY(-10px);
-    transition: 0.4s ease-out;
-    //box-shadow: 0rem 0 2rem rgb(170, 163, 163);
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
 
 .header-content img{
     max-width: 500px;
     max-height: 500px;
+    //filter: drop-shadow(0.1rem 0.5rem 4rem #0c2eb6);
+    //filter: drop-shadow(2em 1em 2em rgba(255, 255, 255, 0.5));
+    filter: drop-shadow(25px 10px 4px #171e3b);
+}
+
+.sombra{
+    filter: drop-shadow(5px 5px 2px #171e3b);
+    //filter: drop-shadow(1rem 0.5rem 4rem #0c2eb6);
+}
+.sombra-titulo{
+    filter: drop-shadow(3px 3px 2px #0202027e);
+    //filter: drop-shadow(5px 5px 2px #ffef11);
+    //filter: drop-shadow(1rem 0.5rem 4rem #0c2eb6);
+}
+
+.header-content img:hover{
+    transform: translateY(-10px);
+    transition: 0.4s ease-out;
+    //box-shadow: 0rem 0 2rem rgb(170, 163, 163);
+}
+
+.img-nosotros{
+    max-width: 500px;
+    max-height: 500px;
     filter: drop-shadow(0.1rem 0.5rem 4rem #0c2eb6);
+    //filter: drop-shadow(2em 1em 2em rgba(255, 255, 255, 0.5));
+    //filter: drop-shadow(25px 10px 4px #171e3b);
+}
+.img-nosotros:hover{
+    transform: translateY(-10px);
+    transition: 0.4s ease-out;
+    //box-shadow: 0rem 0 2rem rgb(170, 163, 163);
 }
 
 .cover-video{
@@ -102,11 +145,15 @@
     width: 100%;
 }
 
-.active{
+.active-nav{
     background-color: $secondary;
     height: 70px;
     text-align: center;
     color: white;
+}
+
+.bg-overlay{
+    background-color: #fed016c7;
 }
 
 .active-footer{
@@ -137,6 +184,14 @@
 
 .img-galeria{
     position: absolute;
+}
+
+.img-carrusel{
+    object-fit: cover;
+    //opacity: 0.70;
+    height: 600px;
+    max-height: 70vh;
+    min-height: 60vh;
 }
 
 .card-img-overlay-custom{
@@ -194,6 +249,19 @@
     height: 100%;
 }
 
+.figura{
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+    border-bottom: 5px solid $warning;
+}
+
+.video-fluid {
+    max-width: 100%;
+
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
 @media (max-width: 960px) {
     .content{
         padding-left: 2rem;
@@ -204,9 +272,16 @@
         justify-content: center;
     }
     .header-content img{
-        max-width: 400px;
+        max-width: 80vw;
         max-height: 400px;
         filter: drop-shadow(0.1rem 0.5rem 3rem #173ac5);
+    }
+    .img-nosotros{
+        max-width: 80vw;
+        max-height: 400px;
+        filter: drop-shadow(0.1rem 0.5rem 4rem #0c2eb6);
+        //filter: drop-shadow(2em 1em 2em rgba(255, 255, 255, 0.5));
+        //filter: drop-shadow(25px 10px 4px #171e3b);
     }
     .active{
         background-color:#060d2700;

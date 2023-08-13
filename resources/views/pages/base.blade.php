@@ -12,8 +12,12 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -26,10 +30,10 @@
                 </a>
                 <div class="d-none d-lg-block ">
                     <div class="nav d-flex">
-                        <a class="nav-link {{ request()->routeIs('inicio') ? 'active' : '' }}" aria-current="page" href="#">INICIO</a>
-                        <a class="nav-link {{ request()->routeIs('nosotros') ? 'active' : '' }}" href="#">NOSOTROS</a>
-                        <a class="nav-link {{ request()->routeIs('alquiler') ? 'active' : '' }}" href="#">ALQUILER</a>
-                        <a class="nav-link {{ request()->routeIs('contacto') ? 'active' : '' }}" href="#">CONTACTO</a>
+                        <a class="nav-link {{ request()->routeIs('inicio') ? 'active-nav' : '' }}" aria-current="page" href="{{ route('inicio') }}">INICIO</a>
+                        <a class="nav-link {{ request()->routeIs('nosotros') ? 'active-nav' : '' }}" href="{{ route('nosotros') }}">NOSOTROS</a>
+                        <a class="nav-link {{ request()->routeIs('alquiler') ? 'active-nav' : '' }}" href="#">ALQUILER</a>
+                        <a class="nav-link {{ request()->routeIs('contacto') ? 'active-nav' : '' }}" href="#">CONTACTO</a>
                     </div>
                 </div>
 
@@ -43,10 +47,10 @@
                     </div>
                     <div class="offcanvas-body justify-content-center align-items-center d-flex">
                         <ul class=" flex-grow-1 pe-3">
-                            <a class="nav-link {{ request()->routeIs('inicio') ? 'active' : 'text-white' }}" aria-current="page" href="#">INICIO</a>
-                            <a class="nav-link {{ request()->routeIs('nosotros') ? 'active' : 'text-white' }}" href="#">NOSOTROS</a>
-                            <a class="nav-link {{ request()->routeIs('alquiler') ? 'active' : 'text-white' }}" href="#">ALQUILER</a>
-                            <a class="nav-link {{ request()->routeIs('contacto') ? 'active' : 'text-white' }}" href="#">CONTACTO</a>
+                            <a class="nav-link {{ request()->routeIs('inicio') ? 'active-nav' : 'text-white' }}" aria-current="page" href="{{ route('inicio') }}">INICIO</a>
+                            <a class="nav-link {{ request()->routeIs('nosotros') ? 'active-nav' : 'text-white' }}" href="{{ route('nosotros') }}">NOSOTROS</a>
+                            <a class="nav-link {{ request()->routeIs('alquiler') ? 'active-nav' : 'text-white' }}" href="#">ALQUILER</a>
+                            <a class="nav-link {{ request()->routeIs('contacto') ? 'active-nav' : 'text-white' }}" href="#">CONTACTO</a>
                             <div class="text-white pt-5">
                                 <p class="text-center fs-6 text-uppercase fw-bold">Ubicación de nuestra oficina central</p>
                                 <p class="text-center m-0">Residencial utila, senda Isis casa G-2 Santa Tecla</p>
@@ -69,8 +73,8 @@
                     <div class=" my-4">
                         <ul class="pe-3">
                         <h2 class="nav-link justify-content-center text-white fs-5 py-3 text-center">Enlaces</h2>
-                        <a class="nav-link justify-content-center {{ request()->routeIs('inicio') ? 'active-footer' : 'text-white' }}" aria-current="page" href="#">INICIO</a>
-                        <a class="nav-link justify-content-center {{ request()->routeIs('nosotros') ? 'active-footer' : 'text-white' }}" href="#">NOSOTROS</a>
+                        <a class="nav-link justify-content-center {{ request()->routeIs('inicio') ? 'active-footer' : 'text-white' }}" aria-current="page" href="{{ route('inicio') }}">INICIO</a>
+                        <a class="nav-link justify-content-center {{ request()->routeIs('nosotros') ? 'active-footer' : 'text-white' }}" href="{{ route('nosotros') }}">NOSOTROS</a>
                         <a class="nav-link justify-content-center {{ request()->routeIs('alquiler') ? 'active-footer' : 'text-white' }}" href="#">ALQUILER</a>
                         <a class="nav-link justify-content-center {{ request()->routeIs('contacto') ? 'active-footer' : 'text-white' }}" href="#">CONTACTO</a>
                         </ul>         
@@ -108,13 +112,13 @@
                         <h2 class="nav-link  text-white fs-5 py-3 text-center">Síguenos en nuestras redes sociales</h2>
                         <div class="d-flex justify-content-center">
                             <a href="">
-                                <img class="icon" src="/img/fb.webp" alt="Facebook icon">
+                                <img class="icon" src="/img/fb1.webp" alt="Facebook icon">
                             </a>
                             <a href="">
-                                <img class="icon" src="/img/instagram.webp" alt="instagram icon">
+                                <img class="icon" src="/img/instagram1.webp" alt="instagram icon">
                             </a>
                             <a href="">
-                                <img class="icon" src="/img/whatsapp.webp" alt="whatsapp Icon">
+                                <img class="icon" src="/img/whatsapp1.webp" alt="whatsapp Icon">
                             </a>
                         </div>
                         <div class="align-items-center justify-content-center d-flex pt-2">

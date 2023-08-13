@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('pages.inicio');
 })->name('inicio');
 
+Route::get('/nosotros', function(){
+    return view('pages.nosotros');
+})->name('nosotros');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

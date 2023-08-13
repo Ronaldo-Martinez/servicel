@@ -16,7 +16,7 @@
         <h1 class="fw-bold">SERVICEL ALQUILER DE MAQUINARIA PESADA Y SERVICIOS DE INGENIERÍA CIVIL Y ELÉCTRICA</h1>
     </div>
     <div class="container-fluid pt-2">
-        <div class="row">
+        <div class="row px-4">
             <div class="col-12 col-lg-6">
                 <video class="video-col" src="/video/video2.mp4" muted autoplay loop loading="lazy"></video>
             </div>
@@ -44,36 +44,36 @@
         <h2 class="fw-bold">NUESTROS SERVICIOS</h2>
     </div>
     <div class="container-fluid pt-2">
-        <div class="row">
-            <div class="col-6 col-lg-3 pt-3">
+        <div class="row px-4">
+            <div class="col-12 col-md-6 col-lg-3 pt-3">
                 <div class="card card-effect" data-bs-toggle="modal" data-bs-target="#modal-alquiler">
                     <img src="/img/excavadora.webp" class="card-img-top img-card" alt="excavadora servicel" loading="lazy">
                     <div class="card-body btn btn-secondary text-white card-bottom">
-                        <h3 class="fs-5 fw-bold">ALQUILER DE MAQUINARIA</h3>
+                        <h3 class="fs-6 fw-bold">ALQUILER DE MAQUINARIA</h3>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 pt-3">
+            <div class="col-12 col-md-6 col-lg-3 pt-3">
                 <div class="card card-effect" data-bs-toggle="modal" data-bs-target="#modal-terraceria">
                     <img src="/img/bulldozer.webp" class="card-img-top img-card" alt="bulldozer terracería servicel" loading="lazy">
                     <div class="card-body btn btn-warning text-secondary card-bottom">
-                        <h3 class="fs-5 fw-bold">SERVICIOS DE TERRACERÍA</h3>
+                        <h3 class="fs-6 fw-bold">SERVICIOS DE TERRACERÍA</h3>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 pt-3">
+            <div class="col-12 col-md-6 col-lg-3 pt-3">
                 <div class="card card-effect" data-bs-toggle="modal" data-bs-target="#modal-agroindustria">
                     <img src="/img/tractor.webp" class="card-img-top img-card" alt="tractor servicel" loading="lazy">
                     <div class="card-body btn btn-secondary text-white card-bottom">
-                        <h3 class="fs-5 fw-bold">SERVICIOS DE AGROINDUSTRIA</h3>
+                        <h3 class="fs-6 fw-bold">SERVICIOS DE AGROINDUSTRIA</h3>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-3 pt-3">
+            <div class="col-12 col-md-6 col-lg-3 pt-3">
                 <div class="card card-effect"  data-bs-toggle="modal" data-bs-target="#modal-venta">
                     <img src="/img/tierra_blanca.webp" class="card-img-top img-card" alt="Tierra blanca servicel" loading="lazy">
                     <div class="card-body btn btn-warning text-secondary card-bottom">
-                        <h3 class="fs-5 fw-bold">VENTA DE TIERRA BLANCA</h3>
+                        <h3 class="fs-6 fw-bold">VENTA DE TIERRA BLANCA</h3>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@
         <h2 class="fw-bold">NUESTRA MAQUINARIA</h2>
     </div>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row px-4">
             <div class="col-12 col-lg-8">
                 <div class="card zoom-container mt-3" style="max-height: 80vh;">
                     <img class="card-img zoom" src="/img/retroexcavadora.webp" alt="retroexcavadora servicel" loading="lazy">
@@ -137,8 +137,8 @@
             competencia técnica y versatilidad en la ejecución, basándonos en valores de 
             <span class="fw-bold">CALIDAD Y PUNTUALIDAD.</span>
         </p>
-        <div class="header-content">
-            <img src="/logo2.webp" alt="Logo servicel">
+        <div>
+            <img class="img-nosotros" src="/logo2.webp" alt="Logo servicel">
         </div>
     </article>
 </div>
@@ -148,7 +148,7 @@
         <h2 class="fw-bold">NUESTRAS UBICACIONES GEOGRÁFICAS</h2>
     </div>
     <div class="container-fluid my-5">
-        <div class="row">
+        <div class="row px-4">
             <div class="col-12 col-lg-6">
                 <h3 class="fw-bold text-warning bg-secondary fs-4 text-center">El Salvador</h3>
                 <div class="map-container">
