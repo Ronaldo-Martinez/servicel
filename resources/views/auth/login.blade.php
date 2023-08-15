@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="card rounded-0 ">
+    <div class="card rounded-0 bg-white">
         <div class="row justify-content-center align-items-center" style="height: 80vh;">
             <div class="col-12 col-lg-8 d-none d-lg-block p-0" style="height: 80vh;">
                 <div class="container card rounded-0 ">
@@ -54,7 +54,7 @@
 
                         <div class="d-flex mb-0 justify-content-center">
                             
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-secondary">
                                     Iniciar Sesión
                                 </button>
 

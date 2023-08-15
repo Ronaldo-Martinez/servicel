@@ -21,8 +21,8 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-    <div id="app" class="bg-white vh-100">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+    <div id="app" class="vh-100">
+        <nav class="navbar navbar-expand-md navbar-dark bg-secondary shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
