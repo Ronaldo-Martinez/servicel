@@ -26,6 +26,15 @@
     background-color: #060d27e3;
 }
 
+.bg-login{
+    background: rgb(3,5,44);
+    background: linear-gradient(155deg, rgba(3,5,44,1) 0%, rgba(55,170,177,1) 100%, rgba(0,82,255,1) 100%);
+}
+
+.bg-nd{
+    background: rgb(3,5,44);
+    background: linear-gradient(155deg, rgba(3,5,44,1) 0%, rgba(55, 171, 177, 1) 100%, rgba(0,82,255,1) 100%);
+}
 
 .nav-link{
     display: flex;
@@ -39,6 +48,7 @@
     background-color: $secondary;
     color: #ffffff;
 }
+
 
 .header{
     height: 100vh;
@@ -65,12 +75,30 @@
     align-items: end;
 }
 
+.content-contacto{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: auto;
+    text-align: center;
+    justify-content: start;
+    align-items: end;
+}
+
 .header-video{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
+}
+
+.header-video-login{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
     overflow: hidden;
 }
 
@@ -81,6 +109,16 @@
 
 .header-overlay{
     height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fed01673;
+    z-index: 1;
+}
+
+.header-overlay-login{
+    height: 80vh;
     width: 100%;
     position: absolute;
     top: 0;
@@ -288,6 +326,14 @@
         height: auto;
         color: $warning;
     }
+
+    .active-nav{
+        background-color: $warning;
+       
+        text-align: center;
+        color: $secondary;
+    }
+
     .nav-link{
         justify-content: center;
         font-size: medium;

@@ -32,8 +32,17 @@
                     <div class="nav d-flex">
                         <a class="nav-link {{ request()->routeIs('inicio') ? 'active-nav' : '' }}" aria-current="page" href="{{ route('inicio') }}">INICIO</a>
                         <a class="nav-link {{ request()->routeIs('nosotros') ? 'active-nav' : '' }}" href="{{ route('nosotros') }}">NOSOTROS</a>
-                        <a class="nav-link {{ request()->routeIs('alquiler') ? 'active-nav' : '' }}" href="#">ALQUILER</a>
-                        <a class="nav-link {{ request()->routeIs('contacto') ? 'active-nav' : '' }}" href="#">CONTACTO</a>
+                        <div class="nav-link d-flex align-items-center dropdown">
+                            <div class="dropdown-toggle d-flex align-items-center h-100"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              ALQUILER
+                            </div>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">EL SALVADOR</a></li>
+                              <li><a class="dropdown-item" href="#">GUATEMALA</a></li>
+                            </ul>
+                        </div>
+                        <a class="nav-link {{ request()->routeIs('contacto') ? 'active-nav' : '' }}" href="{{ route('contacto') }}">CONTACTO</a>
+                        @include('pages.redes')
                     </div>
                 </div>
 
@@ -50,11 +59,14 @@
                             <a class="nav-link {{ request()->routeIs('inicio') ? 'active-nav' : 'text-white' }}" aria-current="page" href="{{ route('inicio') }}">INICIO</a>
                             <a class="nav-link {{ request()->routeIs('nosotros') ? 'active-nav' : 'text-white' }}" href="{{ route('nosotros') }}">NOSOTROS</a>
                             <a class="nav-link {{ request()->routeIs('alquiler') ? 'active-nav' : 'text-white' }}" href="#">ALQUILER</a>
-                            <a class="nav-link {{ request()->routeIs('contacto') ? 'active-nav' : 'text-white' }}" href="#">CONTACTO</a>
+                            <a class="nav-link {{ request()->routeIs('contacto') ? 'active-nav' : 'text-white' }}" href="{{ route('contacto') }}">CONTACTO</a>
                             <div class="text-white pt-5">
                                 <p class="text-center fs-6 text-uppercase fw-bold">Ubicación de nuestra oficina central</p>
                                 <p class="text-center m-0">Residencial utila, senda Isis casa G-2 Santa Tecla</p>
                                 <p class="text-center">La Libertad, El Salvador</p>
+                            </div>
+                            <div class="d-flex justify-content-center pt-4">
+                                @include('pages.redes')
                             </div>
                         </ul>            
                     </div>
@@ -75,8 +87,16 @@
                         <h2 class="nav-link justify-content-center text-white fs-5 py-3 text-center">Enlaces</h2>
                         <a class="nav-link justify-content-center {{ request()->routeIs('inicio') ? 'active-footer' : 'text-white' }}" aria-current="page" href="{{ route('inicio') }}">INICIO</a>
                         <a class="nav-link justify-content-center {{ request()->routeIs('nosotros') ? 'active-footer' : 'text-white' }}" href="{{ route('nosotros') }}">NOSOTROS</a>
-                        <a class="nav-link justify-content-center {{ request()->routeIs('alquiler') ? 'active-footer' : 'text-white' }}" href="#">ALQUILER</a>
-                        <a class="nav-link justify-content-center {{ request()->routeIs('contacto') ? 'active-footer' : 'text-white' }}" href="#">CONTACTO</a>
+                        <div class="nav-link d-flex align-items-center dropdown">
+                            <div class="text-white dropdown-toggle d-flex align-items-center h-100"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              ALQUILER
+                            </div>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">EL SALVADOR</a></li>
+                              <li><a class="dropdown-item" href="#">GUATEMALA</a></li>
+                            </ul>
+                        </div>
+                        <a class="nav-link justify-content-center {{ request()->routeIs('contacto') ? 'active-footer' : 'text-white' }}" href="{{ route('contacto') }}">CONTACTO</a>
                         </ul>         
                     </div>
                 </div>
@@ -111,15 +131,7 @@
                     <div class="my-4">
                         <h2 class="nav-link  text-white fs-5 py-3 text-center">Síguenos en nuestras redes sociales</h2>
                         <div class="d-flex justify-content-center">
-                            <a href="">
-                                <img class="icon" src="/img/fb1.webp" alt="Facebook icon">
-                            </a>
-                            <a href="">
-                                <img class="icon" src="/img/instagram1.webp" alt="instagram icon">
-                            </a>
-                            <a href="">
-                                <img class="icon" src="/img/whatsapp1.webp" alt="whatsapp Icon">
-                            </a>
+                            @include('pages.redes')
                         </div>
                         <div class="align-items-center justify-content-center d-flex pt-2">
                             <img class="img-logo d-flex justify-content-end" src="/logo2.webp" alt="Logo servicel">

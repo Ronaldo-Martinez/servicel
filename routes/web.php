@@ -22,6 +22,29 @@ Route::get('/nosotros', function(){
     return view('pages.nosotros');
 })->name('nosotros');
 
-Auth::routes();
+Route::get('/contacto', function(){
+    return view('pages.contacto');
+})->name('contacto');
+
+//Autenticación 
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+// ... otras rutas que desees mantener ...
+
+// Ruta de inicio de sesión
+Route::get('login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
+
+// Ruta de cierre de sesión
+Route::post('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+
+// Rutas de restablecimiento de contraseña
+Route::get('password/reset', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+Route::post('password/email', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+Route::get('password/reset/{token}', [App\Http\Controllers\Auth\ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('password/reset', [App\Http\Controllers\Auth\ResetPasswordController::class, 'reset'])->name('password.update');
+
+//Fin autenticación
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

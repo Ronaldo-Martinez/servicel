@@ -1,6 +1,7 @@
 @extends('pages.base')
 
 @section('content')
+    <!--Header-->
     <header class="header content-nosotros" id="header">
         <div class="header-video">
             <video src="/video/headerNosotros.mp4" muted autoplay loop loading="lazy"></video>
@@ -11,6 +12,7 @@
         </div>
     </header>
     
+    <!--Misión y Visión-->
     <div class="container-fluid ">
         <div class="row p-0">
             <div class="col-12 col-lg-7 p-0">
@@ -100,7 +102,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6">
-                <div id="carouselElSalvadorCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselGuatemalaCaptions" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                         <img src="/img/guatemala1.webp" class=" w-100 img-carrusel" alt="Personal servicel El Salvador">
@@ -121,11 +123,11 @@
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselElSalvadorCaptions" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselGuatemalaCaptions" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselElSalvadorCaptions" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselGuatemalaCaptions" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
