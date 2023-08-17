@@ -18,7 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/custom.js'])
 </head>
 <body>
     <div id="app" class="vh-100">
@@ -53,8 +54,11 @@
                                 </li>
                             @endif
                         @else
+                            <a class="nav-link-dash {{ request()->routeIs('pais.index') ? 'active-dash' : '' }}" href="{{ URL::to('pais') }}">Paises</a>
+                            <a class="nav-link-dash {{ request()->routeIs('tipo-maquinas.index') ? 'active-dash' : '' }}" href="{{ URL::to('tipo-maquinas') }}">Tipo de Maquinas</a>
+                            <a class="nav-link-dash {{ request()->routeIs('maquinas.index') ? 'active-dash' : '' }}" href="{{ URL::to('maquinas') }}">Maquinas</a>
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link-dash dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 

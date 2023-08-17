@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\TipoMaquina;
+use App\Http\Controllers\CaracteristicaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +23,12 @@ Route::get('/nosotros', function(){
     return view('pages.nosotros');
 })->name('nosotros');
 
+Route::get('/alquiler/elsalvador', function(){
+    $pais="El Salvador";
+    $tiposMaquinaria = TipoMaquina::all(); 
+    return view('pages.alquiler', compact('pais', 'tiposMaquinaria'));
+})->name('alquiler-sv');
+
 Route::get('/contacto', function(){
     return view('pages.contacto');
 })->name('contacto');
@@ -30,6 +37,9 @@ Route::get('/contacto', function(){
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+Route::resource('/pais', App\Http\Controllers\PaiController::class)->middleware('auth');
+Route::resource('/tipo-maquinas', App\Http\Controllers\TipoMaquinaController::class)->middleware('auth');
+Route::resource('/maquinas', App\Http\Controllers\MaquinaController::class)->middleware('auth');
 // ... otras rutas que desees mantener ...
 
 // Ruta de inicio de sesión
@@ -46,5 +56,10 @@ Route::get('password/reset/{token}', [App\Http\Controllers\Auth\ResetPasswordCon
 Route::post('password/reset', [App\Http\Controllers\Auth\ResetPasswordController::class, 'reset'])->name('password.update');
 
 //Fin autenticación
+
+//Maquinaria
+Route::post('/caracteristicas', [CaracteristicaController::class, 'store'])->name('caracteristicas.store');
+Route::delete('/caracteristicas/{id}',[CaracteristicaController::class, 'destroy'])->name('caracteristicas.delete');
+Route::get('/maquinas/{id}/caracteristicas',[CaracteristicaController::class, 'maquina'])->name('caracteristicas.maquina');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -44,9 +44,23 @@
     color: $secondary;
 }
 
+.nav-link-dash{
+    display: flex;
+    align-items: center;
+    font-size: medium;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem;
+    color: #ffffff;
+}
+
 .nav-link:hover{
     background-color: $secondary;
     color: #ffffff;
+}
+.nav-link-dash:hover{
+    background-color: $warning;
+    color: $secondary;
 }
 
 
@@ -188,6 +202,11 @@
     height: 70px;
     text-align: center;
     color: white;
+}
+.active-dash{
+    background-color: $warning;
+    text-align: center;
+    color: $secondary;
 }
 
 .bg-overlay{
