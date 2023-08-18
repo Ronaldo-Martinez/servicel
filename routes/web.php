@@ -62,6 +62,8 @@ Route::post('password/reset', [App\Http\Controllers\Auth\ResetPasswordController
 Route::post('/caracteristicas', [CaracteristicaController::class, 'store'])->name('caracteristicas.store');
 Route::delete('/caracteristicas/{id}',[CaracteristicaController::class, 'destroy'])->name('caracteristicas.delete');
 Route::get('/maquinas/{id}/caracteristicas',[CaracteristicaController::class, 'maquina'])->name('caracteristicas.maquina');
+Route::get('/maquinas/{id}/imagenes',[ImagenController::class, 'maquina'])->name('imagen.maquina');
 Route::post('/imagenes', [ImagenController::class, 'store'])->name('imagenes.store');
+Route::delete('/imagenes/{id}',[ImagenController::class, 'destroy'])->name('imagenes.delete');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

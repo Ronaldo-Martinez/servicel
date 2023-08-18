@@ -6,6 +6,10 @@ $(document).ready(function() {
         var caracteristicaId = $(this).data('caracteristicaid');
         eliminarCaracteristica(caracteristicaId);
     });
+    $(document).on('click', '.btn-eliminar-imagen', function() {
+        var imagenId = $(this).data('imagenid');
+        eliminarImagen(imagenId);
+    });
 
     $('#caracteristicaForm').submit(function(e) {
         e.preventDefault();
@@ -65,7 +69,6 @@ $(document).ready(function() {
     }
 
     function eliminarCaracteristica(id){
-        console.log(id)
         $.ajax({
             url: `/caracteristicas/${id}`, // Asegúrate de tener una ruta definida en tu archivo de rutas
             method: 'DELETE',
@@ -98,7 +101,7 @@ $(document).ready(function() {
                 'X-CSRF-TOKEN': window.csrfToken
             },
             success: function(response) {
-                // Hacer algo después de subir la imagen exitosamente
+                updateImagenesTable();
             },
             error: function(error) {
                 console.error(error);
@@ -106,6 +109,57 @@ $(document).ready(function() {
         });
     });
 
+    // Función para actualizar la tabla de características
+    function updateImagenesTable() {
+        let id_maquina=$('#maquina_id').val();
+        $.ajax({
+            url: `/maquinas/${id_maquina}/imagenes`, // Definir una nueva ruta en las rutas de Laravel
+            method: 'GET',
+            success: function(response) {
+                // Actualizar los datos en la tabla
+                var tbody = $('#imagenesTable tbody');
+                tbody.empty();
+
+                response.forEach(function(imagen) {
+                    var row = $('<tr>');
+                    row.append($('<td>').html(`
+                        <img src="/storage/${imagen.url}" class="img-fluid img-list" alt="${imagen.descripcion}" loading="lazy">
+                    `));
+                    row.append($('<td>').text(imagen.nombre));
+                    row.append($('<td>').text(imagen.descripcion));
+                    row.append($('<td>').html(
+                        `
+                        <button type="submit" class="btn btn-secondary">Editar</button>
+                        <button type="submit" class="btn btn-danger btn-eliminar-imagen" data-imagenid="${imagen.id}">Eliminar</button>
+                        `
+                    ));
+                    tbody.append(row);
+                });
+            },
+            error: function(error) {
+                console.error(error);
+            }
+        });
+    }
+
+    function eliminarImagen(id){
+        $.ajax({
+            url: `/imagenes/${id}`, // Asegúrate de tener una ruta definida en tu archivo de rutas
+            method: 'DELETE',
+            headers:{
+                'X-CSRF-TOKEN': window.csrfToken
+            },
+            success: function(response) {
+                updateImagenesTable();
+            },
+            error: function(error) {
+                // Aquí puedes manejar los errores en caso de que ocurran
+                console.error(error);
+            }
+        });
+    }
+
     // Llamar a updateCaracteristicasTable al cargar la página
     updateCaracteristicasTable();
+    updateImagenesTable();
 });

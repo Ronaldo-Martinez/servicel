@@ -33,19 +33,19 @@
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-group">
-                                        <label for="caracteristica">Característica:</label>
+                                        <label class="form-label" for="caracteristica">Característica:</label>
                                         <input class="form-control" type="text" name="caracteristica" id="caracteristica" required>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="form-group">
-                                        <label for="valor">Valor:</label>
+                                        <label class="form-label" for="valor">Valor:</label>
                                         <input class="form-control" type="text" name="valor" id="valor" required>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="form-group">
-                                        <label for="maquina_id">ID de Máquina:</label>
+                                        <label class="form-label" for="maquina_id">ID de Máquina:</label>
                                         <input class="form-control" type="text" name="maquina_id" id="maquina_id" required value="{{$maquina->id}}" disabled>
                                     </div>
                                 </div>
@@ -82,13 +82,34 @@
                     </div>
                     <div class="card-body">
                         <form id="imagenForm" enctype="multipart/form-data">
-                            <input type="file" name="imagen" id="imagen">
-                            <input type="text" name="maquina_id" id="maquina_id">
-                            <input type="text" name="nombre" id="nombre">
-                            <input type="text" name="descripcion" id="descripcion">
+                            <label class="form-label" for="imagen">Foto de la maquina:</label>
+                            <input class="form-control" type="file" name="imagen" id="imagen">
+                            <label class="form-label" for="maquina_id">Maquina:</label>
+                            <input class="form-control" type="text" name="maquina_id" id="maquina_id">
+                            <label class="form-label" for="nombre">Nombre de Foto::</label>
+                            <input class="form-control" type="text" name="nombre" id="nombre">
+                            <label class="form-label" for="descripcion">Descripción de Foto:</label>
+                            <input class="form-control" type="text" name="descripcion" id="descripcion">
                             <!-- Puedes agregar más campos si es necesario -->
                             <button type="submit">Subir Imagen</button>
                         </form>
+                    </div>
+
+                    <div>
+                        <div class="card-header card-title">Características existentes</div>
+                        <table id="imagenesTable" class="table ">
+                            <thead>
+                                <tr>
+                                    <th>Característica</th>
+                                    <th>Valor</th>
+                                    <th>Máquina ID</th>
+                                    <th>Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Aquí se llenarán los datos de la tabla usando AJAX -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

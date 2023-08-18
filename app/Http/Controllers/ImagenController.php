@@ -67,6 +67,13 @@ class ImagenController extends Controller
         return response()->json(['message' => 'Imagen subida exitosamente'], 200);
     }
 
+    public function maquina($id)
+    {
+        $caracteristicas = Imagen::where('maquina_id', $id)->get();
+
+        return response()->json($caracteristicas);
+    }
+
     /**
      * Display the specified resource.
      *
@@ -119,7 +126,6 @@ class ImagenController extends Controller
     {
         $imagen = Imagen::find($id)->delete();
 
-        return redirect()->route('imagens.index')
-            ->with('success', 'Imagen deleted successfully');
+        return response()->json('Ok', 201);
     }
 }
