@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\TipoMaquina;
 use App\Http\Controllers\CaracteristicaController;
+use App\Http\Controllers\ImagenController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,5 +62,6 @@ Route::post('password/reset', [App\Http\Controllers\Auth\ResetPasswordController
 Route::post('/caracteristicas', [CaracteristicaController::class, 'store'])->name('caracteristicas.store');
 Route::delete('/caracteristicas/{id}',[CaracteristicaController::class, 'destroy'])->name('caracteristicas.delete');
 Route::get('/maquinas/{id}/caracteristicas',[CaracteristicaController::class, 'maquina'])->name('caracteristicas.maquina');
+Route::post('/imagenes', [ImagenController::class, 'store'])->name('imagenes.store');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

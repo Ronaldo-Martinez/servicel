@@ -82,6 +82,30 @@ $(document).ready(function() {
         });
     }
 
+    //Subir imágenes
+    $('#imagenForm').submit(function(e) {
+        e.preventDefault();
+        
+        var formData = new FormData(this);
+        
+        $.ajax({
+            url: "/imagenes", // Asegúrate de tener una ruta definida en tu archivo de rutas
+            method: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            headers: {
+                'X-CSRF-TOKEN': window.csrfToken
+            },
+            success: function(response) {
+                // Hacer algo después de subir la imagen exitosamente
+            },
+            error: function(error) {
+                console.error(error);
+            }
+        });
+    });
+
     // Llamar a updateCaracteristicasTable al cargar la página
     updateCaracteristicasTable();
 });

@@ -76,6 +76,20 @@
                         </table>
                     </div>
                     
+                    <!--Formulario de imagenes-->
+                    <div class="card-header">
+                        <span class="card-title">Agregar Imágenes</span>
+                    </div>
+                    <div class="card-body">
+                        <form id="imagenForm" enctype="multipart/form-data">
+                            <input type="file" name="imagen" id="imagen">
+                            <input type="text" name="maquina_id" id="maquina_id">
+                            <input type="text" name="nombre" id="nombre">
+                            <input type="text" name="descripcion" id="descripcion">
+                            <!-- Puedes agregar más campos si es necesario -->
+                            <button type="submit">Subir Imagen</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
