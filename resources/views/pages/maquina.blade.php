@@ -50,9 +50,9 @@
                                 <img class="icon-cotizar" src="/img/whatsapp1.webp" alt="whatsapp Icon" target="_blank">Consultar
                             </a>
                             @if ($maquina->pais->codigo_pais == '503')
-                                <a class="d-flex justify-content-center btn btn-outline-secondary mt-3" href="{{ route('alquiler-sv-categoria', ['id' => $maquina->tipoMaquina->id]) }}/#maquinas">Otras Máquinas</a>
+                                <a class="d-flex justify-content-center btn btn-outline-secondary mt-3" href="{{ route('alquiler-sv-categoria', ['id' => $maquina->tipoMaquina->id]) }}/#maquinas">Otras {{$maquina->tipoMaquina->nombre}}</a>
                             @else
-                                <a class="d-flex justify-content-center btn btn-outline-secondary mt-3" href="{{ route('alquiler-gt-categoria', ['id' => $maquina->tipoMaquina->id]) }}/#maquinas">Otras Máquinas</a>
+                                <a class="d-flex justify-content-center btn btn-outline-secondary mt-3" href="{{ route('alquiler-gt-categoria', ['id' => $maquina->tipoMaquina->id]) }}/#maquinas">Otras {{$maquina->tipoMaquina->nombre}}</a>
                             @endif
                         </div>
                     </div>
