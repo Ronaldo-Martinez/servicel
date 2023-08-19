@@ -25,8 +25,15 @@ Route::get('/nosotros', function(){
     return view('pages.nosotros');
 })->name('nosotros');
 
+//El Salvador
 Route::get('/alquiler/elsalvador',[AlquilerController::class, 'alquilerSV'])->name('alquiler-sv');
 Route::get('/alquiler/elsalvador/categoria/{id}',[AlquilerController::class, 'alquilerSVCategoria'])->name('alquiler-sv-categoria');
+//Guatemala
+Route::get('/alquiler/guatemala',[AlquilerController::class, 'alquilerGt'])->name('alquiler-gt');
+Route::get('/alquiler/guatemala/categoria/{id}',[AlquilerController::class, 'alquilerGtCategoria'])->name('alquiler-gt-categoria');
+
+Route::get('/alquiler/maquina/{id}', [AlquilerController::class, 'maquina'])->name('maquina');
+
 Route::get('/contacto', function(){
     return view('pages.contacto');
 })->name('contacto');

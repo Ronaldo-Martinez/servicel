@@ -32,13 +32,13 @@
                     <div class="nav d-flex">
                         <a class="nav-link {{ request()->routeIs('inicio') ? 'active-nav' : '' }}" aria-current="page" href="{{ route('inicio') }}">INICIO</a>
                         <a class="nav-link {{ request()->routeIs('nosotros') ? 'active-nav' : '' }}" href="{{ route('nosotros') }}">NOSOTROS</a>
-                        <div class="nav-link d-flex align-items-center dropdown {{ request()->routeIs('alquiler-sv') ? 'active-nav' : '' }}">
+                        <div class="nav-link d-flex align-items-center dropdown {{ request()->routeIs('alquiler-sv') ? 'active-nav' : (request()->routeIs('alquiler-gt') ? 'active-nav' : '')  }} ">
                             <div class="dropdown-toggle d-flex align-items-center h-100"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               ALQUILER
                             </div>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="{{ route('alquiler-sv') }}">EL SALVADOR</a></li>
-                              <li><a class="dropdown-item" href="#">GUATEMALA</a></li>
+                              <li><a class="dropdown-item" href="{{ route('alquiler-gt') }}">GUATEMALA</a></li>
                             </ul>
                         </div>
                         <a class="nav-link {{ request()->routeIs('contacto') ? 'active-nav' : '' }}" href="{{ route('contacto') }}">CONTACTO</a>
@@ -64,7 +64,7 @@
                                 </div>
                                 <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="{{ route('alquiler-sv') }}">EL SALVADOR</a></li>
-                                <li><a class="dropdown-item" href="#">GUATEMALA</a></li>
+                                <li><a class="dropdown-item" href="{{ route('alquiler-gt') }}">GUATEMALA</a></li>
                                 </ul>
                             </div>
                             <a class="nav-link {{ request()->routeIs('alquiler') ? 'active-nav' : 'text-white' }}" href="#">ALQUILER</a>
@@ -101,8 +101,8 @@
                               ALQUILER
                             </div>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">EL SALVADOR</a></li>
-                              <li><a class="dropdown-item" href="#">GUATEMALA</a></li>
+                              <li><a class="dropdown-item" href="{{ route('alquiler-sv') }}">EL SALVADOR</a></li>
+                              <li><a class="dropdown-item" href="{{ route('alquiler-gt') }}">GUATEMALA</a></li>
                             </ul>
                         </div>
                         <a class="nav-link justify-content-center {{ request()->routeIs('contacto') ? 'active-footer' : 'text-white' }}" href="{{ route('contacto') }}">CONTACTO</a>

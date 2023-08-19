@@ -12,7 +12,7 @@
     </header>
     
     <!--Sección Alquiler-->
-    <div>
+    <div id="maquinas">
         <div class="bg-secondary text-white text-center p-3 px-5">
             <h2 class="fw-bold text-uppercase">{{$titulo}}</h2>
         </div>
@@ -20,9 +20,17 @@
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <ul class="list-group mt-3">
-                        <li class="btn btn-outline-secondary rounded-0 bg-secondary text-white" aria-current="true">Categorias</li>
+                        @if ($pais->codigo_pais == '503')
+                            <a class="btn btn-outline-secondary bg-secondary text-white rounded-0" href="{{ route('alquiler-sv') }}">Categoria</a>
+                        @else
+                            <a class="btn btn-outline-secondary bg-secondary text-white rounded-0" href="{{ route('alquiler-gt') }}">Categoria</a>
+                        @endif
                         @foreach($tiposMaquinaria as $tipo)
-                            <a class="btn btn-outline-secondary rounded-0" href="{{ route('alquiler-sv-categoria', ['id' => $tipo->id]) }}">{{$tipo->nombre}}</a>
+                            @if ($pais->codigo_pais == '503')
+                                <a class="btn btn-outline-secondary rounded-0 {{ request()->routeIs('alquiler-sv-categoria') && request()->route()->parameter('id') == $tipo->id ? 'bg-warning text-secondary' : '' }}" href="{{ route('alquiler-sv-categoria', ['id' => $tipo->id]) }}/#maquinas">{{$tipo->nombre}}</a>
+                            @else
+                                <a class="btn btn-outline-secondary rounded-0 {{ request()->routeIs('alquiler-gt-categoria') && request()->route()->parameter('id') == $tipo->id ? 'bg-warning text-secondary' : '' }}" href="{{ route('alquiler-gt-categoria', ['id' => $tipo->id]) }}/#maquinas">{{$tipo->nombre}}</a>
+                            @endif
                         @endforeach
                     </ul>
                 </div>
@@ -34,7 +42,11 @@
                                 <div class="card m-0 p-0">
                                     <img src="/storage/{{ $maquina->imagens->first()->url }}" class="card-img-top img-card" alt="...">
                                     <div class="card-img-overlay">
-                                        <img class="icon" src="/img/sv.webp" alt="whatsapp Icon" target="_blank">
+                                        @if ($maquina->pais->codigo_pais == '503')
+                                            <img class="icon" src="/img/sv.webp" alt="whatsapp Icon" target="_blank">
+                                        @else
+                                            <img class="icon" src="/img/gt.webp" alt="whatsapp Icon" target="_blank">
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="card-body bg-white">
@@ -47,7 +59,7 @@
                                         > 
                                         <img class="icon-cotizar" src="/img/whatsapp1.webp" alt="whatsapp Icon" target="_blank">Consultar
                                     </a>
-                                    <a href="" class="d-flex justify-content-center btn btn-warning mt-3">Ver Mas</a>
+                                    <a href="{{ route('maquina', ['id' => $maquina->id]) }}" class="d-flex justify-content-center btn btn-warning mt-3">Ver Mas</a>
                                 </div>
                             </div>
                         </div>

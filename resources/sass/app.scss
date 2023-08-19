@@ -331,6 +331,30 @@
     object-fit: cover;
 }
 
+.product {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+}
+
+.product-image img {
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+
+
+.product:hover  {
+    transform: scale(1.2);
+}
+
+
 @media (max-width: 960px) {
     .content{
         padding-left: 2rem;
