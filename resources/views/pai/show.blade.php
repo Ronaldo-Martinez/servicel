@@ -24,6 +24,14 @@
                             <strong>Nombre:</strong>
                             {{ $pai->nombre }}
                         </div>
+                        <div class="form-group">
+                            <strong>Codigo Pais:</strong>
+                            {{ $pai->codigo_pais }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Numero Telefono:</strong>
+                            {{ $pai->numero_telefono }}
+                        </div>
 
                     </div>
                 </div>

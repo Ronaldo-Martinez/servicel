@@ -12,7 +12,7 @@
                 @includeif('partials.errors')
 
                 <div class="card card-default">
-                    <div class="card-header">
+                    <div class="card-header bg-secondary text-white">
                         <span class="card-title">Registrar Maquina</span>
                     </div>
                     <div class="card-body">

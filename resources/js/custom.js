@@ -90,6 +90,7 @@ $(document).ready(function() {
         e.preventDefault();
         
         var formData = new FormData(this);
+        formData.append('maquina_id', $("#maquina_id").val());
         
         $.ajax({
             url: "/imagenes", // Asegúrate de tener una ruta definida en tu archivo de rutas
@@ -101,6 +102,7 @@ $(document).ready(function() {
                 'X-CSRF-TOKEN': window.csrfToken
             },
             success: function(response) {
+                $('#imagenForm')[0].reset();
                 updateImagenesTable();
             },
             error: function(error) {

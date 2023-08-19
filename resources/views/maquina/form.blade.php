@@ -28,7 +28,7 @@
         </div>
 
     </div>
-    <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary" onclick="eliminarCaracteristica(4);">{{ __('Submit') }}</button>
+    <div class="box-footer mt-3">
+        <button type="submit" class="btn btn-primary" onclick="eliminarCaracteristica(4);">Enviar</button>
     </div>
 </div>

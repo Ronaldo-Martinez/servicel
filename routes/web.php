@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\TipoMaquina;
 use App\Http\Controllers\CaracteristicaController;
 use App\Http\Controllers\ImagenController;
+use App\Http\Controllers\AlquilerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,12 +25,8 @@ Route::get('/nosotros', function(){
     return view('pages.nosotros');
 })->name('nosotros');
 
-Route::get('/alquiler/elsalvador', function(){
-    $pais="El Salvador";
-    $tiposMaquinaria = TipoMaquina::all(); 
-    return view('pages.alquiler', compact('pais', 'tiposMaquinaria'));
-})->name('alquiler-sv');
-
+Route::get('/alquiler/elsalvador',[AlquilerController::class, 'alquilerSV'])->name('alquiler-sv');
+Route::get('/alquiler/elsalvador/categoria/{id}',[AlquilerController::class, 'alquilerSVCategoria'])->name('alquiler-sv-categoria');
 Route::get('/contacto', function(){
     return view('pages.contacto');
 })->name('contacto');

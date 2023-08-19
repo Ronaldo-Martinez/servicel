@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pais;
+use App\Models\Pai;
 use Illuminate\Http\Request;
 
 /**
@@ -18,7 +18,7 @@ class PaiController extends Controller
      */
     public function index()
     {
-        $pais = Pais::paginate();
+        $pais = Pai::paginate();
 
         return view('pai.index', compact('pais'))
             ->with('i', (request()->input('page', 1) - 1) * $pais->perPage());
@@ -31,7 +31,7 @@ class PaiController extends Controller
      */
     public function create()
     {
-        $pai = new Pais();
+        $pai = new Pai();
         return view('pai.create', compact('pai'));
     }
 
@@ -43,9 +43,9 @@ class PaiController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Pais::$rules);
+        request()->validate(Pai::$rules);
 
-        $pai = Pais::create($request->all());
+        $pai = Pai::create($request->all());
 
         return redirect()->route('pais.index')
             ->with('success', 'Pai created successfully.');
@@ -59,7 +59,7 @@ class PaiController extends Controller
      */
     public function show($id)
     {
-        $pai = Pais::find($id);
+        $pai = Pai::find($id);
 
         return view('pai.show', compact('pai'));
     }
@@ -72,7 +72,7 @@ class PaiController extends Controller
      */
     public function edit($id)
     {
-        $pai = Pais::find($id);
+        $pai = Pai::find($id);
 
         return view('pai.edit', compact('pai'));
     }
@@ -86,7 +86,7 @@ class PaiController extends Controller
      */
     public function update(Request $request, Pai $pai)
     {
-        request()->validate(Pais::$rules);
+        request()->validate(Pai::$rules);
 
         $pai->update($request->all());
 
@@ -101,7 +101,7 @@ class PaiController extends Controller
      */
     public function destroy($id)
     {
-        $pai = Pais::find($id)->delete();
+        $pai = Pai::find($id)->delete();
 
         return redirect()->route('pais.index')
             ->with('success', 'Pai deleted successfully');
