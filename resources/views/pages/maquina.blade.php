@@ -43,8 +43,15 @@
                     <div class="row py-3">
                         <div class="col-12 col-lg-6">
                             <a 
-                                class="d-flex align-items-center justify-content-center fw-bold btn btn-secondary" 
+                                class="d-none d-sm-block d-sm-none d-md-block d-flex align-items-center justify-content-center fw-bold btn btn-outline-secondary" 
                                 href="https://web.whatsapp.com/send?phone={{$maquina->pais->codigo_pais}}{{$maquina->pais->numero_telefono}}&text=+Hola+quiero+mas+informaci%C3%B3n+con+respecto+a%3A%0D%0A%0D%0A+-+La+Maquina+*{{ $maquina->marca }}*+{{$maquina->modelo}}+%0A%0D%0A%2ALa+siguiente+URL%3A%2A+http%3A%2F%2F+"
+                                target="_blank"
+                                > 
+                                <img class="icon-cotizar" src="/img/whatsapp1.webp" alt="whatsapp Icon" target="_blank">Consultar
+                            </a>
+                            <a 
+                                class="d-lg-none d-xl-block d-xl-none d-xxl-block d-flex align-items-center justify-content-center fw-bold btn btn-outline-secondary" 
+                                href="https://api.whatsapp.com/send?phone={{$maquina->pais->codigo_pais}}{{$maquina->pais->numero_telefono}}&text=+Hola+quiero+mas+informaci%C3%B3n+con+respecto+a%3A%0D%0A%0D%0A+-+La+Maquina+*{{ $maquina->marca }}*+{{$maquina->modelo}}+%0A%0D%0A%2ALa+siguiente+URL%3A%2A+http%3A%2F%2F+"
                                 target="_blank"
                                 > 
                                 <img class="icon-cotizar" src="/img/whatsapp1.webp" alt="whatsapp Icon" target="_blank">Consultar

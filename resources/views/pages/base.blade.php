@@ -98,7 +98,10 @@
                                 <div class="col-6 text-center">
                                     <p class="fs-6 m-0 fw-bold">El Salvador</p>
                                     <div class="d-flex justify-content-center">
-                                        <a class="d-flex align-items-center btn px-1" href="https://web.whatsapp.com/send?phone=50378730450&text=+Hola+quiero+mas+informaci%C3%B3n+con+respecto+a%3A%0D%0A%0D%0A%2ALa+siguiente+URL%3A%2A+http%3A%2F%2F+" target="_blank">
+                                        <a class="d-none d-sm-block d-sm-none d-md-block d-flex align-items-center btn px-1" href="https://web.whatsapp.com/send?phone=50378730450&text=+Hola+quiero+mas+informaci%C3%B3n+con+respecto+a%3A%0D%0A%0D%0A%2ALa+siguiente+URL%3A%2A+http%3A%2F%2F+" target="_blank">
+                                            <img class="icon" src="/img/whatsapp1.webp" alt="whatsapp Icon" target="_blank">
+                                        </a>
+                                        <a class="d-lg-none d-xl-block d-xl-none d-xxl-block d-flex align-items-center btn px-1" href="https://api.whatsapp.com/send?phone=50378730450&text=+Hola+quiero+mas+informaci%C3%B3n+con+respecto+a%3A%0D%0A%0D%0A%2ALa+siguiente+URL%3A%2A+http%3A%2F%2F+" target="_blank">
                                             <img class="icon" src="/img/whatsapp1.webp" alt="whatsapp Icon" target="_blank">
                                         </a>
                                     </div>
@@ -106,7 +109,10 @@
                                 <div class="col-6 text-center">
                                     <p class="fs-6 m-0 fw-bold">Guatemala</p>
                                     <div class="d-flex justify-content-center">
-                                        <a class="d-flex align-items-center btn px-1" href="https://web.whatsapp.com/send?phone=50254674528&text=+Hola+quiero+mas+informaci%C3%B3n+con+respecto+a%3A%0D%0A%0D%0A%2ALa+siguiente+URL%3A%2A+http%3A%2F%2F+" target="_blank">
+                                        <a class="d-none d-sm-block d-sm-none d-md-block d-flex align-items-center btn px-1" href="https://web.whatsapp.com/send?phone=50254674528&text=+Hola+quiero+mas+informaci%C3%B3n+con+respecto+a%3A%0D%0A%0D%0A%2ALa+siguiente+URL%3A%2A+http%3A%2F%2F+" target="_blank">
+                                            <img class="icon" src="/img/whatsapp1.webp" alt="whatsapp Icon" target="_blank">
+                                        </a>
+                                        <a class="d-lg-none d-xl-block d-xl-none d-xxl-block d-flex align-items-center btn px-1" href="https://api.whatsapp.com/send?phone=50254674528&text=+Hola+quiero+mas+informaci%C3%B3n+con+respecto+a%3A%0D%0A%0D%0A%2ALa+siguiente+URL%3A%2A+http%3A%2F%2F+" target="_blank">
                                             <img class="icon" src="/img/whatsapp1.webp" alt="whatsapp Icon" target="_blank">
                                         </a>
                                     </div>
