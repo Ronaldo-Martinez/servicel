@@ -85,6 +85,41 @@
 
         <main>
             @yield('content')
+            <div class="modal fade" id="whatsappModal" tabindex="-1" aria-labelledby="whatsappModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Seleccione su País.</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6 text-center">
+                                    <p class="fs-6 m-0 fw-bold">El Salvador</p>
+                                    <div class="d-flex justify-content-center">
+                                        <a class="d-flex align-items-center btn px-1" href="https://web.whatsapp.com/send?phone=50378730450&text=+Hola+quiero+mas+informaci%C3%B3n+con+respecto+a%3A%0D%0A%0D%0A%2ALa+siguiente+URL%3A%2A+http%3A%2F%2F+" target="_blank">
+                                            <img class="icon" src="/img/whatsapp1.webp" alt="whatsapp Icon" target="_blank">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <p class="fs-6 m-0 fw-bold">Guatemala</p>
+                                    <div class="d-flex justify-content-center">
+                                        <a class="d-flex align-items-center btn px-1" href="https://web.whatsapp.com/send?phone=50254674528&text=+Hola+quiero+mas+informaci%C3%B3n+con+respecto+a%3A%0D%0A%0D%0A%2ALa+siguiente+URL%3A%2A+http%3A%2F%2F+" target="_blank">
+                                            <img class="icon" src="/img/whatsapp1.webp" alt="whatsapp Icon" target="_blank">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer class="bg-secondary">

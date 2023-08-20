@@ -63,11 +63,11 @@ Route::post('password/reset', [App\Http\Controllers\Auth\ResetPasswordController
 //Fin autenticación
 
 //Maquinaria
-Route::post('/caracteristicas', [CaracteristicaController::class, 'store'])->name('caracteristicas.store');
-Route::delete('/caracteristicas/{id}',[CaracteristicaController::class, 'destroy'])->name('caracteristicas.delete');
-Route::get('/maquinas/{id}/caracteristicas',[CaracteristicaController::class, 'maquina'])->name('caracteristicas.maquina');
-Route::get('/maquinas/{id}/imagenes',[ImagenController::class, 'maquina'])->name('imagen.maquina');
-Route::post('/imagenes', [ImagenController::class, 'store'])->name('imagenes.store');
-Route::delete('/imagenes/{id}',[ImagenController::class, 'destroy'])->name('imagenes.delete');
+Route::post('/caracteristicas', [CaracteristicaController::class, 'store'])->name('caracteristicas.store')->middleware('auth');
+Route::delete('/caracteristicas/{id}',[CaracteristicaController::class, 'destroy'])->name('caracteristicas.delete')->middleware('auth');
+Route::get('/maquinas/{id}/caracteristicas',[CaracteristicaController::class, 'maquina'])->name('caracteristicas.maquina')->middleware('auth');
+Route::get('/maquinas/{id}/imagenes',[ImagenController::class, 'maquina'])->name('imagen.maquina')->middleware('auth');
+Route::post('/imagenes', [ImagenController::class, 'store'])->name('imagenes.store')->middleware('auth');
+Route::delete('/imagenes/{id}',[ImagenController::class, 'destroy'])->name('imagenes.delete')->middleware('auth');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

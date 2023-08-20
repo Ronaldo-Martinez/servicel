@@ -12,13 +12,13 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/custom.js'])
 </head>
 <body>
@@ -54,6 +54,7 @@
                                 </li>
                             @endif
                         @else
+                            <a class="nav-link-dash {{ request()->routeIs('home') ? 'active-dash' : '' }}" href="{{ URL::to('home') }}">Inicio</a>
                             <a class="nav-link-dash {{ request()->routeIs('pais.index') ? 'active-dash' : '' }}" href="{{ URL::to('pais') }}">Paises</a>
                             <a class="nav-link-dash {{ request()->routeIs('tipo-maquinas.index') ? 'active-dash' : '' }}" href="{{ URL::to('tipo-maquinas') }}">Tipo de Maquinas</a>
                             <a class="nav-link-dash {{ request()->routeIs('maquinas.index') ? 'active-dash' : '' }}" href="{{ URL::to('maquinas') }}">Maquinas</a>
