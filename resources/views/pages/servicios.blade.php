@@ -127,27 +127,27 @@
                     </div>
                 </div>
                 <div class="container">
-                    <div class="mx-5 row">
+                    <div class="me-4 row">
                         <div class="col-12 col-lg-6">
-                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 fw-bold text-white"> 
+                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
                                 Movimientos masivos de tierra.
                                 <span class="material-symbols-outlined text-warning ms-2">
                                     check_circle
                                 </span>
                             </p>
-                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 fw-bold text-white"> 
+                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
                                 Diseños de terraza.
                                 <span class="material-symbols-outlined text-warning ms-2">
                                     check_circle
                                 </span>
                             </p>
-                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 fw-bold text-white"> 
+                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
                                 Cortes y rellenos estructurales.
                                 <span class="material-symbols-outlined text-warning ms-2">
                                     check_circle
                                 </span>
                             </p>
-                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 fw-bold text-white"> 
+                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
                                 Estabilización de suelos.
                                 <span class="material-symbols-outlined text-warning ms-2">
                                     check_circle
@@ -155,25 +155,25 @@
                             </p>
                         </div>
                         <div class="col-12 col-lg-6">
-                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 fw-bold text-white"> 
+                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
                                 Terraplenes.
                                 <span class="material-symbols-outlined text-warning ms-2">
                                     check_circle
                                 </span>
                             </p>
-                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 fw-bold text-white"> 
+                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
                                Calles y accesos.
                                <span class="material-symbols-outlined text-warning ms-2">
                                     check_circle
                                 </span>
                             </p>
-                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 fw-bold text-white"> 
+                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
                                 Obras de mitigación.
                                 <span class="material-symbols-outlined text-warning ms-2">
                                     check_circle
                                 </span>
                             </p>
-                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 fw-bold text-white"> 
+                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
                                 Topografía.
                                 <span class="material-symbols-outlined text-warning ms-2" id="venta">
                                     check_circle
