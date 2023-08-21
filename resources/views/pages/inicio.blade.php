@@ -138,7 +138,7 @@
             <span class="fw-bold">CALIDAD Y PUNTUALIDAD.</span>
         </p>
         <div>
-            <img class="img-nosotros" src="/logo2.webp" alt="Logo servicel">
+            <img class="img-nosotros" src="/logo1.webp" alt="Logo servicel">
         </div>
     </article>
 </div>

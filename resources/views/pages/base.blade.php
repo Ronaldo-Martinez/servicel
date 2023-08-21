@@ -26,7 +26,7 @@
         <nav class="bg-nav navbar  p-0 fixed-top">
             <div class="container">
                 <a class="navbar-brand p-0" href="/">
-                    <img src="/logo2.webp" alt="Logo servicel" class="logo">
+                    <img src="/logo1.webp" alt="Logo servicel" class="logo">
                 </a>
                 <div class="d-none d-lg-block ">
                     <div class="nav d-flex">
