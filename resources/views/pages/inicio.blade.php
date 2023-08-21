@@ -92,8 +92,8 @@
                     <img class="card-img zoom" src="/img/retroexcavadora.webp" alt="retroexcavadora servicel" loading="lazy">
                     <div class="card-img-overlay-custom">
                         <div class="container row">
-                            <div class="col-6 bg-white d-grid gap-2 p-0">
-                                <a class="btn btn-outline-secondary rounded-0 fs-4" href="#">Excavadoras</a>
+                            <div class="col-8 bg-white d-grid gap-2 p-0">
+                                <button class="btn btn-outline-secondary rounded-0 fs-4" data-bs-toggle="modal" data-bs-target="#modal-excavadoras">Excavadoras</button>
                             </div>
                         </div>
                     </div>
@@ -104,8 +104,8 @@
                     <img class="card-img zoom" src="/img/montacargas.webp" alt="montacargas servicel" loading="lazy">
                     <div class="card-img-overlay-custom">
                         <div class="container row">
-                            <div class="col-6 bg-white d-grid gap-2 p-0">
-                                <a class="btn btn-outline-secondary rounded-0 fs-4" href="#">Montacargas</a>
+                            <div class="col-8 bg-white d-grid gap-2 p-0">
+                                <button class="btn btn-outline-secondary rounded-0 fs-4" data-bs-toggle="modal" data-bs-target="#modal-minicargadores">Minicargadores</button>
                             </div>
                         </div>
                     </div>
@@ -115,8 +115,8 @@
                     <img class="card-img zoom" src="/img/motoniveladora.webp" alt="motoniveladora servicel" loading="lazy">
                     <div class="card-img-overlay-custom">
                         <div class="container row">
-                            <div class="col-6 bg-white d-grid gap-2 p-0">
-                                <a class="btn btn-outline-secondary rounded-0 fs-4" href="#">Motoniveladoras</a>
+                            <div class="col-8 bg-white d-grid gap-2 p-0">
+                                <button class="btn btn-outline-secondary rounded-0 fs-4" data-bs-toggle="modal" data-bs-target="#modal-motoniveladoras">Motoniveladoras</button>
                             </div>
                         </div>
                     </div>
@@ -183,120 +183,198 @@
             </div>
         </div>
     </div>
-
-    <!--Modales-->
-    <div class="modal fade" id="modal-alquiler" tabindex="-1" aria-labelledby="modal-alquilerLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header bg-secondary">
-              <h3 class="modal-title text-white" id="modal-alquilerLabel">Alquiler de maquinaria</h3>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body texto fs-5">
-                Nuestra amplia flota de maquinaria pesada y equipos de primera categoría, combinada con 
-                la experiencia de nuestro equipo altamente capacitado, garantiza la ejecución impecable 
-                de proyectos de cualquier magnitud, apegándonos a las exigencias y normativas específicas 
-                de cada uno de nuestros clientes. Desde excavadoras, retroexcavadoras, tractores, 
-                cargadores frontales y motoniveladoras hasta montacargas y miniexcavadoras, disponemos de 
-                todo lo necesario para llevar a cabo con éxito proyectos desafiantes y complejos
-
-
-            </div>
-          </div>
+</div>
+<!--Modales-->
+<div class="modal fade" id="modal-alquiler" tabindex="-1" aria-labelledby="modal-alquilerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-secondary">
+            <h3 class="modal-title text-white" id="modal-alquilerLabel">Alquiler de maquinaria</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-    </div>
-    <div class="modal fade" id="modal-terraceria" tabindex="-1" aria-labelledby="modal-terraceria-Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header bg-secondary">
-              <h3 class="modal-title text-white" id="modal-aterraceria-Label">Servicios de terraceria</h3>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-               <div class="row">
-                    <div class="col-12 col-lg-6 pt-2">
-                        <ul class="list-group">
-                            <li class="list-group-item">Movimientos masivos de tierra.</li>
-                            <li class="list-group-item">Diseños de terraza.</li>
-                            <li class="list-group-item">Cortes y rellenos estructurales.</li>
-                            <li class="list-group-item">Estabilización de suelos.</li>
-                            <li class="list-group-item">Terraplenes.</li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-lg-6 pt-2">
-                        <img class="img-fluid rounded" src="/img/terraceria1.webp" alt="Servicios de Terraceria Servicel">
-                    </div>
-                    <div class="col-12 col-lg-6 pt-2">
-                        <img class="img-fluid rounded" src="/img/terraceria2.webp" alt="maquinaria aplanado terreno">
-                    </div>
-                    <div class="col-12 col-lg-6 pt-2">
-                        <ul class="list-group">
-                            <li class="list-group-item">Calles y accesos.</li>
-                            <li class="list-group-item">Obras de mitigación.</li>
-                            <li class="list-group-item">Topografía.</li>
-                        </ul>
-                    </div>
-               </div>
-            </div>
-          </div>
+        <div class="modal-body texto fs-5">
+            Nuestra amplia flota de maquinaria pesada y equipos de primera categoría, combinada con 
+            la experiencia de nuestro equipo altamente capacitado, garantiza la ejecución impecable 
+            de proyectos de cualquier magnitud, apegándonos a las exigencias y normativas específicas 
+            de cada uno de nuestros clientes. Desde excavadoras, retroexcavadoras, tractores, 
+            cargadores frontales y motoniveladoras hasta montacargas y miniexcavadoras, disponemos de 
+            todo lo necesario para llevar a cabo con éxito proyectos desafiantes y complejos
+
+
         </div>
-    </div>
-    <div class="modal fade" id="modal-agroindustria" tabindex="-1" aria-labelledby="modal-agroindustria-Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header bg-secondary">
-              <h3 class="modal-title text-white" id="modal-agroindustria-Label">Servicios de agroindustria</h3>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        Preparación de suelos para siembra: Plantación nueva, finca nueva de caña de azúcar, banano, palma africana y fincas de cafe.                    
-                    </li>
-                    <li class="list-group-item">
-                        Apertura y mantenimiento de accesos.
-                    </li>
-                    <li class="list-group-item">
-                        Apertura y Mantenimiento de obras y drenajes.
-                    </li>
-                    <li class="list-group-item">
-                        Obras para control de inundaciones.
-                    </li>
-                    <li class="list-group-item">
-                        Desolve de ríos y quebradas.
-                    </li>
-                    <li class="list-group-item">
-                        Apertura y mantenimiento de estanques de acuicultura para camarón y tilapia.
-                    </li>
-                    <li class="list-group-item">
-                        Conformación de bordas dentro de fincas.
-                    </li>
-                </ul>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modal-venta" tabindex="-1" aria-labelledby="modal-venta-Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header bg-secondary">
-              <h3 class="modal-title text-white" id="modal-venta-Label">Venta de tierra blanca</h3>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p class="fs-5 texto">
-                    En El Salvador, nos enorgullecemos de ofrecer un servicio integral de venta de 
-                    tierra blanca, respaldado por todos los permisos de ley vigentes. Nuestra dedicación 
-                    a la legalidad y la transparencia nos distingue como proveedores confiables en el 
-                    mercado de suministro de tierra blanca.
-                </p>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1725.5353587895513!2d-89.46547453506611!3d13.857284946733857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDUxJzI2LjQiTiA4OcKwMjcnNTQuMCJX!5e0!3m2!1ses!2ssv!4v1691524711856!5m2!1ses!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-          </div>
         </div>
     </div>
 </div>
+<div class="modal fade" id="modal-terraceria" tabindex="-1" aria-labelledby="modal-terraceria-Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-secondary">
+            <h3 class="modal-title text-white" id="modal-aterraceria-Label">Servicios de terraceria</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-12 col-lg-6 pt-2">
+                    <ul class="list-group">
+                        <li class="list-group-item">Movimientos masivos de tierra.</li>
+                        <li class="list-group-item">Diseños de terraza.</li>
+                        <li class="list-group-item">Cortes y rellenos estructurales.</li>
+                        <li class="list-group-item">Estabilización de suelos.</li>
+                        <li class="list-group-item">Terraplenes.</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-6 pt-2">
+                    <img class="img-fluid rounded" src="/img/terraceria1.webp" alt="Servicios de Terraceria Servicel">
+                </div>
+                <div class="col-12 col-lg-6 pt-2">
+                    <img class="img-fluid rounded" src="/img/terraceria2.webp" alt="maquinaria aplanado terreno">
+                </div>
+                <div class="col-12 col-lg-6 pt-2">
+                    <ul class="list-group">
+                        <li class="list-group-item">Calles y accesos.</li>
+                        <li class="list-group-item">Obras de mitigación.</li>
+                        <li class="list-group-item">Topografía.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-agroindustria" tabindex="-1" aria-labelledby="modal-agroindustria-Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-secondary">
+            <h3 class="modal-title text-white" id="modal-agroindustria-Label">Servicios de agroindustria</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    Preparación de suelos para siembra: Plantación nueva, finca nueva de caña de azúcar, banano, palma africana y fincas de cafe.                    
+                </li>
+                <li class="list-group-item">
+                    Apertura y mantenimiento de accesos.
+                </li>
+                <li class="list-group-item">
+                    Apertura y Mantenimiento de obras y drenajes.
+                </li>
+                <li class="list-group-item">
+                    Obras para control de inundaciones.
+                </li>
+                <li class="list-group-item">
+                    Desolve de ríos y quebradas.
+                </li>
+                <li class="list-group-item">
+                    Apertura y mantenimiento de estanques de acuicultura para camarón y tilapia.
+                </li>
+                <li class="list-group-item">
+                    Conformación de bordas dentro de fincas.
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-venta" tabindex="-1" aria-labelledby="modal-venta-Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-secondary">
+            <h3 class="modal-title text-white" id="modal-venta-Label">Venta de tierra blanca</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p class="fs-5 texto">
+                En El Salvador, nos enorgullecemos de ofrecer un servicio integral de venta de 
+                tierra blanca, respaldado por todos los permisos de ley vigentes. Nuestra dedicación 
+                a la legalidad y la transparencia nos distingue como proveedores confiables en el 
+                mercado de suministro de tierra blanca.
+            </p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1725.5353587895513!2d-89.46547453506611!3d13.857284946733857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDUxJzI2LjQiTiA4OcKwMjcnNTQuMCJX!5e0!3m2!1ses!2ssv!4v1691524711856!5m2!1ses!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-excavadoras" tabindex="-1" aria-labelledby="modal-excavadoras-Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-secondary">
+            <h3 class="modal-title text-white" id="modal-excavadoras-Label">Seleccione su país</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <p class="fs-5 text-center fw-bold text-secondary">El Salvador</p>
+                    <a href="{{ route('alquiler-sv-categoria', ['id' => 1]) }}/#maquinas">
+                        <img class="img-fluid" src="/img/sv-flag.webp" alt="Bandera de El Salvador" height="400px">
+                    </a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="fs-5 text-center fw-bold text-secondary">Guatemala</p>
+                    <a href="{{ route('alquiler-gt-categoria', ['id' => 1]) }}/#maquinas">
+                        <img class="img-fluid" src="/img/gt-flag.webp" alt="Bandera de Guatemala" height="400px">
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-motoniveladoras" tabindex="-1" aria-labelledby="modal-motoniveladoras-Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-secondary">
+            <h3 class="modal-title text-white" id="modal-motoniveladoras-Label">Seleccione su país</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <p class="fs-5 text-center fw-bold text-secondary">El Salvador</p>
+                    <a href="{{ route('alquiler-sv-categoria', ['id' => 3]) }}/#maquinas">
+                        <img class="img-fluid" src="/img/sv-flag.webp" alt="Bandera de El Salvador" height="400px">
+                    </a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="fs-5 text-center fw-bold text-secondary">Guatemala</p>
+                    <a href="{{ route('alquiler-gt-categoria', ['id' => 3]) }}/#maquinas">
+                        <img class="img-fluid" src="/img/gt-flag.webp" alt="Bandera de Guatemala" height="400px">
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-minicargadores" tabindex="-1" aria-labelledby="modal-motoniveladoras-Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-secondary">
+            <h3 class="modal-title text-white" id="modal-minicargadores-Label">Seleccione su país</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <p class="fs-5 text-center fw-bold text-secondary">El Salvador</p>
+                    <a href="{{ route('alquiler-sv-categoria', ['id' => 6]) }}/#maquinas">
+                        <img class="img-fluid" src="/img/sv-flag.webp" alt="Bandera de El Salvador" height="400px">
+                    </a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="fs-5 text-center fw-bold text-secondary">Guatemala</p>
+                    <a href="{{ route('alquiler-gt-categoria', ['id' => 6]) }}/#maquinas">
+                        <img class="img-fluid" src="/img/gt-flag.webp" alt="Bandera de Guatemala" height="400px">
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
 
 @endsection
