@@ -32,6 +32,7 @@
                     <div class="nav d-flex">
                         <a class="nav-link {{ request()->routeIs('inicio') ? 'active-nav' : '' }}" aria-current="page" href="{{ route('inicio') }}">INICIO</a>
                         <a class="nav-link {{ request()->routeIs('nosotros') ? 'active-nav' : '' }}" href="{{ route('nosotros') }}">NOSOTROS</a>
+                        <a class="nav-link {{ request()->routeIs('servicios') ? 'active-nav' : '' }}" href="{{ route('servicios') }}">SERVICIOS</a>
                         <div class="nav-link d-flex align-items-center dropdown {{ request()->routeIs('alquiler-sv') ? 'active-nav' : (request()->routeIs('alquiler-gt') ? 'active-nav' : '')  }} ">
                             <div class="dropdown-toggle d-flex align-items-center h-100"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               ALQUILER
@@ -58,6 +59,7 @@
                         <ul class=" flex-grow-1 pe-3">
                             <a class="nav-link {{ request()->routeIs('inicio') ? 'active-nav' : 'text-white' }}" aria-current="page" href="{{ route('inicio') }}">INICIO</a>
                             <a class="nav-link {{ request()->routeIs('nosotros') ? 'active-nav' : 'text-white' }}" href="{{ route('nosotros') }}">NOSOTROS</a>
+                            <a class="nav-link {{ request()->routeIs('servicios') ? 'active-nav' : '' }}" href="{{ route('servicios') }}">SERVICIOS</a>
                             <div class="nav-link d-flex align-items-center dropdown {{ request()->routeIs('nosotros') ? 'active-nav' : 'text-white' }}">
                                 <div class="dropdown-toggle d-flex align-items-center h-100"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 ALQUILER
@@ -137,6 +139,7 @@
                         <h2 class="nav-link justify-content-center text-white fs-5 py-3 text-center">Enlaces</h2>
                         <a class="nav-link justify-content-center {{ request()->routeIs('inicio') ? 'active-footer' : 'text-white' }}" aria-current="page" href="{{ route('inicio') }}">INICIO</a>
                         <a class="nav-link justify-content-center {{ request()->routeIs('nosotros') ? 'active-footer' : 'text-white' }}" href="{{ route('nosotros') }}">NOSOTROS</a>
+                        <a class="nav-link {{ request()->routeIs('servicios') ? 'active-nav' : '' }}" href="{{ route('servicios') }}">SERVICIOS</a>
                         <div class="nav-link d-flex align-items-center dropdown">
                             <div class="text-white dropdown-toggle d-flex align-items-center h-100"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               ALQUILER

@@ -323,6 +323,12 @@
     border-bottom: 5px solid $warning;
 }
 
+.figura-ii{
+    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+    border-bottom: 5px solid $warning;
+}
+
+
 .video-fluid {
     max-width: 100%;
 

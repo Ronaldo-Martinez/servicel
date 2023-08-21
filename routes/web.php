@@ -25,6 +25,10 @@ Route::get('/nosotros', function(){
     return view('pages.nosotros');
 })->name('nosotros');
 
+Route::get('/servicios', function(){
+    return view('pages.servicios');
+})->name('servicios');
+
 //El Salvador
 Route::get('/alquiler/elsalvador',[AlquilerController::class, 'alquilerSV'])->name('alquiler-sv');
 Route::get('/alquiler/elsalvador/categoria/{id}',[AlquilerController::class, 'alquilerSVCategoria'])->name('alquiler-sv-categoria');
