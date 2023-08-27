@@ -228,7 +228,30 @@
 .img-card{
     height: 35vh;
 }
-
+.img-card-alquiler{
+    height: 35vh;
+    background-image: url('/img/excavadora1.webp');
+    background-position: center;
+    background-size: cover;
+}
+.img-card-terraceria{
+    height: 35vh;
+    background-image: url('/img/terraceria.webp');
+    background-position: center;
+    background-size: cover;
+}
+.img-card-agroindustria{
+    height: 35vh;
+    background-image: url('/img/agroindustria.webp');
+    background-position: center;
+    background-size: cover;
+}
+.img-card-tierra-blanca{
+    height: 35vh;
+    background-image: url('/img/tierra-blanca.webp');
+    background-position: center;
+    background-size: cover;
+}
 .card-bottom{
     border-radius: 0% 0% 5% 5%;
 }
@@ -400,5 +423,8 @@
         font-size: medium;
         font-weight: bold;
         padding-top: 0.5rem;
+    }
+    .video-col{
+        display: none;
     }
 }

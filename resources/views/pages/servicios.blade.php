@@ -12,7 +12,7 @@
 </header>
 <div id="Servicios">
     <div class="bg-secondary text-white text-center p-3 px-5">
-        <h1 class="fw-bold" id="terraceria">SERVICIOS DE SERVICEL</h1>
+        <h1 class="fw-bold" id="terraceria">NUESTROS SERVICIOS</h1>
     </div>
     
     <!--Terraceria-->
@@ -77,7 +77,7 @@
                 <div id="carouselTerraceriaCaptions" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img src="/img/terraceria1.webp" class=" w-100 img-carrusel" alt="Servicios de Terraceria Servicel">
+                        <img src="/img/terraceria.webp" class=" w-100 img-carrusel" alt="Servicios de Terraceria Servicel">
                         </div>
                         <div class="carousel-item">
                             <img src="/img/terraceria2.webp" class=" w-100 img-carrusel" alt="maquinaria aplanado terreno">
@@ -126,58 +126,52 @@
                         </h2>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container ps-4 pe-4">
+                    <p class="d-flex align-items-center justify-content-start pt-3 fs-5 text-white"> 
+                        <span class="material-symbols-outlined text-warning me-3">
+                            check_circle
+                        </span>
+                        Preparación de suelos para siembra: Plantación nueva, finca nueva de caña de azúcar, banano, palma africana y fincas de cafe.
+                    </p>
                     <div class="me-4 row">
                         <div class="col-12 col-lg-6">
-                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
-                                Movimientos masivos de tierra.
-                                <span class="material-symbols-outlined text-warning ms-2">
+                            <p class="d-flex align-items-center justify-content-start pt-3 fs-5 text-white"> 
+                                <span class="material-symbols-outlined text-warning me-3">
                                     check_circle
                                 </span>
+                                Apertura y mantenimiento de accesos.
                             </p>
                             <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
-                                Diseños de terraza.
-                                <span class="material-symbols-outlined text-warning ms-2">
+                                <span class="material-symbols-outlined text-warning me-3">
                                     check_circle
-                                </span>
+                                </span>    
+                                Apertura y Mantenimiento de obras y drenajes.
                             </p>
-                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
-                                Cortes y rellenos estructurales.
-                                <span class="material-symbols-outlined text-warning ms-2">
+                            <p class="d-flex align-items-center justify-content-start pt-3 fs-5 text-white"> 
+                                <span class="material-symbols-outlined text-warning me-3">
                                     check_circle
                                 </span>
-                            </p>
-                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
-                                Estabilización de suelos.
-                                <span class="material-symbols-outlined text-warning ms-2">
-                                    check_circle
-                                </span>
+                                Obras para control de inundaciones.
                             </p>
                         </div>
                         <div class="col-12 col-lg-6">
-                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
-                                Terraplenes.
-                                <span class="material-symbols-outlined text-warning ms-2">
+                            <p class="d-flex align-items-center justify-content-start pt-3 fs-5 text-white"> 
+                                <span class="material-symbols-outlined text-warning me-3">
                                     check_circle
                                 </span>
+                                Desolve de ríos y quebradas.
                             </p>
-                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
-                               Calles y accesos.
-                               <span class="material-symbols-outlined text-warning ms-2">
+                            <p class="d-flex align-items-center justify-content-start pt-3 fs-5 text-white"> 
+                               <span class="material-symbols-outlined text-warning me-3">
                                     check_circle
                                 </span>
+                                Apertura y mantenimiento de estanques de acuicultura para camarón y tilapia.
                             </p>
-                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
-                                Obras de mitigación.
-                                <span class="material-symbols-outlined text-warning ms-2">
+                            <p class="d-flex align-items-center justify-content-start pt-3 fs-5 text-white"> 
+                                <span class="material-symbols-outlined text-warning me-3">
                                     check_circle
                                 </span>
-                            </p>
-                            <p class="d-flex align-items-center justify-content-end pt-3 fs-5 text-white"> 
-                                Topografía.
-                                <span class="material-symbols-outlined text-warning ms-2" id="venta">
-                                    check_circle
-                                </span>
+                                Conformación de bordas dentro de fincas.
                             </p>
                         </div>
                     </div>

@@ -30,9 +30,9 @@
                 <p>
                 Nuestra amplia flota de maquinaria pesada y equipos de primera categoría, combinada con 
                 la experiencia de nuestro equipo altamente capacitado, garantiza la ejecución impecable 
-                de proyectos de cualquier magnitud. desde excavadoras, retroexcavadoras, tractores, 
+                de proyectos de cualquier magnitud. Desde excavadoras, retroexcavadoras, tractores, 
                 cargadores frontales y motoniveladoras hasta montacargas y miniexcavadoras,
-                disponemos de todo lo necesario para llevar a cabo con éxito proyectos desafiantes y complejos.
+                disponemos de todo lo necesario para llevar a cabo con éxito proyectos desafiantes y complejos para nuestros clientes.
                 </p>
             </div>
         </div>
@@ -47,7 +47,7 @@
         <div class="row px-4">
             <div class="col-12 col-md-6 col-lg-3 pt-3">
                 <a class="card card-effect text-decoration-none" href="#maquinaria">
-                    <img src="/img/excavadora.webp" class="card-img-top img-card" alt="excavadora servicel" loading="lazy">
+                    <div class="img-card-alquiler"></div>
                     <div class="card-body btn btn-secondary text-white card-bottom">
                         <h3 class="fs-6 fw-bold">ALQUILER DE MAQUINARIA</h3>
                     </div>
@@ -55,7 +55,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-3 pt-3">
                 <a class="card card-effect text-decoration-none" href="{{ route('servicios') }}/#terraceria">
-                    <img src="/img/bulldozer.webp" class="card-img-top img-card" alt="bulldozer terracería servicel" loading="lazy">
+                <div class="img-card-terraceria"></div>
                     <div class="card-body btn btn-warning text-secondary card-bottom">
                         <h3 class="fs-6 fw-bold">SERVICIOS DE TERRACERÍA</h3>
                     </div>
@@ -63,7 +63,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-3 pt-3">
                 <a class="card card-effect text-decoration-none" href="{{ route('servicios') }}/#agroIndustria">
-                    <img src="/img/tractor.webp" class="card-img-top img-card" alt="tractor servicel" loading="lazy">
+                    <div class="img-card-agroindustria"></div>
                     <div class="card-body btn btn-secondary text-white card-bottom">
                         <h3 class="fs-6 fw-bold">SERVICIOS DE AGROINDUSTRIA</h3>
                     </div>
@@ -71,7 +71,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-3 pt-3">
                 <a class="card card-effect text-decoration-none" href="{{ route('servicios') }}/#venta">
-                    <img src="/img/tierra_blanca.webp" class="card-img-top img-card" alt="Tierra blanca servicel" loading="lazy">
+                <div class="img-card-tierra-blanca"></div>
                     <div class="card-body btn btn-warning text-secondary card-bottom">
                         <h3 class="fs-6 fw-bold">VENTA DE TIERRA BLANCA</h3>
                     </div>
