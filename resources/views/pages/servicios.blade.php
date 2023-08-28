@@ -99,13 +99,13 @@
     <div class="container-fluid bg-secondary my-4">
         <div class="row p-0">
             <div class="col-12 col-md-6 col-lg-4 p-0 d-none d-sm-block d-sm-none d-md-block">
-                <div id="carouselAgroIndustriaCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselAgroIndustriaCaptions" class="carousel slide figura" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img src="/img/agro1.webp" class="figura w-100 img-carrusel" alt="Servicios de Agroindustria Servicel">
+                        <img src="/img/agro1.webp" class=" w-100 img-carrusel" alt="Servicios de Agroindustria Servicel">
                         </div>
                         <div class="carousel-item">
-                            <img src="/img/agro2.webp" class="figura w-100 img-carrusel" alt="maquinaria preparando terreno para cultivo terreno">
+                            <img src="/img/agro2.webp" class=" w-100 img-carrusel" alt="maquinaria preparando terreno para cultivo terreno">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselAgroIndustriaCaptions" data-bs-slide="prev">
