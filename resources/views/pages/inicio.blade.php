@@ -89,7 +89,7 @@
         <div class="row px-4">
             <div class="col-12 col-lg-8">
                 <div class="card zoom-container mt-3" style="max-height: 80vh;">
-                    <img class="card-img zoom" src="/img/retroexcavadora.webp" alt="retroexcavadora servicel" loading="lazy">
+                    <img class="card-img zoom" src="/img/excavadora2.webp" alt="retroexcavadora servicel" loading="lazy">
                     <div class="card-img-overlay-custom">
                         <div class="container row">
                             <div class="col-8 bg-white d-grid gap-2 p-0">
@@ -101,11 +101,11 @@
             </div>
             <div class="col-12 col-lg-4">
                 <div class="card zoom-container mt-3" style="max-height: 39vh;">
-                    <img class="card-img zoom" src="/img/montacargas.webp" alt="montacargas servicel" loading="lazy">
+                    <img class="card-img zoom" src="/img/retroexcavadora.webp" alt="montacargas servicel" loading="lazy">
                     <div class="card-img-overlay-custom">
                         <div class="container row">
                             <div class="col-8 bg-white d-grid gap-2 p-0">
-                                <button class="btn btn-outline-secondary rounded-0 fs-4" data-bs-toggle="modal" data-bs-target="#modal-minicargadores">Minicargadores</button>
+                                <button class="btn btn-outline-secondary rounded-0 fs-4" data-bs-toggle="modal" data-bs-target="#modal-retroexcavadora">Retroexcavadoras</button>
                             </div>
                         </div>
                     </div>
@@ -117,6 +117,30 @@
                         <div class="container row">
                             <div class="col-8 bg-white d-grid gap-2 p-0">
                                 <button class="btn btn-outline-secondary rounded-0 fs-4" data-bs-toggle="modal" data-bs-target="#modal-motoniveladoras">Motoniveladoras</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">           
+                <div class="card zoom-container mt-3" style="max-height: 39vh;">
+                    <img class="card-img zoom" src="/img/tractores.webp" alt="motoniveladora servicel" loading="lazy">
+                    <div class="card-img-overlay-custom">
+                        <div class="container row">
+                            <div class="col-8 bg-white d-grid gap-2 p-0">
+                                <button class="btn btn-outline-secondary rounded-0 fs-4" data-bs-toggle="modal" data-bs-target="#modal-tractores">Tractores</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">           
+                <div class="card zoom-container mt-3" style="max-height: 39vh;">
+                    <img class="card-img zoom" src="/img/miniexcavadoras.webp" alt="miniexcavadoras servicel" loading="lazy">
+                    <div class="card-img-overlay-custom">
+                        <div class="container row">
+                            <div class="col-8 bg-white d-grid gap-2 p-0">
+                                <button class="btn btn-outline-secondary rounded-0 fs-4" data-bs-toggle="modal" data-bs-target="#modal-miniexcavadoras">Miniexcavadoras</button>
                             </div>
                         </div>
                     </div>
@@ -237,11 +261,63 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="modal-minicargadores" tabindex="-1" aria-labelledby="modal-motoniveladoras-Label" aria-hidden="true">
+<div class="modal fade" id="modal-retroexcavadora" tabindex="-1" aria-labelledby="modal-retroexcavadora-Label" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
         <div class="modal-header bg-secondary">
-            <h3 class="modal-title text-white" id="modal-minicargadores-Label">Seleccione su país</h3>
+            <h3 class="modal-title text-white" id="modal-retroexcavadora-Label">Seleccione su país</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <p class="fs-5 text-center fw-bold text-secondary">El Salvador</p>
+                    <a href="{{ route('alquiler-sv-categoria', ['id' => 5]) }}/#maquinas">
+                        <img class="img-fluid" src="/img/sv-flag.webp" alt="Bandera de El Salvador" height="400px">
+                    </a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="fs-5 text-center fw-bold text-secondary">Guatemala</p>
+                    <a href="{{ route('alquiler-gt-categoria', ['id' => 5]) }}/#maquinas">
+                        <img class="img-fluid" src="/img/gt-flag.webp" alt="Bandera de Guatemala" height="400px">
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-tractores" tabindex="-1" aria-labelledby="modal-tractores-Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-secondary">
+            <h3 class="modal-title text-white" id="modal-tractores-Label">Seleccione su país</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <p class="fs-5 text-center fw-bold text-secondary">El Salvador</p>
+                    <a href="{{ route('alquiler-sv-categoria', ['id' => 2]) }}/#maquinas">
+                        <img class="img-fluid" src="/img/sv-flag.webp" alt="Bandera de El Salvador" height="400px">
+                    </a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="fs-5 text-center fw-bold text-secondary">Guatemala</p>
+                    <a href="{{ route('alquiler-gt-categoria', ['id' => 2]) }}/#maquinas">
+                        <img class="img-fluid" src="/img/gt-flag.webp" alt="Bandera de Guatemala" height="400px">
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-miniexcavadoras" tabindex="-1" aria-labelledby="modal-miniexcavadoras-Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-secondary">
+            <h3 class="modal-title text-white" id="modal-miniexcavadoras-Label">Seleccione su país</h3>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
