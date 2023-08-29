@@ -72,7 +72,9 @@
                         </div>
                     @endforeach
                     </div>
-                    {{ $maquinas->links() }}
+                    <div class="d-flex mt-4 justify-content-center">
+                        {{ $maquinas->links() }}
+                    </div>
                 </div>
             </div>
         </div>
