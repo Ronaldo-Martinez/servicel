@@ -196,6 +196,13 @@
                     dedicación a la legalidad y la transparencia nos distingue como proveedores 
                     confiables en el mercado de suministro de tierra blanca.
                 </p>  
+                <button class="btn btn-outline-secondary"  data-bs-toggle="modal" data-bs-target="#modal-miniexcavadoras">
+                    <div class="d-flex align-items-center justify-content-center fs-5 fw-bold" href="tel:+50322882451"> 
+                        <span class="material-symbols-outlined">
+                            location_on
+                        </span>Nuestra Ubicación
+                    </div>
+                </button>
             </div>
             <div class="col-12 col-md-6">
                 <div id="carouselTierraCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -220,7 +227,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
         <div class="modal-header bg-secondary">
-            <h3 class="modal-title text-white" id="modal-miniexcavadoras-Label">Seleccione su país</h3>
+            <h3 class="modal-title text-white" id="modal-miniexcavadoras-Label">Nuestra Ubicación</h3>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
