@@ -198,12 +198,39 @@
                 </p>  
             </div>
             <div class="col-12 col-md-6">
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1725.5353587895513!2d-89.46547453506611!3d13.857284946733857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDUxJzI2LjQiTiA4OcKwMjcnNTQuMCJX!5e0!3m2!1ses!2ssv!4v1691524711856!5m2!1ses!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>           
+                <div id="carouselTierraCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner"  data-bs-toggle="modal" data-bs-target="#modal-miniexcavadoras">
+                        <div class="carousel-item active">
+                            <img src="/img/terraceria2.webp" class=" w-100 img-carrusel" alt="maquinaria aplanado terreno">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselTierraCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselTierraCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>         
             </div>
         </div>
     </div>
+    <div class="modal fade" id="modal-miniexcavadoras" tabindex="-1" aria-labelledby="modal-miniexcavadoras-Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-secondary">
+            <h3 class="modal-title text-white" id="modal-miniexcavadoras-Label">Seleccione su país</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1725.5353587895513!2d-89.46547453506611!3d13.857284946733857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDUxJzI2LjQiTiA4OcKwMjcnNTQuMCJX!5e0!3m2!1ses!2ssv!4v1691524711856!5m2!1ses!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>  
+        </div>
+        </div>
+    </div>
+</div>
 </div>
 
 
