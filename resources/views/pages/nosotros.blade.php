@@ -99,7 +99,19 @@
                 <div id="carouselGuatemalaCaptions" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="/img/guatemala2.webp" class=" w-100 img-carrusel" alt="...">
+                                <img src="/img/guate1.jpeg" class=" w-100 img-carrusel" alt="...">
+                            <div class="card-img-overlay-custom rounded-0 d-none d-md-block bg-overlay ">
+                                <h5 class="text-center text-secondary p-2 fs-3 sombra-titulo fw-bold ">GUATEMALA</h5>              
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                                <img src="/img/guate2.jpeg" class=" w-100 img-carrusel" alt="...">
+                            <div class="card-img-overlay-custom rounded-0 d-none d-md-block bg-overlay ">
+                                <h5 class="text-center text-secondary p-2 fs-3 sombra-titulo fw-bold ">GUATEMALA</h5>              
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                                <img src="/img/guatemala2.webp" class=" w-100 img-carrusel" alt="...">
                             <div class="card-img-overlay-custom rounded-0 d-none d-md-block bg-overlay ">
                                 <h5 class="text-center text-secondary p-2 fs-3 sombra-titulo fw-bold ">GUATEMALA</h5>              
                             </div>

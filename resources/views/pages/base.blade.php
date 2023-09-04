@@ -174,7 +174,7 @@
                         <p>7:30 A.M. a 4:30 P.M.</p>
                         <p class="m-0">Sábados</p>
                         <p>7:30 A.M. a 12:00 M</p>
-                        <p class="fs-5 fw-bold">Brindamos soporte técnico las 24 horas</p>
+                        <p class="fs-5 fw-bold">Brindamos soporte técnico telefónico las 24 horas</p>
                     </div>
                     <div class="border-bottom border-warning d-block d-sm-none">
                     </div>
