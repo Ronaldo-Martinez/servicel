@@ -577,3 +577,122 @@
         text-align: justify;
     }
 }
+
+.site-footer {
+    background-color: #0f172a; /* Slate 900 */
+    color: #94a3b8; /* Slate 400 */
+    font-size: 0.95rem;
+    position: relative;
+    border-top: 4px solid $warning;
+
+    .footer-top {
+        padding: 5rem 0 3rem;
+    }
+
+    .footer-logo {
+        max-width: 130px;
+        height: auto;
+        filter: drop-shadow(0 0 10px rgba(254, 209, 22, 0.15));
+    }
+
+    .footer-title {
+        color: #ffffff;
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin-bottom: 1.75rem;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 35px;
+            height: 3px;
+            background-color: $warning;
+            border-radius: 2px;
+        }
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 0.75rem;
+            
+            a {
+                color: #94a3b8;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+
+                &:hover {
+                    color: $warning;
+                    transform: translateX(5px);
+                }
+
+                &.active-footer {
+                    color: $warning;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .contact-item {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 0.75rem;
+        color: #cbd5e1; /* Slate 300 */
+        text-decoration: none;
+        transition: color 0.3s ease;
+        width: 100%;
+
+        &:hover {
+            color: $warning;
+        }
+
+        .contact-icon {
+            color: $warning;
+            margin-right: 0.75rem;
+            font-size: 1.25rem;
+        }
+    }
+
+    .schedule-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 1.25rem;
+        
+        .schedule-title {
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+    }
+
+    .support-badge {
+        background-color: rgba(254, 209, 22, 0.08);
+        border: 1px solid rgba(254, 209, 22, 0.15);
+        color: $warning;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        display: inline-flex;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 1.5rem 0;
+        background-color: #090d16;
+    }
+}
