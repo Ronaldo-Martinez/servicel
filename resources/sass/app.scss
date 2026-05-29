@@ -523,3 +523,57 @@
         margin-bottom: 0.75rem;
     }
 }
+
+.about-card {
+    background: #ffffff;
+    border-radius: 20px;
+    border-left: 6px solid $warning !important;
+    padding: 3rem;
+    box-shadow: 0 10px 40px rgba(37, 50, 102, 0.04);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(37, 50, 102, 0.08);
+        
+        .about-icon {
+            background-color: $warning;
+            color: $secondary;
+            transform: scale(1.1) rotate(5deg);
+        }
+    }
+
+    .about-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 14px;
+        background-color: rgba(37, 50, 102, 0.05);
+        color: $secondary;
+        margin-right: 1.5rem;
+        transition: all 0.3s ease;
+        
+        span {
+            font-size: 2.2rem;
+        }
+    }
+
+    h3 {
+        color: $secondary;
+        font-weight: 800;
+        font-size: 1.75rem;
+        margin-bottom: 0;
+    }
+
+    p {
+        color: #5a6485;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 0;
+        text-align: justify;
+    }
+}
