@@ -163,10 +163,20 @@
                             call
                         </span>+ 503 2288 - 2451
                     </a>
+                    <a class="d-flex align-items-center justify-content-center nav-link text-white" href="tel:+50376285412"> 
+                        <span class="material-symbols-outlined text-warning">
+                            call
+                        </span>+ 503 7628 - 5412
+                    </a>
                     <a class="d-flex align-items-center justify-content-center nav-link text-white" href="tel:+50254674528"> 
                         <span class="material-symbols-outlined text-warning">
                             call
                         </span>+ 502 5467 - 4528
+                    </a>
+                    <a class="d-flex align-items-center justify-content-center nav-link text-white" href="tel:+50247003189"> 
+                        <span class="material-symbols-outlined text-warning">
+                            call
+                        </span>+ 502 4700 - 3189
                     </a>
                     <h2 class="text-white fs-5 py-3 fw-bold">Horarios de oficinas administrativas</h2>
                     <div class="text-white text-center fs-5">
