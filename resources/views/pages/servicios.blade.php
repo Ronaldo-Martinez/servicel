@@ -9,6 +9,38 @@
     <div class="header-content">
         <img src="/logo2.webp" alt="Logo servicel">
     </div>
+    
+    <!-- Banner de Características -->
+    <div class="header-features-banner">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-center">
+                <!-- Soporte 24/7 -->
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start py-2 py-md-0 feature-border-end">
+                    <span class="material-symbols-outlined text-warning me-3 fs-1">schedule</span>
+                    <div class="text-start">
+                        <div class="feature-title text-white fw-bold">Soporte 24/7</div>
+                        <div class="feature-subtitle text-white-50 small">Atención y asistencia técnica</div>
+                    </div>
+                </div>
+                <!-- 32+ años de experiencia -->
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center py-2 py-md-0 feature-border-end">
+                    <span class="material-symbols-outlined text-warning me-3 fs-1">workspace_premium</span>
+                    <div class="text-start">
+                        <div class="feature-title text-white fw-bold">32+ años de experiencia</div>
+                        <div class="feature-subtitle text-white-50 small">Trayectoria y confianza</div>
+                    </div>
+                </div>
+                <!-- Calidad garantizada -->
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end py-2 py-md-0">
+                    <span class="material-symbols-outlined text-warning me-3 fs-1">verified_user</span>
+                    <div class="text-start">
+                        <div class="feature-title text-white fw-bold">Calidad garantizada</div>
+                        <div class="feature-subtitle text-white-50 small">Compromiso en cada proyecto</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
 <div id="Servicios">
     <div class="bg-secondary text-white text-center p-3 px-5">
