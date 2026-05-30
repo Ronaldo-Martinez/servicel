@@ -13,10 +13,10 @@ class AlquilerController extends Controller
     {
         $pais=Pai::where('nombre', 'El Salvador')->first();
         $titulo="Alquiler de maquinaria en ".$pais->nombre;
-        $tiposMaquinaria = TipoMaquina::whereHas('maquinas.pais', function ($query)  use ($pais) {
-            $query->where('pais_id', $pais->id);
+        $tiposMaquinaria = TipoMaquina::whereHas('maquinas', function ($query)  use ($pais) {
+            $query->where('pais_id', $pais->id)->where('status', true);
         })->get();
-        $maquinas=Maquina::where('pais_id', $pais->id)->paginate(6);
+        $maquinas=Maquina::where('pais_id', $pais->id)->where('status', true)->paginate(6);
         return view('pages.alquiler', compact('titulo', 'pais', 'tiposMaquinaria', 'maquinas'));
     }
 
@@ -24,9 +24,9 @@ class AlquilerController extends Controller
         $pais=Pai::where('nombre', 'El Salvador')->first();
         $tiposMaquinaria=TipoMaquina::find($id);  
         $titulo="Alquiler de ".$tiposMaquinaria->nombre." en ".$pais->nombre;
-        $maquinas=Maquina::where('pais_id', $pais->id)->where('tipo_maquina_id', $tiposMaquinaria->id)->paginate(6);
-        $tiposMaquinaria = TipoMaquina::whereHas('maquinas.pais', function ($query)  use ($pais) {
-            $query->where('pais_id', $pais->id);
+        $maquinas=Maquina::where('pais_id', $pais->id)->where('tipo_maquina_id', $tiposMaquinaria->id)->where('status', true)->paginate(6);
+        $tiposMaquinaria = TipoMaquina::whereHas('maquinas', function ($query)  use ($pais) {
+            $query->where('pais_id', $pais->id)->where('status', true);
         })->get();
         return view('pages.alquiler', compact('titulo', 'pais', 'tiposMaquinaria', 'maquinas'));
     }
@@ -35,10 +35,10 @@ class AlquilerController extends Controller
     {
         $pais=Pai::where('nombre', 'Guatemala')->first();
         $titulo="Alquiler de maquinaria en ".$pais->nombre;
-        $tiposMaquinaria = TipoMaquina::whereHas('maquinas.pais', function ($query)  use ($pais) {
-            $query->where('pais_id', $pais->id);
+        $tiposMaquinaria = TipoMaquina::whereHas('maquinas', function ($query)  use ($pais) {
+            $query->where('pais_id', $pais->id)->where('status', true);
         })->get();
-        $maquinas=Maquina::where('pais_id', $pais->id)->paginate(6);
+        $maquinas=Maquina::where('pais_id', $pais->id)->where('status', true)->paginate(6);
         return view('pages.alquiler', compact('titulo', 'pais', 'tiposMaquinaria', 'maquinas'));
     }
 
@@ -46,9 +46,9 @@ class AlquilerController extends Controller
         $pais=Pai::where('nombre', 'Guatemala')->first();
         $tiposMaquinaria=TipoMaquina::find($id);  
         $titulo="Alquiler de ".$tiposMaquinaria->nombre." en ".$pais->nombre;
-        $maquinas=Maquina::where('pais_id', $pais->id)->where('tipo_maquina_id', $tiposMaquinaria->id)->paginate(6);
-        $tiposMaquinaria = TipoMaquina::whereHas('maquinas.pais', function ($query)  use ($pais) {
-            $query->where('pais_id', $pais->id);
+        $maquinas=Maquina::where('pais_id', $pais->id)->where('tipo_maquina_id', $tiposMaquinaria->id)->where('status', true)->paginate(6);
+        $tiposMaquinaria = TipoMaquina::whereHas('maquinas', function ($query)  use ($pais) {
+            $query->where('pais_id', $pais->id)->where('status', true);
         })->get();
         return view('pages.alquiler', compact('titulo', 'pais', 'tiposMaquinaria', 'maquinas'));
     }

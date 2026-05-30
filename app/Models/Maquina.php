@@ -30,6 +30,11 @@ class Maquina extends Model
 		'tipo_maquina_id' => 'required',
 		'modelo' => 'required',
 		'marca' => 'required',
+		'status' => 'nullable|boolean',
+    ];
+
+    protected $casts = [
+        'status' => 'boolean',
     ];
 
     protected $perPage = 20;
@@ -39,7 +44,7 @@ class Maquina extends Model
      *
      * @var array
      */
-    protected $fillable = ['pais_id','tipo_maquina_id','modelo','marca'];
+    protected $fillable = ['pais_id','tipo_maquina_id','modelo','marca','status'];
 
 
     /**

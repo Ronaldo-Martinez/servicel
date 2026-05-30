@@ -26,6 +26,13 @@
             {{ Form::text('modelo', $maquina->modelo, ['class' => 'form-control' . ($errors->has('modelo') ? ' is-invalid' : ''), 'placeholder' => 'Modelo']) }}
             {!! $errors->first('modelo', '<div class="invalid-feedback">:message</div>') !!}
         </div>
+        <div class="form-group mt-3">
+            <div class="form-check form-switch">
+                {{ Form::checkbox('status', 1, $maquina->exists ? $maquina->status : true, ['class' => 'form-check-input', 'id' => 'statusSwitch']) }}
+                {{ Form::label('statusSwitch', 'Máquina Activa (Visible al público)', ['class' => 'form-check-label']) }}
+            </div>
+            {!! $errors->first('status', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
 
     </div>
     <div class="box-footer mt-3">

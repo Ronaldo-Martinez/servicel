@@ -49,7 +49,10 @@ class MaquinaController extends Controller
     {
         request()->validate(Maquina::$rules);
 
-        $maquina = Maquina::create($request->all());
+        $data = $request->all();
+        $data['status'] = $request->has('status');
+
+        $maquina = Maquina::create($data);
 
         return redirect()->route('maquinas.index')
             ->with('success', 'Maquina created successfully.');
@@ -93,7 +96,10 @@ class MaquinaController extends Controller
     {
         request()->validate(Maquina::$rules);
 
-        $maquina->update($request->all());
+        $data = $request->all();
+        $data['status'] = $request->has('status');
+
+        $maquina->update($data);
 
         return redirect()->route('maquinas.index')
             ->with('success', 'Maquina updated successfully');
@@ -110,5 +116,55 @@ class MaquinaController extends Controller
 
         return redirect()->route('maquinas.index')
             ->with('success', 'Maquina deleted successfully');
+    }
+
+    /**
+     * Toggle the status of the machine.
+     *
+     * @param  int $id
+     * @return \Illuminate\Http\Response
+     */
+    public function toggleStatus($id)
+    {
+        $maquina = Maquina::findOrFail($id);
+        $maquina->status = !$maquina->status;
+        $maquina->save();
+
+        return redirect()->back()
+            ->with('success', 'Estado de la máquina actualizado correctamente.');
+    }
+
+    /**
+     * Clone the specified resource.
+     *
+     * @param  int $id
+     * @return \Illuminate\Http\Response
+     */
+    public function clone($id)
+    {
+        $original = Maquina::findOrFail($id);
+        
+        // Replicamos la máquina
+        $clone = $original->replicate();
+        $clone->modelo = $clone->modelo . ' (Copia)';
+        $clone->status = false; // Desactivada por defecto
+        $clone->save();
+        
+        // Clonamos las características
+        foreach ($original->caracteristicas as $caracteristica) {
+            $cloneCaracteristica = $caracteristica->replicate();
+            $cloneCaracteristica->maquina_id = $clone->id;
+            $cloneCaracteristica->save();
+        }
+
+        // Clonamos las imágenes
+        foreach ($original->imagens as $imagen) {
+            $cloneImagen = $imagen->replicate();
+            $cloneImagen->maquina_id = $clone->id;
+            $cloneImagen->save();
+        }
+
+        return redirect()->route('maquinas.edit', $clone->id)
+            ->with('success', 'Máquina clonada con éxito. Puedes editar sus datos ahora.');
     }
 }

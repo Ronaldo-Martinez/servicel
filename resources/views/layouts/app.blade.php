@@ -29,10 +29,10 @@
 <body class="{{ request()->routeIs('login') ? 'bg-login-clean' : '' }}">
     <div id="app" class="vh-100">
         @if(!request()->routeIs('login'))
-        <nav class="navbar navbar-expand-md navbar-dark bg-secondary shadow-sm">
+        <nav class="navbar-premium-admin navbar navbar-expand-md navbar-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Servicel') }}<span>•</span>Admin
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -45,7 +45,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto align-items-center">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -56,7 +56,7 @@
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -64,7 +64,7 @@
                             <a class="nav-link-dash {{ request()->routeIs('pais.index') ? 'active-dash' : '' }}" href="{{ URL::to('pais') }}">Paises</a>
                             <a class="nav-link-dash {{ request()->routeIs('tipo-maquinas.index') ? 'active-dash' : '' }}" href="{{ URL::to('tipo-maquinas') }}">Tipo de Maquinas</a>
                             <a class="nav-link-dash {{ request()->routeIs('maquinas.index') ? 'active-dash' : '' }}" href="{{ URL::to('maquinas') }}">Maquinas</a>
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown ms-2">
                                 <a id="navbarDropdown" class="nav-link-dash dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>

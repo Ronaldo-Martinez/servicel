@@ -36,6 +36,10 @@
                             <strong>Marca:</strong>
                             {{ $maquina->marca }}
                         </div>
+                        <div class="form-group">
+                            <strong>Estado:</strong>
+                            {{ $maquina->status ? 'Activo' : 'Inactivo' }}
+                        </div>
 
                     </div>
                 </div>

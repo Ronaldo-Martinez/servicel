@@ -49,6 +49,8 @@ Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'inde
 Route::resource('/pais', App\Http\Controllers\PaiController::class)->middleware('auth');
 Route::resource('/tipo-maquinas', App\Http\Controllers\TipoMaquinaController::class)->middleware('auth');
 Route::resource('/maquinas', App\Http\Controllers\MaquinaController::class)->middleware('auth');
+Route::patch('/maquinas/{id}/toggle-status', [App\Http\Controllers\MaquinaController::class, 'toggleStatus'])->name('maquinas.toggle-status')->middleware('auth');
+Route::post('/maquinas/{id}/clone', [App\Http\Controllers\MaquinaController::class, 'clone'])->name('maquinas.clone')->middleware('auth');
 // ... otras rutas que desees mantener ...
 
 // Ruta de inicio de sesión

@@ -13381,4 +13381,544 @@ textarea.form-control-lg {
     }
 }
 
+/* Premium Admin Dashboard Cards */
+.admin-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.admin-maquina-card, .admin-general-card {
+    background: #ffffff;
+    border: 1px solid #eef1f6;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(37, 50, 102, 0.03);
+    padding: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.admin-maquina-card:hover, .admin-general-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(37, 50, 102, 0.08);
+    border-color: #FED116;
+}
+
+.admin-general-card .card-info {
+    margin-bottom: 1.5rem;
+}
+
+.admin-general-card .card-title {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #253266;
+    margin: 0;
+}
+
+.admin-general-card .card-description {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+
+.admin-maquina-card .card-badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.admin-maquina-card .badge-country {
+    background-color: rgba(37, 50, 102, 0.06);
+    color: #253266;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+}
+
+.admin-maquina-card .badge-type {
+    background-color: rgba(254, 209, 22, 0.1);
+    color: #8b6e00;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+}
+
+.admin-maquina-card .machine-info {
+    margin-bottom: 1.5rem;
+}
+
+.admin-maquina-card .machine-model {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #253266;
+    margin: 0;
+}
+
+.admin-maquina-card .machine-brand {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 0.2rem;
+}
+
+.admin-maquina-card .card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1rem;
+    margin-top: auto;
+}
+
+.admin-maquina-card .status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.admin-maquina-card .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.admin-maquina-card .status-dot.active {
+    background-color: #10b981;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+.admin-maquina-card .status-dot.inactive {
+    background-color: #ef4444;
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+}
+
+.admin-maquina-card .action-buttons {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.admin-maquina-card .btn-admin-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    color: #475569;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.admin-maquina-card .btn-admin-action:hover {
+    background: #253266;
+    color: #ffffff;
+    border-color: #253266;
+}
+
+.admin-maquina-card .btn-admin-delete {
+    background: #fef2f2;
+    color: #ef4444;
+    border-color: #fee2e2;
+}
+
+.admin-maquina-card .btn-admin-delete:hover {
+    background: #ef4444;
+    color: #ffffff;
+    border-color: #ef4444;
+}
+
+.admin-maquina-card .btn-admin-edit {
+    background: #f0fdf4;
+    color: #15803d;
+    border-color: #dcfce7;
+}
+
+.admin-maquina-card .btn-admin-edit:hover {
+    background: #15803d;
+    color: #ffffff;
+    border-color: #15803d;
+}
+
+.admin-maquina-card .btn-admin-show {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border-color: #dbeafe;
+}
+
+.admin-maquina-card .btn-admin-show:hover {
+    background: #1d4ed8;
+    color: #ffffff;
+    border-color: #1d4ed8;
+}
+
+/* Card y Contenedor Premium del Administrador */
+.card-premium-admin {
+    background: #ffffff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(37, 50, 102, 0.04);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 1px solid #f1f5f9;
+}
+
+.card-premium-admin .card-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f1f5f9;
+    padding: 1.5rem 2rem;
+}
+
+.card-premium-admin .card-title {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #253266;
+    margin: 0;
+    position: relative;
+    padding-bottom: 4px;
+    display: inline-block;
+}
+
+.card-premium-admin .card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background-color: #FED116;
+    border-radius: 2px;
+}
+
+.card-premium-admin .card-body {
+    padding: 2rem;
+}
+
+/* Tabla Premium del Administrador */
+.table-premium-admin-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+}
+
+.table-premium-admin {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+}
+
+.table-premium-admin thead th {
+    background-color: #f8fafc;
+    color: #475569;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1.1rem 1.5rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.table-premium-admin thead th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.table-premium-admin thead th:last-child {
+    border-top-right-radius: 12px;
+}
+
+.table-premium-admin tbody tr {
+    transition: all 0.25s ease;
+}
+
+.table-premium-admin tbody tr:hover {
+    background-color: rgba(37, 50, 102, 0.02) !important;
+}
+
+.table-premium-admin tbody tr:nth-of-type(even) {
+    background-color: #fcfdfe;
+}
+
+.table-premium-admin tbody td {
+    padding: 1.1rem 1.5rem;
+    vertical-align: middle;
+    color: #334155;
+    font-family: 'Lexend', sans-serif;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f1f5f9;
+    font-weight: 400;
+}
+
+.table-premium-admin tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-premium-admin tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.table-premium-admin tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+/* Badges y Elementos Especiales en Tabla */
+.table-premium-admin .badge-pill-custom {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.table-premium-admin .badge-pill-country {
+    background-color: rgba(37, 50, 102, 0.06);
+    color: #253266;
+}
+
+.table-premium-admin .badge-pill-type {
+    background-color: rgba(254, 209, 22, 0.12);
+    color: #8b6e00;
+}
+
+.table-premium-admin .badge-pill-active {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.table-premium-admin .badge-pill-inactive {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Botones de acción en tabla */
+.table-premium-admin .action-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.table-premium-admin .btn-action-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    color: #64748b;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    padding: 0;
+}
+
+.table-premium-admin .btn-action-circle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.table-premium-admin .btn-action-show:hover {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    border-color: #bfdbfe;
+}
+
+.table-premium-admin .btn-action-edit:hover {
+    background-color: #f0fdf4;
+    color: #16a34a;
+    border-color: #bbf7d0;
+}
+
+.table-premium-admin .btn-action-delete:hover {
+    background-color: #fef2f2;
+    color: #dc2626;
+    border-color: #fecaca;
+}
+
+/* Navbar Premium del Administrador */
+.navbar-premium-admin {
+    background-color: #253266 !important;
+    border-bottom: 3px solid #FED116;
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-premium-admin .navbar-brand {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: #ffffff !important;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.navbar-premium-admin .navbar-brand span {
+    color: #FED116;
+}
+
+.navbar-premium-admin .nav-link-dash {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8) !important;
+    padding: 0.6rem 1.1rem !important;
+    border-radius: 8px;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin: 0 0.2rem;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar-premium-admin .nav-link-dash:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+}
+
+.navbar-premium-admin .nav-link-dash.active-dash {
+    background-color: #FED116 !important;
+    color: #253266 !important;
+    box-shadow: 0 4px 12px rgba(254, 209, 22, 0.25);
+}
+
+.navbar-premium-admin .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+    padding: 0.4rem 0.6rem;
+}
+
+.navbar-premium-admin .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* Dropdown de Usuario en Navbar */
+.navbar-premium-admin .dropdown-menu {
+    border-radius: 12px;
+    border: 1px solid #eef1f6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.navbar-premium-admin .dropdown-item {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: #475569;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.navbar-premium-admin .dropdown-item:hover {
+    background-color: #f1f5f9;
+    color: #253266;
+}
+
+/* Botón Premium para Registrar/Crear Nuevo */
+.btn-premium-create {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #ffffff !important;
+    background-color: #253266;
+    border: 1.5px solid #253266;
+    padding: 0.55rem 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 10px rgba(37, 50, 102, 0.1);
+}
+
+.btn-premium-create:hover {
+    background-color: #FED116;
+    border-color: #FED116;
+    color: #253266 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(254, 209, 22, 0.3);
+}
+
+.btn-premium-create span.material-symbols-outlined {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Botones de alternancia de estado (Activo/Inactivo) en la tabla admin */
+.table-premium-admin .btn-action-status-active {
+    color: #16a34a;
+    border-color: #bbf7d0;
+    background-color: #f0fdf4;
+}
+
+.table-premium-admin .btn-action-status-active:hover {
+    background-color: #16a34a !important;
+    color: #ffffff !important;
+    border-color: #16a34a !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(22, 163, 74, 0.2);
+}
+
+.table-premium-admin .btn-action-status-inactive {
+    color: #94a3b8;
+    border-color: #cbd5e1;
+    background-color: #f8fafc;
+}
+
+.table-premium-admin .btn-action-status-inactive:hover {
+    background-color: #94a3b8 !important;
+    color: #ffffff !important;
+    border-color: #94a3b8 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(148, 163, 184, 0.2);
+}
+
+/* Botón de Clonar en la tabla admin */
+.table-premium-admin .btn-action-clone {
+    color: #8b5cf6;
+    border-color: #ddd6fe;
+    background-color: #f5f3ff;
+}
+
+.table-premium-admin .btn-action-clone:hover {
+    background-color: #8b5cf6 !important;
+    color: #ffffff !important;
+    border-color: #8b5cf6 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(139, 92, 246, 0.2);
+}
+
+
+
+
+
+
+
 
