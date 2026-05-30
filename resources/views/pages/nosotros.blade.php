@@ -46,68 +46,75 @@
             </div>
         </div>
     </header>
+    
     <!--Misión y Visión-->
     <div class="container-fluid bg-light py-5">
-        <div class="row align-items-stretch px-4">
-            <!-- Left Column: Title, Misión, and Visión stacked vertically -->
-            <div class="col-12 col-lg-7 pe-lg-4 d-flex flex-column justify-content-center mb-4 mb-lg-0">
-                <div class="mb-5">
-                    <span class="text-secondary text-uppercase fw-bold fs-6" style="letter-spacing: 2px;">CONÓCENOS</span>
-                    <h2 class="display-5 fw-bold text-secondary mt-1 mb-3">Misión y Visión de Servicel</h2>
-                    <div style="width: 70px; height: 5px; background-color: #FED116; border-radius: 10px;"></div>
-                </div>
-
-                <!-- Misión Card (Full width of the left column) -->
-                <div class="about-card mb-4">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="about-icon">
-                            <span class="material-symbols-outlined">target</span>
-                        </div>
-                        <h3>Nuestra Misión</h3>
+        <div class="container">
+            <div class="row align-items-stretch">
+                <!-- Left Column: Title, Misión, and Visión stacked vertically -->
+                <div class="col-12 col-lg-7 pe-lg-4 d-flex flex-column justify-content-center mb-4 mb-lg-0">
+                    <div class="mb-5">
+                        <span class="text-secondary text-uppercase fw-bold fs-6" style="letter-spacing: 2px;">CONÓCENOS</span>
+                        <h2 class="display-5 fw-bold text-secondary mt-1 mb-3">Misión y Visión de Servicel</h2>
+                        <div style="width: 70px; height: 5px; background-color: #FED116; border-radius: 10px;"></div>
                     </div>
-                    <p>
-                        En Servicel, nuestra misión es ser el referente indiscutible en el sector de
-                        alquiler de maquinaria pesada y servicios de terracería, ofreciendo soluciones
-                        integrales y personalizadas para proyectos de construcción, obras civiles y
-                        agroindustria. Con una dedicación inquebrantable hacia la excelencia y la
-                        satisfacción del cliente, nos comprometemos a brindar servicios de primera
-                        categoría, respaldados por nuestros {{ date('Y') - 1993 }} años de experiencia en el mercado.
-                    </p>
-                </div>
 
-                <!-- Visión Card (Full width of the left column) -->
-                <div class="about-card">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="about-icon">
-                            <span class="material-symbols-outlined">moving</span>
+                    <!-- Misión Card (Full width of the left column) -->
+                    <div class="about-card mb-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="about-icon">
+                                <span class="material-symbols-outlined">target</span>
+                            </div>
+                            <h3>Nuestra Misión</h3>
                         </div>
-                        <h3>Nuestra Visión</h3>
+                        <p>
+                            En Servicel, nuestra misión es ser el referente indiscutible en el sector de
+                            alquiler de maquinaria pesada y servicios de terracería, ofreciendo soluciones
+                            integrales y personalizadas para proyectos de construcción, obras civiles y
+                            agroindustria. Con una dedicación inquebrantable hacia la excelencia y la
+                            satisfacción del cliente, nos comprometemos a brindar servicios de primera
+                            categoría, respaldados por nuestros {{ date('Y') - 1993 }} años de experiencia en el mercado.
+                        </p>
                     </div>
-                    <p>
-                        Nuestra visión en Servicel es liderar el mercado de alquiler de maquinaria pesada
-                        y servicios de terracería, siendo reconocidos como el socio de confianza para la
-                        realización de proyectos de ingeniería civil en toda nuestra región. Buscamos
-                        expandir nuestra presencia y diversificar nuestros servicios para abarcar nuevos
-                        mercados y sectores, manteniendo siempre el más alto nivel de calidad y
-                        profesionalismo.
-                    </p>
-                </div>
-            </div>
 
-            <!-- Right Column: Video Showcase -->
-            <div class="col-12 col-lg-5 ps-lg-4 p-0">
-                <div class="h-100 rounded-4 overflow-hidden shadow-sm" style="min-height: 450px;">
-                    <video class="video-fluid w-100 h-100" style="object-fit: cover;" src="/video/excavadora.mp4" muted
-                        autoplay loop loading="lazy"></video>
+                    <!-- Visión Card (Full width of the left column) -->
+                    <div class="about-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="about-icon">
+                                <span class="material-symbols-outlined">moving</span>
+                            </div>
+                            <h3>Nuestra Visión</h3>
+                        </div>
+                        <p>
+                            Nuestra visión en Servicel es liderar el mercado de alquiler de maquinaria pesada
+                            y servicios de terracería, siendo reconocidos como el socio de confianza para la
+                            realización de proyectos de ingeniería civil en toda nuestra región. Buscamos
+                            expandir nuestra presencia y diversificar nuestros servicios para abarcar nuevos
+                            mercados y sectores, manteniendo siempre el más alto nivel de calidad y
+                            profesionalismo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Video Showcase -->
+                <div class="col-12 col-lg-5 ps-lg-4">
+                    <div class="h-100 rounded-4 overflow-hidden shadow-sm" style="min-height: 450px;">
+                        <video class="video-fluid w-100 h-100" style="object-fit: cover;" src="/video/excavadora.mp4" muted
+                            autoplay loop loading="lazy"></video>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <!--Nuestro equipo-->
-    <div class="bg-secondary text-white text-center p-3 px-5">
-        <h2 class="fw-bold">NUESTRO EQUIPO</h2>
+    <div class="bg-secondary text-white text-center p-4">
+        <div class="container">
+            <h2 class="fw-bold text-uppercase m-0" style="letter-spacing: 1px; font-family: 'Lexend', sans-serif;">Nuestro Equipo</h2>
+        </div>
     </div>
-    <div class="container-fluid p-5">
+    
+    <div class="container my-5">
         <div class="row">
             <div class="col-12 col-lg-6">
                 <div id="carouselElSalvadorCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -139,7 +146,7 @@
                     </button>
                 </div>
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 mt-4 mt-lg-0">
                 <div id="carouselGuatemalaCaptions" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">

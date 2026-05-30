@@ -45,11 +45,13 @@
     
     <!--Sección Ubicaciones-->
     <div>
-        <div class="bg-secondary text-white text-center p-3 px-5">
-            <h2 class="fw-bold">NUESTRAS UBICACIONES GEOGRÁFICAS</h2>
+        <div class="bg-secondary text-white text-center p-4">
+            <div class="container">
+                <h2 class="fw-bold text-uppercase m-0" style="letter-spacing: 1px; font-family: 'Lexend', sans-serif;">Nuestras Ubicaciones Geográficas</h2>
+            </div>
         </div>
-        <div class="container-fluid my-5">
-            <div class="row px-4">
+        <div class="container my-5">
+            <div class="row">
                 <div class="col-12 col-lg-6">
                     <h3 class="fw-bold text-warning bg-secondary fs-4 text-center">El Salvador</h3>
                     <div class="map-container">
@@ -66,7 +68,7 @@
                         </span>+ 503 2288 - 2451
                     </a>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 mt-5 mt-lg-0">
                     <h3 class="fw-bold text-warning bg-secondary fs-4 text-center">Guatemala</h3>
                     <div class="map-container">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1933.7350366547232!2d-90.73635650632048!3d14.225778619049937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8588fcdd5acf3b99%3A0x42843213332f485b!2sParque%20Industrial%20Tecnopark!5e0!3m2!1ses!2ssv!4v1691471069036!5m2!1ses!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
