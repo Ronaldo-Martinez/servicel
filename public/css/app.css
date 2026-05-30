@@ -12777,3 +12777,268 @@ textarea.form-control-lg {
     margin-top: 0.75rem;
     border-radius: 2px;
 }
+
+/* Premium Machinery Gallery Grid */
+.premium-gallery-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.premium-gallery-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    z-index: 2;
+    pointer-events: none;
+    transition: border-color 0.3s ease;
+}
+
+.premium-gallery-card:hover::before {
+    border-color: rgba(254, 209, 22, 0.5);
+}
+
+.premium-gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(37, 50, 102, 0.18);
+}
+
+.premium-gallery-card .card-img {
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.premium-gallery-card:hover .card-img {
+    transform: scale(1.08);
+}
+
+.premium-gallery-card .gallery-badge {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    background: rgba(37, 50, 102, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.35rem 0.75rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 3;
+    pointer-events: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.premium-gallery-card .gallery-badge span.material-symbols-outlined {
+    font-size: 0.95rem;
+    color: #FED116;
+}
+
+.premium-gallery-card .gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(37, 50, 102, 0.9) 0%, rgba(37, 50, 102, 0.3) 50%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    transition: background 0.4s ease;
+}
+
+.premium-gallery-card:hover .gallery-overlay {
+    background: linear-gradient(to top, rgba(37, 50, 102, 0.95) 0%, rgba(37, 50, 102, 0.5) 60%, rgba(37, 50, 102, 0.1) 100%);
+}
+
+.premium-gallery-card .gallery-category {
+    font-family: 'Lexend', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.premium-gallery-card .gallery-category span.material-symbols-outlined {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.premium-gallery-card:hover .gallery-category span.material-symbols-outlined {
+    transform: translateX(5px);
+    color: #ffffff !important;
+}
+
+.premium-gallery-card .gallery-action-text {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #FED116;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 0.4rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    align-items: center;
+}
+
+.premium-gallery-card:hover .gallery-action-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.premium-gallery-card .gallery-action-text span {
+    font-size: 1.1rem;
+    margin-left: 0.25rem;
+}
+
+/* Gallery Heights for Perfect Alignments */
+.gallery-card-lg {
+    height: 520px;
+}
+
+.gallery-card-sm {
+    height: 247px;
+}
+
+@media (max-height: 800px) {
+    .gallery-card-lg {
+        height: 460px;
+    }
+    .gallery-card-sm {
+        height: 217px;
+    }
+}
+
+@media (max-width: 991px) {
+    .gallery-card-lg {
+        height: 350px;
+    }
+    .gallery-card-sm {
+        height: 250px;
+    }
+}
+
+/* Premium Country Selector Modal */
+.country-select-modal .modal-content {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(37, 50, 102, 0.25);
+}
+
+.country-select-modal .modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.5rem 2rem;
+}
+
+.country-select-modal .modal-title {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.country-select-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+    border: 2px solid #eef1f6;
+    border-radius: 16px;
+    background: #ffffff;
+    text-decoration: none;
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+}
+
+.country-select-card:hover {
+    transform: translateY(-5px);
+    border-color: #FED116;
+    box-shadow: 0 12px 30px rgba(37, 50, 102, 0.12);
+}
+
+.country-flag-wrapper {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border: 3px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.country-select-card:hover .country-flag-wrapper {
+    transform: scale(1.08);
+    box-shadow: 0 10px 24px rgba(37, 50, 102, 0.15);
+}
+
+.country-flag-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.country-name {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: #253266;
+    margin: 1.25rem 0 0.5rem 0;
+    text-align: center;
+}
+
+.country-action-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #253266;
+    background: #FED116;
+    padding: 0.4rem 0.9rem;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.country-select-card:hover .country-action-badge {
+    background: #253266;
+    color: #ffffff;
+}
+
+.country-action-badge span.material-symbols-outlined {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.country-select-card:hover .country-action-badge span.material-symbols-outlined {
+    transform: translateX(3px);
+}
