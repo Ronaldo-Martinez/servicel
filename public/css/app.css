@@ -12513,3 +12513,267 @@ textarea.form-control-lg {
     padding: 1.5rem 0;
     background-color: #1a244d; /* Darker Brand Blue */
 }
+
+/* ==========================================================================
+   NUESTROS SERVICIOS - NEW PREMIUM DESIGN STYLES V4 (COMPACT DESIGN WITH CAROUSELS)
+   ========================================================================== */
+
+/* Main Header Section Overwrite */
+#Servicios .bg-secondary.text-center {
+    background: linear-gradient(135deg, #253266 0%, #172147 100%) !important;
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 2rem !important;
+    border-bottom: 5px solid #FED116;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+#Servicios .bg-secondary.text-center h1 {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    font-size: 2.75rem;
+    letter-spacing: 2px;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    margin: 0;
+}
+
+/* Premium Title Figures Styling */
+.figura.sombra-titulo {
+    background: linear-gradient(135deg, #253266 0%, #1c2754 100%) !important;
+    box-shadow: 0 8px 25px rgba(37, 50, 102, 0.15);
+    border-bottom: 5px solid #FED116;
+}
+
+.figura-ii.sombra-titulo {
+    background: linear-gradient(135deg, #ffffff 0%, #f4f6fc 100%) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #FED116;
+}
+
+.figura h2, .figura-ii h2 {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Premium Carousel Container Wrapper */
+.premium-carousel-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(37, 50, 102, 0.15);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    margin-top: 1rem;
+}
+
+.premium-carousel-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(37, 50, 102, 0.25);
+}
+
+.premium-carousel-container.select-figura-carousel {
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    margin-top: 1rem;
+}
+
+/* Clean, Premium Original List Items (No card backgrounds, vertically balanced) */
+.original-list-item {
+    display: flex;
+    align-items: center;
+    padding: 1.15rem 0.5rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(37, 50, 102, 0.08);
+    transition: all 0.25s ease;
+    text-decoration: none !important;
+}
+
+.original-list-item .material-symbols-outlined {
+    color: #FED116 !important;
+    font-size: 1.7rem;
+    margin-right: 0.85rem;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+.original-list-item .list-text {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #253266;
+    line-height: 1.4;
+    transition: color 0.25s ease;
+}
+
+.original-list-item:hover {
+    background-color: rgba(37, 50, 102, 0.02);
+    border-bottom-color: rgba(37, 50, 102, 0.2);
+}
+
+.original-list-item:hover .material-symbols-outlined {
+    transform: scale(1.2);
+}
+
+/* Dark Mode List Items (Agroindustria) */
+.original-list-item-dark {
+    display: flex;
+    align-items: center;
+    padding: 1.15rem 0.5rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.25s ease;
+    text-decoration: none !important;
+}
+
+.original-list-item-dark .material-symbols-outlined {
+    color: #FED116 !important;
+    font-size: 1.7rem;
+    margin-right: 0.85rem;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+.original-list-item-dark .list-text {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.4;
+    transition: color 0.25s ease;
+}
+
+.original-list-item-dark:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.original-list-item-dark:hover .material-symbols-outlined {
+    transform: scale(1.2);
+}
+
+/* Featured Agroindustria Item */
+.original-highlight-item-dark {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.35rem 0.75rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.original-highlight-item-dark .material-symbols-outlined {
+    color: #FED116 !important;
+    font-size: 1.9rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+.original-highlight-item-dark .list-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.45;
+}
+
+.original-highlight-item-dark:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.original-highlight-item-dark:hover .material-symbols-outlined {
+    transform: scale(1.15);
+}
+
+/* Premium Location Button */
+.premium-location-btn {
+    background-color: #253266;
+    color: #ffffff;
+    border: 2px solid #253266;
+    font-weight: 700;
+    padding: 0.8rem 1.75rem;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(37, 50, 102, 0.2);
+}
+
+.premium-location-btn span {
+    margin-right: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.premium-location-btn:hover {
+    background-color: #FED116;
+    color: #253266;
+    border-color: #FED116;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(254, 209, 22, 0.4);
+}
+
+/* Modern Subsection Title Containers */
+.subsection-title-container {
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.subsection-title-container .subtitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #253266;
+    opacity: 0.75;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.subsection-title-container h2 {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    color: #253266;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.subsection-title-container .accent-bar {
+    width: 60px;
+    height: 4px;
+    background-color: #FED116;
+    margin-top: 0.75rem;
+    border-radius: 2px;
+}
+
+.subsection-title-container-dark {
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.subsection-title-container-dark .subtitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #FED116;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.subsection-title-container-dark h2 {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.subsection-title-container-dark .accent-bar {
+    width: 60px;
+    height: 4px;
+    background-color: #FED116;
+    margin-top: 0.75rem;
+    border-radius: 2px;
+}
