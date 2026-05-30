@@ -13156,3 +13156,229 @@ textarea.form-control-lg {
     object-fit: cover;
 }
 
+/* Clean background for Login page */
+.bg-login-clean {
+    background-color: #f8fafc;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(37, 50, 102, 0.03) 0px, transparent 50%),
+        radial-gradient(at 50% 0%, rgba(254, 209, 22, 0.03) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(37, 50, 102, 0.03) 0px, transparent 50%);
+}
+
+/* Premium Login Page Redesign */
+.premium-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+/* Button to go back to Home */
+.btn-back-home {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #253266;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    border: 1px solid #eef1f6;
+    box-shadow: 0 4px 12px rgba(37, 50, 102, 0.04);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 10;
+}
+
+.btn-back-home:hover {
+    background: #253266;
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(37, 50, 102, 0.12);
+    transform: translateX(-4px);
+}
+
+.btn-back-home span {
+    font-size: 1.2rem;
+}
+
+.premium-login-card {
+    background: #ffffff;
+    border: 1px solid #eef1f6;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(37, 50, 102, 0.08);
+    overflow: hidden;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    z-index: 5;
+}
+
+.premium-login-card .video-pane {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    background: #253266;
+}
+
+.premium-login-card .video-pane video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+.premium-login-card .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(37, 50, 102, 0.75);
+    z-index: 1;
+}
+
+.premium-login-card .video-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.premium-login-card .video-content img {
+    max-width: 200px;
+    height: auto;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+    animation: pulseLogo 3s ease-in-out infinite;
+}
+
+@keyframes pulseLogo {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+}
+
+.premium-login-card .form-pane {
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.premium-login-card .form-header {
+    margin-bottom: 2rem;
+}
+
+.premium-login-card .form-title {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    font-size: 1.75rem;
+    color: #253266;
+    margin-bottom: 0.5rem;
+}
+
+.premium-login-card .form-subtitle {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.premium-login-card .form-accent-bar {
+    width: 50px;
+    height: 4px;
+    background-color: #FED116;
+    border-radius: 2px;
+    margin-top: 0.75rem;
+}
+
+.premium-login-card .form-label {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #253266;
+    margin-bottom: 0.5rem;
+}
+
+.premium-login-card .form-control {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    color: #1e293b;
+    transition: all 0.3s ease;
+}
+
+.premium-login-card .form-control:focus {
+    border-color: #253266;
+    box-shadow: 0 0 0 3px rgba(37, 50, 102, 0.1);
+    outline: none;
+}
+
+.premium-login-card .form-check-input {
+    border-color: #cbd5e1;
+    cursor: pointer;
+}
+
+.premium-login-card .form-check-input:checked {
+    background-color: #253266;
+    border-color: #253266;
+}
+
+.premium-login-card .form-check-label {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #64748b;
+    cursor: pointer;
+}
+
+.premium-login-card .btn-login-submit {
+    width: 100%;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: #253266;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 12px rgba(37, 50, 102, 0.15);
+}
+
+.premium-login-card .btn-login-submit:hover {
+    background-color: #FED116;
+    color: #253266;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(254, 209, 22, 0.35);
+}
+
+/* Responsive adjustment for login */
+@media (max-width: 991.98px) {
+    .premium-login-card .form-pane {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+
