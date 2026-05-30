@@ -112,7 +112,25 @@ class MaquinaController extends Controller
      */
     public function destroy($id)
     {
-        $maquina = Maquina::find($id)->delete();
+        $maquina = Maquina::findOrFail($id);
+
+        // Eliminar las imágenes asociadas (incluyendo archivos físicos si no están compartidos)
+        foreach ($maquina->imagens as $imagen) {
+            $isShared = \App\Models\Imagen::where('url', $imagen->url)
+                ->where('id', '!=', $imagen->id)
+                ->exists();
+
+            if (!$isShared && $imagen->url && \Illuminate\Support\Facades\Storage::disk('public')->exists($imagen->url)) {
+                \Illuminate\Support\Facades\Storage::disk('public')->delete($imagen->url);
+            }
+            $imagen->delete();
+        }
+
+        // Eliminar las características asociadas
+        $maquina->caracteristicas()->delete();
+
+        // Eliminar la máquina
+        $maquina->delete();
 
         return redirect()->route('maquinas.index')
             ->with('success', 'Maquina deleted successfully');
@@ -161,6 +179,15 @@ class MaquinaController extends Controller
         foreach ($original->imagens as $imagen) {
             $cloneImagen = $imagen->replicate();
             $cloneImagen->maquina_id = $clone->id;
+
+            // Duplicar el archivo físico de la imagen si existe
+            if ($imagen->url && \Illuminate\Support\Facades\Storage::disk('public')->exists($imagen->url)) {
+                $ext = pathinfo($imagen->url, PATHINFO_EXTENSION);
+                $newPath = 'imagenes/' . uniqid() . '.' . $ext;
+                \Illuminate\Support\Facades\Storage::disk('public')->copy($imagen->url, $newPath);
+                $cloneImagen->url = $newPath;
+            }
+
             $cloneImagen->save();
         }
 
