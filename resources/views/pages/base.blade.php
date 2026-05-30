@@ -134,81 +134,108 @@
             </div>
         </main>
 
-        <footer class="bg-secondary">
-            <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 col-lg-4 justify-content-center align-items-center d-flex">
-                    <div class=" my-4">
-                        <ul class="pe-3">
-                        <h2 class="nav-link justify-content-center text-white fs-5 py-3 text-center">Enlaces</h2>
-                        <a class="nav-link justify-content-center {{ request()->routeIs('inicio') ? 'active-footer' : 'text-white' }}" aria-current="page" href="{{ route('inicio') }}">INICIO</a>
-                        <a class="nav-link justify-content-center {{ request()->routeIs('nosotros') ? 'active-footer' : 'text-white' }}" href="{{ route('nosotros') }}">NOSOTROS</a>
-                        <a class="nav-link {{ request()->routeIs('servicios') ? 'active-footer' : 'text-white' }}" href="{{ route('servicios') }}">SERVICIOS</a>
-                        <div class="nav-link d-flex align-items-center dropdown">
-                            <div class="text-white dropdown-toggle d-flex align-items-center h-100"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              ALQUILER
+        <footer class="site-footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row g-4 text-start">
+                        <!-- Column 1: Brand & Social -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="mb-4">
+                                <img class="footer-logo mb-3" src="/logo2.webp" alt="Logo servicel">
+                                <p class="small text-white mt-3" style="line-height: 1.6; text-align: justify;">
+                                    Líderes en alquiler de maquinaria pesada y servicios de terracería con más de 30 años de experiencia construyendo el futuro de la región.
+                                </p>
                             </div>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="{{ route('alquiler-sv') }}">EL SALVADOR</a></li>
-                              <li><a class="dropdown-item" href="{{ route('alquiler-gt') }}">GUATEMALA</a></li>
+                            <div class="mt-4">
+                                <div class="d-flex gap-2">
+                                    @include('pages.redes')
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 2: Navigation Links -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <h3 class="footer-title">Enlaces</h3>
+                            <ul class="footer-links">
+                                <li>
+                                    <a class="{{ request()->routeIs('inicio') ? 'active-footer' : '' }}" href="{{ route('inicio') }}">Inicio</a>
+                                </li>
+                                <li>
+                                    <a class="{{ request()->routeIs('nosotros') ? 'active-footer' : '' }}" href="{{ route('nosotros') }}">Nosotros</a>
+                                </li>
+                                <li>
+                                    <a class="{{ request()->routeIs('servicios') ? 'active-footer' : '' }}" href="{{ route('servicios') }}">Servicios</a>
+                                </li>
+                                <li>
+                                    <a class="{{ request()->routeIs('alquiler-sv') ? 'active-footer' : '' }}" href="{{ route('alquiler-sv') }}">Alquiler El Salvador</a>
+                                </li>
+                                <li>
+                                    <a class="{{ request()->routeIs('alquiler-gt') ? 'active-footer' : '' }}" href="{{ route('alquiler-gt') }}">Alquiler Guatemala</a>
+                                </li>
+                                <li>
+                                    <a class="{{ request()->routeIs('contacto') ? 'active-footer' : '' }}" href="{{ route('contacto') }}">Contacto</a>
+                                </li>
                             </ul>
                         </div>
-                        <a class="nav-link justify-content-center {{ request()->routeIs('contacto') ? 'active-footer' : 'text-white' }}" href="{{ route('contacto') }}">CONTACTO</a>
-                        </ul>         
-                    </div>
-                </div>
-                <!--Información de contacto-->
-                <div class="col-12 col-lg-4 my-4 border-start border-end border-warning  text-white text-center">
-                    <div class="border-top border-warning d-block d-sm-none">
-                    </div>
-                    <h2 class="nav-link justify-content-center  text-white fs-5 py-3">Contáctanos</h2>
-                    <a class="d-flex align-items-center justify-content-center nav-link text-white" href="tel:+50322882451"> 
-                        <span class="material-symbols-outlined text-warning">
-                            call
-                        </span>+ 503 2288 - 2451
-                    </a>
-                    <a class="d-flex align-items-center justify-content-center nav-link text-white" href="tel:+50376285412"> 
-                        <span class="material-symbols-outlined text-warning">
-                            call
-                        </span>+ 503 7628 - 5412
-                    </a>
-                    <a class="d-flex align-items-center justify-content-center nav-link text-white" href="tel:+50254674528"> 
-                        <span class="material-symbols-outlined text-warning">
-                            call
-                        </span>+ 502 5467 - 4528
-                    </a>
-                    <a class="d-flex align-items-center justify-content-center nav-link text-white" href="tel:+50247003189"> 
-                        <span class="material-symbols-outlined text-warning">
-                            call
-                        </span>+ 502 4700 - 3189
-                    </a>
-                    <h2 class="text-white fs-5 py-3 fw-bold">Horarios de oficinas administrativas</h2>
-                    <div class="text-white text-center fs-5">
-                        <p class="m-0">Lunes a Viernes</p>
-                        <p>7:30 A.M. a 4:30 P.M.</p>
-                        <p class="m-0">Sábados</p>
-                        <p>7:30 A.M. a 12:00 M</p>
-                        <p class="fs-5 fw-bold">Brindamos soporte técnico telefónico las 24 horas</p>
-                    </div>
-                    <div class="border-bottom border-warning d-block d-sm-none">
-                    </div>
-                </div>
-                <!--Redes Sociales-->
-                <div class="col-12 col-lg-4 align-items-center justify-content-center d-flex">
-                    <div class="my-4">
-                        <h2 class="nav-link  text-white fs-5 py-3 text-center">Síguenos en nuestras redes sociales</h2>
-                        <div class="d-flex justify-content-center">
-                            @include('pages.redes')
+
+                        <!-- Column 3: Contact Info -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <h3 class="footer-title">Contáctanos</h3>
+                            
+                            <div class="mb-4">
+                                <span class="d-block text-white-50 small fw-bold mb-2" style="letter-spacing: 1px;">EL SALVADOR</span>
+                                <a class="contact-item" href="tel:+50322882451">
+                                    <span class="material-symbols-outlined contact-icon">call</span>
+                                    + 503 2288 - 2451
+                                </a>
+                                <a class="contact-item" href="tel:+50376285412">
+                                    <span class="material-symbols-outlined contact-icon">call</span>
+                                    + 503 7628 - 5412
+                                </a>
+                            </div>
+
+                            <div>
+                                <span class="d-block text-white-50 small fw-bold mb-2" style="letter-spacing: 1px;">GUATEMALA</span>
+                                <a class="contact-item" href="tel:+50254674528">
+                                    <span class="material-symbols-outlined contact-icon">call</span>
+                                    + 502 5467 - 4528
+                                </a>
+                                <a class="contact-item" href="tel:+50247003189">
+                                    <span class="material-symbols-outlined contact-icon">call</span>
+                                    + 502 4700 - 3189
+                                </a>
+                            </div>
                         </div>
-                        <div class="align-items-center justify-content-center d-flex pt-2">
-                            <img class="img-logo d-flex justify-content-end" src="/logo2.webp" alt="Logo servicel">
+
+                        <!-- Column 4: Schedules -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <h3 class="footer-title">Horarios</h3>
+                            <div class="schedule-card mb-3">
+                                <div class="mb-3">
+                                    <span class="d-block text-white fw-bold small">Lunes a Viernes</span>
+                                    <span class="small text-white-50">7:30 A.M. a 4:30 P.M.</span>
+                                </div>
+                                <div class="mb-0">
+                                    <span class="d-block text-white fw-bold small">Sábados</span>
+                                    <span class="small text-white-50">7:30 A.M. a 12:00 M.</span>
+                                </div>
+                            </div>
+                            
+                            <div class="support-badge w-100 justify-content-center">
+                                <span class="material-symbols-outlined me-2 fs-5">support_agent</span>
+                                Soporte telefónico 24/7
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 text-center text-white">
-                    <p class="fs-4 m-2">© {{ date('Y') }} Todos los derechos reservados | SERVICEL S.A de C.V. </p>
                 </div>
             </div>
+            
+            <div class="footer-bottom">
+                <div class="container text-center">
+                    <p class="mb-0 small text-white-50">
+                        &copy; {{ date('Y') }} Todos los derechos reservados | <strong>SERVICEL S.A. de C.V.</strong>
+                    </p>
+                </div>
             </div>
         </footer>
     </div>
