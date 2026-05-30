@@ -51,27 +51,74 @@
         <div class="container my-5">
             <div class="row">
                 <div class="col-12 col-lg-3">
-                    <ul class="list-group mt-3">
-                        @if ($pais->codigo_pais == '503')
-                            <a class="btn btn-outline-secondary bg-secondary text-white rounded-0" href="{{ route('alquiler-sv') }}">Categoria</a>
-                        @else
-                            <a class="btn btn-outline-secondary bg-secondary text-white rounded-0" href="{{ route('alquiler-gt') }}">Categoria</a>
-                        @endif
-                        @foreach($tiposMaquinaria as $tipo)
+                    <div class="category-sidebar-card mt-3">
+                        <div class="category-sidebar-header">
+                            <h3 class="category-sidebar-title">Categorías</h3>
+                            <div class="accent-bar"></div>
+                        </div>
+                        <div class="category-sidebar-menu">
                             @if ($pais->codigo_pais == '503')
-                                <a class="btn btn-outline-secondary rounded-0 {{ request()->routeIs('alquiler-sv-categoria') && request()->route()->parameter('id') == $tipo->id ? 'bg-warning text-secondary' : '' }}" href="{{ route('alquiler-sv-categoria', ['id' => $tipo->id]) }}/#maquinas">{{$tipo->nombre}}</a>
+                                <a class="category-sidebar-link {{ request()->routeIs('alquiler-sv') ? 'active-category' : '' }}" href="{{ route('alquiler-sv') }}">
+                                    <span class="d-flex align-items-center gap-2">
+                                        <span class="material-symbols-outlined">grid_view</span>
+                                        Todas las categorías
+                                    </span>
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </a>
                             @else
-                                <a class="btn btn-outline-secondary rounded-0 {{ request()->routeIs('alquiler-gt-categoria') && request()->route()->parameter('id') == $tipo->id ? 'bg-warning text-secondary' : '' }}" href="{{ route('alquiler-gt-categoria', ['id' => $tipo->id]) }}/#maquinas">{{$tipo->nombre}}</a>
+                                <a class="category-sidebar-link {{ request()->routeIs('alquiler-gt') ? 'active-category' : '' }}" href="{{ route('alquiler-gt') }}">
+                                    <span class="d-flex align-items-center gap-2">
+                                        <span class="material-symbols-outlined">grid_view</span>
+                                        Todas las categorías
+                                    </span>
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </a>
                             @endif
-                        @endforeach
-                    </ul>
+                            @foreach($tiposMaquinaria as $tipo)
+                                @php
+                                    $isActive = (request()->routeIs('alquiler-sv-categoria') || request()->routeIs('alquiler-gt-categoria')) && request()->route('id') == $tipo->id;
+                                    
+                                    $iconName = 'construction';
+                                    $nombreLower = strtolower($tipo->nombre);
+                                    if (strpos($nombreLower, 'excavadora') !== false) {
+                                        $iconName = 'construction';
+                                    } elseif (strpos($nombreLower, 'motoniveladora') !== false) {
+                                        $iconName = 'precision_manufacturing';
+                                    } elseif (strpos($nombreLower, 'tractor') !== false) {
+                                        $iconName = 'agriculture';
+                                    } elseif (strpos($nombreLower, 'retroexcavadora') !== false) {
+                                        $iconName = 'engineering';
+                                    } elseif (strpos($nombreLower, 'compactadora') !== false || strpos($nombreLower, 'rodillo') !== false) {
+                                        $iconName = 'settings_input_hdmi';
+                                    }
+                                @endphp
+                                @if ($pais->codigo_pais == '503')
+                                    <a class="category-sidebar-link {{ $isActive ? 'active-category' : '' }}" href="{{ route('alquiler-sv-categoria', ['id' => $tipo->id]) }}/#maquinas">
+                                        <span class="d-flex align-items-center gap-2">
+                                            <span class="material-symbols-outlined">{{ $iconName }}</span>
+                                            {{$tipo->nombre}}
+                                        </span>
+                                        <span class="material-symbols-outlined">chevron_right</span>
+                                    </a>
+                                @else
+                                    <a class="category-sidebar-link {{ $isActive ? 'active-category' : '' }}" href="{{ route('alquiler-gt-categoria', ['id' => $tipo->id]) }}/#maquinas">
+                                        <span class="d-flex align-items-center gap-2">
+                                            <span class="material-symbols-outlined">{{ $iconName }}</span>
+                                            {{$tipo->nombre}}
+                                        </span>
+                                        <span class="material-symbols-outlined">chevron_right</span>
+                                    </a>
+                                @endif
+                            @endforeach
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-lg-9">
                     <div class="row">
                     @foreach($maquinas as $maquina)
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="card card-effect mt-3">
-                                <div class="card m-0 p-0">
+                        <div class="col-12 col-md-6 col-lg-4 mt-4">
+                            <div class="card premium-product-card-original">
+                                <div class="card m-0 p-0 border-0">
                                     <img src="/storage/{{ $maquina->imagens->first()->url }}" class="card-img-top img-card" alt="...">
                                     <div class="card-img-overlay">
                                         @if ($maquina->pais->codigo_pais == '503')
@@ -84,20 +131,25 @@
                                 <div class="card-body bg-white">
                                     <h5 class="card-title fw-bold">{{ $maquina->marca }} {{$maquina->modelo}}</h5>
                                     <p class="card-text">{{$maquina->tipoMaquina->nombre}}</p>
+                                    
+                                    <!-- Botón WhatsApp Escritorio -->
                                     <a 
-                                        class="d-none d-sm-block d-sm-none d-md-block d-flex align-items-center justify-content-center fw-bold btn btn-outline-secondary" 
+                                        class="d-none d-lg-flex align-items-center justify-content-center fw-bold btn btn-outline-secondary" 
                                         href="https://web.whatsapp.com/send?phone={{$maquina->pais->codigo_pais}}{{$maquina->pais->numero_telefono}}&text=+Hola+quiero+mas+informaci%C3%B3n+con+respecto+a%3A%0D%0A%0D%0A+-+La+Maquina+*{{ $maquina->marca }}*+{{$maquina->modelo}}+%0A%0D%0A%2ALa+siguiente+URL%3A%2A+http%3A%2F%2F+"
                                         target="_blank"
                                         > 
                                         <img class="icon-cotizar" src="/img/whatsapp1.webp" alt="whatsapp Icon" target="_blank">Consultar
                                     </a>
+                                    
+                                    <!-- Botón WhatsApp Móvil -->
                                     <a 
-                                        class="d-lg-none d-xl-block d-xl-none d-xxl-block d-flex align-items-center justify-content-center fw-bold btn btn-outline-secondary" 
+                                        class="d-flex d-lg-none align-items-center justify-content-center fw-bold btn btn-outline-secondary" 
                                         href="https://api.whatsapp.com/send?phone={{$maquina->pais->codigo_pais}}{{$maquina->pais->numero_telefono}}&text=+Hola+quiero+mas+informaci%C3%B3n+con+respecto+a%3A%0D%0A%0D%0A+-+La+Maquina+*{{ $maquina->marca }}*+{{$maquina->modelo}}+%0A%0D%0A%2ALa+siguiente+URL%3A%2A+http%3A%2F%2F+"
                                         target="_blank"
                                         > 
                                         <img class="icon-cotizar" src="/img/whatsapp1.webp" alt="whatsapp Icon" target="_blank">Consultar
                                     </a>
+                                    
                                     <a href="{{ route('maquina', ['id' => $maquina->id]) }}" class="d-flex justify-content-center btn btn-warning mt-3">Ver Mas</a>
                                 </div>
                             </div>

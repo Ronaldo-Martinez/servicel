@@ -13042,3 +13042,117 @@ textarea.form-control-lg {
 .country-select-card:hover .country-action-badge span.material-symbols-outlined {
     transform: translateX(3px);
 }
+
+/* Premium Sidebar Category Selector */
+.category-sidebar-card {
+    background: #ffffff;
+    border: 1px solid #eef1f6;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(37, 50, 102, 0.04);
+}
+
+.category-sidebar-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.category-sidebar-title {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #253266;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.category-sidebar-header .accent-bar {
+    width: 40px;
+    height: 3px;
+    background-color: #FED116;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+}
+
+.category-sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.category-sidebar-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #253266;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid transparent;
+}
+
+.category-sidebar-link:hover {
+    background-color: rgba(37, 50, 102, 0.05);
+    color: #253266;
+    padding-left: 1.25rem;
+}
+
+.category-sidebar-link span.material-symbols-outlined {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+    opacity: 0.6;
+}
+
+.category-sidebar-link:hover span.material-symbols-outlined {
+    transform: translateX(3px);
+    opacity: 1;
+}
+
+/* Active Category Style */
+.category-sidebar-link.active-category {
+    background-color: #253266;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(37, 50, 102, 0.2);
+}
+
+.category-sidebar-link.active-category span.material-symbols-outlined {
+    color: #FED116;
+    opacity: 1;
+}
+
+.category-sidebar-link.active-category span.material-symbols-outlined:last-child {
+    transform: rotate(90deg);
+}
+
+/* Premium Product Card (Original layout with Sidebar shape) */
+.premium-product-card-original {
+    background: #ffffff;
+    border: 1px solid #eef1f6 !important;
+    border-radius: 16px !important;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 20px rgba(37, 50, 102, 0.04) !important;
+    height: 100%;
+}
+
+.premium-product-card-original:hover {
+    transform: translateY(-5px);
+    border-color: #FED116 !important;
+    box-shadow: 0 12px 30px rgba(37, 50, 102, 0.08) !important;
+}
+
+.premium-product-card-original .img-card {
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    object-fit: cover;
+}
+
