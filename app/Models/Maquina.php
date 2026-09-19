@@ -60,7 +60,7 @@ class Maquina extends Model
      */
     public function imagens()
     {
-        return $this->hasMany('App\Models\Imagen', 'maquina_id', 'id');
+        return $this->hasMany('App\Models\Imagen', 'maquina_id', 'id')->orderBy('orden', 'asc')->orderBy('id', 'asc');
     }
     
     /**

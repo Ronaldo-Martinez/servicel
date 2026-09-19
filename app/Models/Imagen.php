@@ -36,7 +36,7 @@ class Imagen extends Model
      *
      * @var array
      */
-    protected $fillable = ['url','nombre','descripcion','maquina_id'];
+    protected $fillable = ['url','nombre','descripcion','maquina_id','orden'];
 
 
     /**

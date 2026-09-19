@@ -36,7 +36,7 @@
 </head>
 
 <body class="{{ request()->routeIs('login') ? 'bg-login-clean' : '' }}">
-    <div id="app" class="vh-100">
+    <div id="app" class="min-vh-100 d-flex flex-column">
         @if(!request()->routeIs('login'))
             <nav class="navbar-premium-admin navbar navbar-expand-md navbar-dark shadow-sm">
                 <div class="container">
@@ -104,7 +104,7 @@
             </nav>
         @endif
 
-        <main class="{{ request()->routeIs('login') ? 'p-0' : 'py-4' }}">
+        <main class="{{ request()->routeIs('login') ? 'p-0' : 'py-4 flex-grow-1' }}">
             @yield('content')
         </main>
     </div>

@@ -45,7 +45,7 @@ Route::get('/contacto', function(){
 //Autenticación 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 Route::resource('/pais', App\Http\Controllers\PaiController::class)->middleware('auth');
 Route::resource('/tipo-maquinas', App\Http\Controllers\TipoMaquinaController::class)->middleware('auth');
 Route::resource('/maquinas', App\Http\Controllers\MaquinaController::class)->middleware('auth');
@@ -75,5 +75,7 @@ Route::get('/maquinas/{id}/caracteristicas',[CaracteristicaController::class, 'm
 Route::get('/maquinas/{id}/imagenes',[ImagenController::class, 'maquina'])->name('imagen.maquina')->middleware('auth');
 Route::post('/imagenes', [ImagenController::class, 'store'])->name('imagenes.store')->middleware('auth');
 Route::delete('/imagenes/{id}',[ImagenController::class, 'destroy'])->name('imagenes.delete')->middleware('auth');
+Route::post('/imagenes/{id}/make-primary', [ImagenController::class, 'makePrimary'])->name('imagenes.make-primary')->middleware('auth');
+Route::post('/imagenes/reorder', [ImagenController::class, 'reorder'])->name('imagenes.reorder')->middleware('auth');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

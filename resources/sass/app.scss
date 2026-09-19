@@ -1233,3 +1233,586 @@
         font-size: 1.4rem;
     }
 }
+
+/* ==========================================================================
+   Executive Modern Dashboard for Home
+   ========================================================================== */
+.dash-welcome-card {
+    background: linear-gradient(135deg, #1e2a52 0%, #253266 50%, #171e3b 100%);
+    border-radius: 20px;
+    padding: 2rem 2.25rem;
+    color: #ffffff;
+    box-shadow: 0 12px 35px rgba(37, 50, 102, 0.15);
+    border: 1px solid rgba(254, 209, 22, 0.2);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, rgba(254, 209, 22, 0.15) 0%, transparent 70%);
+        pointer-events: none;
+    }
+}
+
+.dash-badge {
+    background: rgba(254, 209, 22, 0.2);
+    color: #FED116;
+    border: 1px solid rgba(254, 209, 22, 0.35);
+    font-family: 'Lexend', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.25rem 0.75rem;
+    border-radius: 30px;
+}
+
+.dash-badge-date {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+}
+
+.dash-greeting {
+    font-family: 'Lexend', sans-serif;
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0.25rem 0;
+}
+
+.dash-subtitle {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    margin: 0;
+    max-width: 600px;
+}
+
+.btn-dash-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #FED116;
+    color: #171e3b !important;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.65rem 1.25rem;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(254, 209, 22, 0.35);
+    transition: all 0.25s ease;
+
+    &:hover {
+        background-color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+    }
+}
+
+.btn-dash-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.65rem 1.25rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+    }
+}
+
+/* KPI Cards */
+.dash-kpi-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    box-shadow: 0 4px 15px rgba(37, 50, 102, 0.04);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 25px rgba(37, 50, 102, 0.09);
+        border-color: #FED116;
+    }
+}
+
+.kpi-icon-wrapper {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+
+    &.bg-navy {
+        background: rgba(37, 50, 102, 0.1);
+        color: #253266;
+    }
+
+    &.bg-yellow {
+        background: rgba(254, 209, 22, 0.2);
+        color: #b45309;
+    }
+
+    &.border-yellow {
+        border: 2px solid #FED116;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.kpi-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.kpi-label {
+    font-family: 'Lexend', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #64748b;
+}
+
+.kpi-value {
+    font-family: 'Lexend', sans-serif;
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #171e3b;
+    margin: 0.1rem 0;
+    line-height: 1.1;
+}
+
+.kpi-subtext {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+/* Dashboard Content Cards */
+.dash-card {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 25px rgba(37, 50, 102, 0.05);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dash-card-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dash-card-title {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: #171e3b;
+    margin: 0;
+}
+
+.dash-card-subtitle {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.dash-header-flag {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1.5px solid #FED116;
+    object-fit: cover;
+}
+
+.badge-count-pill {
+    background: rgba(37, 50, 102, 0.07);
+    color: #253266;
+    font-family: 'Lexend', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.35rem 0.85rem;
+    border-radius: 30px;
+}
+
+.dash-card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.chart-wrapper {
+    position: relative;
+    height: 310px;
+    width: 100%;
+}
+
+.dash-link-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Lexend', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #253266;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+        color: #b45309;
+        transform: translateX(3px);
+    }
+}
+
+/* Recent Machinery Table */
+.dash-table {
+    width: 100%;
+    vertical-align: middle;
+
+    thead th {
+        background: #f8fafc;
+        color: #64748b;
+        font-family: 'Lexend', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 0.85rem 1.5rem;
+        border-bottom: 1px solid #e2e8f0;
+        white-space: nowrap;
+    }
+
+    tbody td {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #f1f5f9;
+        color: #334155;
+        font-size: 0.9rem;
+    }
+
+    tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    tbody tr:hover {
+        background-color: #f8fafc;
+    }
+}
+
+.table-machine-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid #e2e8f0;
+}
+
+.table-machine-name {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    color: #171e3b;
+    display: block;
+    line-height: 1.2;
+}
+
+.table-machine-brand {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.badge-category-tag {
+    background: rgba(254, 209, 22, 0.15);
+    color: #8b6e00;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 0.78rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.table-flag {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #FED116;
+}
+
+.table-country-text {
+    font-weight: 600;
+    color: #334155;
+    font-size: 0.88rem;
+}
+
+.badge-status-active {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 0.78rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 30px;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #10b981;
+}
+
+.badge-status-inactive {
+    background: rgba(148, 163, 184, 0.15);
+    color: #64748b;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 0.78rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.btn-table-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #253266;
+    font-family: 'Lexend', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.4rem 0.85rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: #253266;
+        color: #ffffff;
+        border-color: #253266;
+    }
+}
+
+/* ==========================================================================
+   Modern Machine Editor & Media Manager
+   ========================================================================== */
+.edit-maquina-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(37, 50, 102, 0.05);
+}
+
+.nav-tabs-modern {
+    border-bottom: 2px solid #f1f5f9;
+    gap: 0.5rem;
+
+    .nav-link {
+        border: none;
+        color: #64748b;
+        border-bottom: 3px solid transparent;
+        font-family: 'Lexend', sans-serif;
+        font-weight: 700;
+        font-size: 0.95rem;
+        transition: all 0.25s ease;
+        border-radius: 8px 8px 0 0;
+        background: transparent;
+
+        &:hover {
+            color: #253266;
+            background: rgba(37, 50, 102, 0.03);
+            border-bottom-color: rgba(37, 50, 102, 0.2);
+        }
+
+        &.active {
+            color: #253266;
+            border-bottom-color: #FED116;
+            background: transparent;
+        }
+    }
+}
+
+.form-control-modern,
+.form-select.form-control-modern {
+    border-radius: 10px;
+    border: 1.5px solid #e2e8f0;
+    padding: 0.65rem 1rem;
+    font-size: 0.92rem;
+    color: #1e293b;
+    transition: all 0.2s ease;
+
+    &:focus {
+        border-color: #253266;
+        box-shadow: 0 0 0 3px rgba(37, 50, 102, 0.12);
+    }
+}
+
+.btn-save-machine {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #253266;
+    color: #ffffff !important;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.6rem;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(37, 50, 102, 0.2);
+    transition: all 0.25s ease;
+
+    &:hover {
+        background-color: #FED116;
+        color: #171e3b !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(254, 209, 22, 0.4);
+    }
+}
+
+/* Dropzone Styles */
+.dropzone-area {
+    border-color: #cbd5e1 !important;
+    background-color: #f8fafc !important;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    &:hover,
+    &.dropzone-active {
+        border-color: #FED116 !important;
+        background-color: rgba(254, 209, 22, 0.05) !important;
+        transform: scale(1.01);
+    }
+
+    .dropzone-icon {
+        font-size: 2.5rem;
+        color: #253266;
+        line-height: 1;
+    }
+}
+
+/* Photo Cards in Gallery */
+.photo-manager-card {
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: #ffffff;
+    border-color: #e2e8f0;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(37, 50, 102, 0.08);
+
+        .photo-manager-img {
+            transform: scale(1.04);
+        }
+    }
+
+    &.is-primary-card {
+        border: 2px solid #FED116 !important;
+        box-shadow: 0 4px 18px rgba(254, 209, 22, 0.25);
+    }
+}
+
+.photo-preview-wrapper {
+    height: 170px;
+    background-color: #0f172a;
+    overflow: hidden;
+}
+
+.photo-manager-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.btn-delete-photo {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: #ef4444 !important;
+        color: #ffffff !important;
+        transform: scale(1.1);
+    }
+}
+
+.btn-make-primary {
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: #FED116 !important;
+        border-color: #FED116 !important;
+        color: #171e3b !important;
+    }
+}
+
+/* Technical Specs Chips */
+.chip-spec {
+    font-size: 0.78rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border-color: #cbd5e1;
+    color: #475569;
+
+    &:hover {
+        background-color: #253266;
+        border-color: #253266;
+        color: #ffffff;
+        transform: translateY(-1px);
+    }
+}
+
+.spec-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #FED116;
+    display: inline-block;
+}
+
+.status-dot-sm {
+    width: 7px;
+    height: 7px;
+}

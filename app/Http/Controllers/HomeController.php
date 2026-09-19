@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Maquina;
-
+use App\Models\TipoMaquina;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -40,6 +40,24 @@ class HomeController extends Controller
         ->groupBy('tipo_maquina_id', 'pais_id')
         ->get();
 
-        return view('home', compact('conteoMaquinasElSalvador','conteoMaquinasGuatemala'));
+        $totalMaquinasSV = $conteoMaquinasElSalvador->sum('total');
+        $totalMaquinasGT = $conteoMaquinasGuatemala->sum('total');
+        $totalMaquinas = $totalMaquinasSV + $totalMaquinasGT;
+        $totalCategorias = TipoMaquina::count();
+
+        $ultimasMaquinas = Maquina::with(['tipoMaquina', 'pais', 'imagens'])
+            ->latest()
+            ->take(5)
+            ->get();
+
+        return view('home', compact(
+            'conteoMaquinasElSalvador',
+            'conteoMaquinasGuatemala',
+            'totalMaquinas',
+            'totalMaquinasSV',
+            'totalMaquinasGT',
+            'totalCategorias',
+            'ultimasMaquinas'
+        ));
     }
 }

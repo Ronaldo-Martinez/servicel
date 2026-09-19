@@ -43,35 +43,116 @@ class ImagenController extends Controller
      */
     public function store(Request $request)
     {
-        // Validación de campos si es necesario
-        $this->validate($request, [
-            'imagen' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'nombre' => 'required',
-            'descripcion' => 'required',
-            'maquina_id' => 'required'
+        $request->validate([
+            'maquina_id' => 'required|exists:maquinas,id',
+            'imagen' => 'nullable|image|mimes:jpeg,png,jpg,webp,gif|max:5120',
+            'imagenes.*' => 'nullable|image|mimes:jpeg,png,jpg,webp,gif|max:5120',
+            'nombre' => 'nullable|string|max:255',
+            'descripcion' => 'nullable|string|max:500'
         ]);
 
-        // Guardar la imagen
-        $imagen = new Imagen;
-        $imagen->nombre = $request->nombre;
-        $imagen->descripcion = $request->descripcion;
-        $imagen->maquina_id = $request->maquina_id;
+        $maquinaId = $request->input('maquina_id');
+        $maquina = \App\Models\Maquina::find($maquinaId);
+        $baseName = $request->input('nombre') ?: ($maquina ? $maquina->modelo : 'Foto');
+        $descripcion = $request->input('descripcion') ?: '';
 
-        if ($request->hasFile('imagen')) {
-            $imagePath = $request->file('imagen')->store('imagenes', 'public');
-            $imagen->url = $imagePath;
+        // Determinar el último número de orden
+        $ultimoOrden = Imagen::where('maquina_id', $maquinaId)->max('orden') ?? -1;
+
+        $archivos = [];
+        if ($request->hasFile('imagenes')) {
+            $archivos = $request->file('imagenes');
+        } elseif ($request->hasFile('imagen')) {
+            $archivos = [$request->file('imagen')];
         }
 
-        $imagen->save();
+        if (empty($archivos)) {
+            return response()->json(['error' => 'No se seleccionó ninguna imagen.'], 422);
+        }
 
-        return response()->json(['message' => 'Imagen subida exitosamente'], 200);
+        $guardadas = [];
+        foreach ($archivos as $index => $archivo) {
+            $imagePath = $archivo->store('imagenes', 'public');
+            $ultimoOrden++;
+
+            $nombre = count($archivos) > 1 
+                ? pathinfo($archivo->getClientOriginalName(), PATHINFO_FILENAME) 
+                : $baseName;
+
+            $imagen = Imagen::create([
+                'url' => $imagePath,
+                'nombre' => $nombre,
+                'descripcion' => $descripcion,
+                'maquina_id' => $maquinaId,
+                'orden' => $ultimoOrden
+            ]);
+
+            $guardadas[] = $imagen;
+        }
+
+        return response()->json([
+            'message' => count($guardadas) > 1 ? 'Imágenes subidas exitosamente' : 'Imagen subida exitosamente',
+            'imagenes' => $guardadas
+        ], 200);
     }
 
+    /**
+     * Get all images for a specific machine ordered by orden asc.
+     */
     public function maquina($id)
     {
-        $caracteristicas = Imagen::where('maquina_id', $id)->get();
+        $imagenes = Imagen::where('maquina_id', $id)
+            ->orderBy('orden', 'asc')
+            ->orderBy('id', 'asc')
+            ->get();
 
-        return response()->json($caracteristicas);
+        return response()->json($imagenes);
+    }
+
+    /**
+     * Set an image as primary (first photo / portada).
+     */
+    public function makePrimary($id)
+    {
+        $imagen = Imagen::findOrFail($id);
+        $maquinaId = $imagen->maquina_id;
+
+        // Todas las imágenes de la máquina ordenadas
+        $imagenes = Imagen::where('maquina_id', $maquinaId)
+            ->orderBy('orden', 'asc')
+            ->orderBy('id', 'asc')
+            ->get();
+
+        // Asignar orden 0 a la seleccionada, y 1, 2, 3... a las demás
+        $orden = 1;
+        foreach ($imagenes as $img) {
+            if ($img->id == $imagen->id) {
+                $img->orden = 0;
+            } else {
+                $img->orden = $orden++;
+            }
+            $img->save();
+        }
+
+        return response()->json([
+            'message' => 'Foto establecida como principal exitosamente.',
+            'primary_id' => $imagen->id
+        ], 200);
+    }
+
+    /**
+     * Reorder images according to an array of IDs.
+     */
+    public function reorder(Request $request)
+    {
+        $ids = $request->input('ids', []);
+        if (is_array($ids)) {
+            foreach ($ids as $orden => $id) {
+                Imagen::where('id', $id)->update(['orden' => $orden]);
+            }
+        }
+
+        return response()->json(['message' => 'Orden de fotos actualizado con éxito.'], 200);
     }
 
     /**
@@ -119,13 +200,21 @@ class ImagenController extends Controller
 
     /**
      * @param int $id
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\JsonResponse
      * @throws \Exception
      */
     public function destroy($id)
     {
-        $imagen = Imagen::find($id)->delete();
+        $imagen = Imagen::findOrFail($id);
 
-        return response()->json('Ok', 201);
+        // Verificar si la imagen está compartida con otra máquina antes de borrar el archivo
+        $isShared = Imagen::where('url', $imagen->url)->where('id', '!=', $imagen->id)->exists();
+        if (!$isShared && $imagen->url && \Illuminate\Support\Facades\Storage::disk('public')->exists($imagen->url)) {
+            \Illuminate\Support\Facades\Storage::disk('public')->delete($imagen->url);
+        }
+
+        $imagen->delete();
+
+        return response()->json(['message' => 'Imagen eliminada exitosamente.'], 200);
     }
 }
