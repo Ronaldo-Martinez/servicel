@@ -13939,6 +13939,240 @@ textarea.form-control-lg {
     box-shadow: 0 4px 10px rgba(139, 92, 246, 0.2);
 }
 
+/* ==========================================================================
+   Separador Distintivo y Moderno: Nuestras Ubicaciones
+   ========================================================================== */
+.separator-ubicaciones-bar {
+    background-color: #253266;
+    border-bottom: 4px solid #FED116;
+    padding: 1.4rem 1rem;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.separator-icon-badge {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background-color: #FED116;
+    color: #171e3b;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(254, 209, 22, 0.4);
+    flex-shrink: 0;
+}
+
+.separator-icon-badge .svg-icon,
+.separator-icon-badge span.material-symbols-outlined {
+    font-size: 1.45rem;
+}
+
+.separator-heading-text {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    font-size: 1.7rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Tarjetas de Ubicación Ultra Modernas */
+.ubicacion-card-v2 {
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 18px 45px -10px rgba(23, 30, 59, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease;
+}
+
+.ubicacion-card-v2:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 60px -12px rgba(23, 30, 59, 0.16);
+    border-color: #FED116;
+}
+
+.card-v2-header {
+    padding: 1.25rem 1.5rem;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.flag-avatar-wrapper {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 2.5px solid #FED116;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+}
+
+.flag-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.country-name-v2 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 1.28rem;
+    font-weight: 800;
+    color: #171e3b;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.country-city-tag {
+    font-size: 0.82rem;
+    color: #64748b;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 3px;
+}
+
+.country-city-tag span.material-symbols-outlined,
+.country-city-tag .svg-icon {
+    font-size: 1rem;
+}
+
+.btn-quick-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.5rem 1.1rem;
+    border-radius: 50px;
+    background: rgba(37, 50, 102, 0.06);
+    color: #253266;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    border: 1px solid rgba(37, 50, 102, 0.12);
+    transition: all 0.25s ease;
+}
+
+.btn-quick-call:hover {
+    background: #FED116;
+    color: #171e3b;
+    border-color: #FED116;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(254, 209, 22, 0.35);
+}
+
+.card-v2-map {
+    height: 340px;
+    position: relative;
+    background-color: #e2e8f0;
+}
+
+.card-v2-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.card-v2-footer {
+    padding: 1.15rem 1.5rem;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+.address-snippet {
+    display: flex;
+    flex-direction: column;
+}
+
+.address-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+}
+
+.address-text {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #334155;
+    margin: 0;
+}
+
+.btn-open-maps {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.65rem 1.25rem;
+    border-radius: 12px;
+    background: #253266;
+    color: #ffffff !important;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.btn-open-maps:hover {
+    background: #FED116;
+    color: #171e3b !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(254, 209, 22, 0.4);
+}
+
+.btn-open-maps:hover span.material-symbols-outlined,
+.btn-open-maps:hover .svg-icon {
+    transform: translateX(3px);
+    transition: transform 0.2s ease;
+}
+
+@media (max-width: 576px) {
+    .separator-ubicaciones-bar {
+        padding: 1.1rem 1rem;
+    }
+    .separator-icon-badge {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+    }
+    .separator-icon-badge .svg-icon,
+    .separator-icon-badge span.material-symbols-outlined {
+        font-size: 1.25rem;
+    }
+    .separator-heading-text {
+        font-size: 1.35rem;
+    }
+    .card-v2-map {
+        height: 250px;
+    }
+    .card-v2-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .btn-open-maps {
+        justify-content: center;
+    }
+}
+
+
 
 
 
