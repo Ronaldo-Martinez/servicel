@@ -17,7 +17,7 @@
 
                             <div class="float-right">
                                 <a href="{{ route('maquinas.create') }}" class="btn-premium-create" data-placement="left">
-                                    <span class="material-symbols-outlined">add</span>
+                                    <x-icon name="add" />
                                     Registrar Nuevo
                                 </a>
                             </div>
@@ -78,33 +78,33 @@
                                                         @method('PATCH')
                                                         @if($maquina->status)
                                                             <button type="submit" class="btn-action-circle btn-action-status-active" title="Desactivar Máquina">
-                                                                <span class="material-symbols-outlined" style="font-size: 1.25rem;">toggle_on</span>
+                                                                <x-icon name="toggle_on" style="font-size: 1.25rem;" />
                                                             </button>
                                                         @else
                                                             <button type="submit" class="btn-action-circle btn-action-status-inactive" title="Activar Máquina">
-                                                                <span class="material-symbols-outlined" style="font-size: 1.25rem;">toggle_off</span>
+                                                                <x-icon name="toggle_off" style="font-size: 1.25rem;" />
                                                             </button>
                                                         @endif
                                                     </form>
 
                                                     <a class="btn-action-circle btn-action-show" href="{{ route('maquinas.show',$maquina->id) }}" title="Ver">
-                                                        <span class="material-symbols-outlined" style="font-size: 1.25rem;">visibility</span>
+                                                        <x-icon name="visibility" style="font-size: 1.25rem;" />
                                                     </a>
                                                     <form action="{{ route('maquinas.clone', $maquina->id) }}" method="POST" class="m-0">
                                                         @csrf
                                                         <button type="submit" class="btn-action-circle btn-action-clone" title="Clonar Máquina">
-                                                            <span class="material-symbols-outlined" style="font-size: 1.25rem;">content_copy</span>
+                                                            <x-icon name="content_copy" style="font-size: 1.25rem;" />
                                                         </button>
                                                     </form>
                                                     <a class="btn-action-circle btn-action-edit" href="{{ route('maquinas.edit',$maquina->id) }}" title="Editar">
-                                                        <span class="material-symbols-outlined" style="font-size: 1.25rem;">edit</span>
+                                                        <x-icon name="edit" style="font-size: 1.25rem;" />
                                                     </a>
 
                                                     <form action="{{ route('maquinas.destroy',$maquina->id) }}" method="POST" class="m-0">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn-action-circle btn-action-delete" title="Eliminar" onclick="return confirm('¿Seguro que deseas eliminar esta máquina?')">
-                                                            <span class="material-symbols-outlined" style="font-size: 1.25rem;">delete</span>
+                                                            <x-icon name="delete" style="font-size: 1.25rem;" />
                                                         </button>
                                                     </form>
                                                 </div>

@@ -16,10 +16,10 @@
                             </h2>
 
                              <div class="float-right">
-                                <a href="{{ route('pais.create') }}" class="btn-premium-create" data-placement="left">
-                                    <span class="material-symbols-outlined">add</span>
-                                    Registrar Nuevo
-                                </a>
+                                 <a href="{{ route('pais.create') }}" class="btn-premium-create" data-placement="left">
+                                     <x-icon name="add" />
+                                     Registrar Nuevo
+                                 </a>
                               </div>
                         </div>
                     </div>
@@ -56,17 +56,17 @@
                                             <td>
                                                 <div class="action-group justify-content-end">
                                                     <form action="{{ route('pais.destroy',$pai->id) }}" method="POST" class="m-0 d-flex gap-2">
-                                                        <a class="btn-action-circle btn-action-show" href="{{ route('pais.show',$pai->id) }}" title="Ver">
-                                                            <span class="material-symbols-outlined" style="font-size: 1.25rem;">visibility</span>
-                                                        </a>
-                                                        <a class="btn-action-circle btn-action-edit" href="{{ route('pais.edit',$pai->id) }}" title="Editar">
-                                                            <span class="material-symbols-outlined" style="font-size: 1.25rem;">edit</span>
-                                                        </a>
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="btn-action-circle btn-action-delete" title="Eliminar" onclick="return confirm('¿Seguro que deseas eliminar este país?')">
-                                                            <span class="material-symbols-outlined" style="font-size: 1.25rem;">delete</span>
-                                                        </button>
+                                                         <a class="btn-action-circle btn-action-show" href="{{ route('pais.show',$pai->id) }}" title="Ver">
+                                                             <x-icon name="visibility" style="font-size: 1.25rem;" />
+                                                         </a>
+                                                         <a class="btn-action-circle btn-action-edit" href="{{ route('pais.edit',$pai->id) }}" title="Editar">
+                                                             <x-icon name="edit" style="font-size: 1.25rem;" />
+                                                         </a>
+                                                         @csrf
+                                                         @method('DELETE')
+                                                         <button type="submit" class="btn-action-circle btn-action-delete" title="Eliminar" onclick="return confirm('¿Seguro que deseas eliminar este país?')">
+                                                             <x-icon name="delete" style="font-size: 1.25rem;" />
+                                                         </button>
                                                     </form>
                                                 </div>
                                             </td>

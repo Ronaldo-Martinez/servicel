@@ -16,7 +16,7 @@
                 <div class="row align-items-center justify-content-center">
                     <!-- Soporte 24/7 -->
                     <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start py-2 py-md-0 feature-border-end">
-                        <span class="material-symbols-outlined text-warning me-3 fs-1">schedule</span>
+                        <x-icon name="schedule" class="text-warning me-3 fs-1" />
                         <div class="text-start">
                             <div class="feature-title text-white fw-bold">Soporte 24/7</div>
                             <div class="feature-subtitle text-white-50 small">Atención y asistencia técnica</div>
@@ -24,7 +24,7 @@
                     </div>
                     <!-- 32+ años de experiencia -->
                     <div class="col-12 col-md-4 d-flex align-items-center justify-content-center py-2 py-md-0 feature-border-end">
-                        <span class="material-symbols-outlined text-warning me-3 fs-1">workspace_premium</span>
+                        <x-icon name="workspace_premium" class="text-warning me-3 fs-1" />
                         <div class="text-start">
                             <div class="feature-title text-white fw-bold">32+ años de experiencia</div>
                             <div class="feature-subtitle text-white-50 small">Trayectoria y confianza</div>
@@ -32,7 +32,7 @@
                     </div>
                     <!-- Calidad garantizada -->
                     <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end py-2 py-md-0">
-                        <span class="material-symbols-outlined text-warning me-3 fs-1">verified_user</span>
+                        <x-icon name="verified_user" class="text-warning me-3 fs-1" />
                         <div class="text-start">
                             <div class="feature-title text-white fw-bold">Calidad garantizada</div>
                             <div class="feature-subtitle text-white-50 small">Compromiso en cada proyecto</div>
@@ -60,18 +60,18 @@
                             @if ($pais->codigo_pais == '503')
                                 <a class="category-sidebar-link {{ request()->routeIs('alquiler-sv') ? 'active-category' : '' }}" href="{{ route('alquiler-sv') }}">
                                     <span class="d-flex align-items-center gap-2">
-                                        <span class="material-symbols-outlined">grid_view</span>
+                                        <x-icon name="grid_view" />
                                         Todas las categorías
                                     </span>
-                                    <span class="material-symbols-outlined">chevron_right</span>
+                                    <x-icon name="chevron_right" />
                                 </a>
                             @else
                                 <a class="category-sidebar-link {{ request()->routeIs('alquiler-gt') ? 'active-category' : '' }}" href="{{ route('alquiler-gt') }}">
                                     <span class="d-flex align-items-center gap-2">
-                                        <span class="material-symbols-outlined">grid_view</span>
+                                        <x-icon name="grid_view" />
                                         Todas las categorías
                                     </span>
-                                    <span class="material-symbols-outlined">chevron_right</span>
+                                    <x-icon name="chevron_right" />
                                 </a>
                             @endif
                             @foreach($tiposMaquinaria as $tipo)
@@ -95,18 +95,18 @@
                                 @if ($pais->codigo_pais == '503')
                                     <a class="category-sidebar-link {{ $isActive ? 'active-category' : '' }}" href="{{ route('alquiler-sv-categoria', ['id' => $tipo->id]) }}/#maquinas">
                                         <span class="d-flex align-items-center gap-2">
-                                            <span class="material-symbols-outlined">{{ $iconName }}</span>
+                                            <x-icon :name="$iconName" />
                                             {{$tipo->nombre}}
                                         </span>
-                                        <span class="material-symbols-outlined">chevron_right</span>
+                                        <x-icon name="chevron_right" />
                                     </a>
                                 @else
                                     <a class="category-sidebar-link {{ $isActive ? 'active-category' : '' }}" href="{{ route('alquiler-gt-categoria', ['id' => $tipo->id]) }}/#maquinas">
                                         <span class="d-flex align-items-center gap-2">
-                                            <span class="material-symbols-outlined">{{ $iconName }}</span>
+                                            <x-icon :name="$iconName" />
                                             {{$tipo->nombre}}
                                         </span>
-                                        <span class="material-symbols-outlined">chevron_right</span>
+                                        <x-icon name="chevron_right" />
                                     </a>
                                 @endif
                             @endforeach

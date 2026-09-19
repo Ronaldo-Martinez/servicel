@@ -16,7 +16,7 @@
             <div class="row align-items-center justify-content-center">
                 <!-- Soporte 24/7 -->
                 <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start py-2 py-md-0 feature-border-end">
-                    <span class="material-symbols-outlined text-warning me-3 fs-1">schedule</span>
+                    <x-icon name="schedule" class="text-warning me-3 fs-1" />
                     <div class="text-start">
                         <div class="feature-title text-white fw-bold">Soporte 24/7</div>
                         <div class="feature-subtitle text-white-50 small">Atención y asistencia técnica</div>
@@ -24,7 +24,7 @@
                 </div>
                 <!-- 32+ años de experiencia -->
                 <div class="col-12 col-md-4 d-flex align-items-center justify-content-center py-2 py-md-0 feature-border-end">
-                    <span class="material-symbols-outlined text-warning me-3 fs-1">workspace_premium</span>
+                    <x-icon name="workspace_premium" class="text-warning me-3 fs-1" />
                     <div class="text-start">
                         <div class="feature-title text-white fw-bold">32+ años de experiencia</div>
                         <div class="feature-subtitle text-white-50 small">Trayectoria y confianza</div>
@@ -32,7 +32,7 @@
                 </div>
                 <!-- Calidad garantizada -->
                 <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end py-2 py-md-0">
-                    <span class="material-symbols-outlined text-warning me-3 fs-1">verified_user</span>
+                    <x-icon name="verified_user" class="text-warning me-3 fs-1" />
                     <div class="text-start">
                         <div class="feature-title text-white fw-bold">Calidad garantizada</div>
                         <div class="feature-subtitle text-white-50 small">Compromiso en cada proyecto</div>
@@ -61,35 +61,35 @@
                 
                 <div class="mt-4 px-3">
                     <div class="original-list-item">
-                        <span class="material-symbols-outlined">check_circle</span>
+                        <x-icon name="check_circle" />
                         <span class="list-text">Movimientos masivos de tierra.</span>
                     </div>
                     <div class="original-list-item">
-                        <span class="material-symbols-outlined">check_circle</span>
+                        <x-icon name="check_circle" />
                         <span class="list-text">Diseños de terraza.</span>
                     </div>
                     <div class="original-list-item">
-                        <span class="material-symbols-outlined">check_circle</span>
+                        <x-icon name="check_circle" />
                         <span class="list-text">Cortes y rellenos estructurales.</span>
                     </div>
                     <div class="original-list-item">
-                        <span class="material-symbols-outlined">check_circle</span>
+                        <x-icon name="check_circle" />
                         <span class="list-text">Estabilización de suelos.</span>
                     </div>
                     <div class="original-list-item">
-                        <span class="material-symbols-outlined">check_circle</span>
+                        <x-icon name="check_circle" />
                         <span class="list-text">Terraplenes.</span>
                     </div>
                     <div class="original-list-item">
-                        <span class="material-symbols-outlined">check_circle</span>
+                        <x-icon name="check_circle" />
                         <span class="list-text">Calles y accesos.</span>
                     </div>
                     <div class="original-list-item">
-                        <span class="material-symbols-outlined">check_circle</span>
+                        <x-icon name="check_circle" />
                         <span class="list-text">Obras de mitigación.</span>
                     </div>
                     <div class="original-list-item">
-                        <span class="material-symbols-outlined" id="agroIndustria">check_circle</span>
+                        <x-icon name="check_circle" id="agroIndustria" />
                         <span class="list-text">Topografía.</span>
                     </div>
                 </div>      
@@ -156,31 +156,31 @@
                     
                     <div class="px-3 mt-4">
                         <div class="original-highlight-item-dark mb-3">
-                            <span class="material-symbols-outlined">check_circle</span>
+                            <x-icon name="check_circle" />
                             <span class="list-text">Preparación de suelos para siembra: Plantación nueva, finca nueva de caña de azúcar, banano, palma africana y fincas de cafe.</span>
                         </div>
                         <div class="original-list-item-dark">
-                            <span class="material-symbols-outlined">check_circle</span>
+                            <x-icon name="check_circle" />
                             <span class="list-text">Apertura y mantenimiento de accesos.</span>
                         </div>
                         <div class="original-list-item-dark">
-                            <span class="material-symbols-outlined">check_circle</span>
+                            <x-icon name="check_circle" />
                             <span class="list-text">Apertura y Mantenimiento de obras y drenajes.</span>
                         </div>
                         <div class="original-list-item-dark">
-                            <span class="material-symbols-outlined">check_circle</span>
+                            <x-icon name="check_circle" />
                             <span class="list-text">Obras para control de inundaciones.</span>
                         </div>
                         <div class="original-list-item-dark">
-                            <span class="material-symbols-outlined">check_circle</span>
+                            <x-icon name="check_circle" />
                             <span class="list-text">Desolve de ríos y quebradas.</span>
                         </div>
                         <div class="original-list-item-dark">
-                            <span class="material-symbols-outlined">check_circle</span>
+                            <x-icon name="check_circle" />
                             <span class="list-text">Apertura y mantenimiento de estanques de acuicultura para camarón y tilapia.</span>
                         </div>
                         <div class="original-list-item-dark">
-                            <span class="material-symbols-outlined">check_circle</span>
+                            <x-icon name="check_circle" />
                             <span class="list-text">Conformación de bordas dentro de fincas.</span>
                         </div>
                     </div>
@@ -205,7 +205,7 @@
                     confiables en el mercado de suministro de tierra blanca.
                 </p>  
                 <button class="premium-location-btn" data-bs-toggle="modal" data-bs-target="#modal-miniexcavadoras">
-                    <span class="material-symbols-outlined">location_on</span>
+                    <x-icon name="location_on" />
                     Nuestra Ubicación
                 </button>
             </div>

@@ -12,7 +12,6 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,11 +184,11 @@
                             <div class="mb-4">
                                 <span class="d-block text-white-50 small fw-bold mb-2" style="letter-spacing: 1px;">EL SALVADOR</span>
                                 <a class="contact-item" href="tel:+50322882451">
-                                    <span class="material-symbols-outlined contact-icon">call</span>
+                                    <x-icon name="call" class="contact-icon" />
                                     + 503 2288 - 2451
                                 </a>
                                 <a class="contact-item" href="tel:+50376285412">
-                                    <span class="material-symbols-outlined contact-icon">call</span>
+                                    <x-icon name="call" class="contact-icon" />
                                     + 503 7628 - 5412
                                 </a>
                             </div>
@@ -197,11 +196,11 @@
                             <div>
                                 <span class="d-block text-white-50 small fw-bold mb-2" style="letter-spacing: 1px;">GUATEMALA</span>
                                 <a class="contact-item" href="tel:+50254674528">
-                                    <span class="material-symbols-outlined contact-icon">call</span>
+                                    <x-icon name="call" class="contact-icon" />
                                     + 502 5467 - 4528
                                 </a>
                                 <a class="contact-item" href="tel:+50247003189">
-                                    <span class="material-symbols-outlined contact-icon">call</span>
+                                    <x-icon name="call" class="contact-icon" />
                                     + 502 4700 - 3189
                                 </a>
                             </div>
@@ -222,7 +221,7 @@
                             </div>
                             
                             <div class="support-badge w-100 justify-content-center">
-                                <span class="material-symbols-outlined me-2 fs-5">support_agent</span>
+                                <x-icon name="support_agent" class="me-2 fs-5" />
                                 Soporte telefónico 24/7
                             </div>
                         </div>

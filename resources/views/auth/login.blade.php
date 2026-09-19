@@ -4,7 +4,7 @@
 <div class="premium-login-container position-relative">
     <!-- Botón para regresar al Home -->
     <a href="/" class="btn-back-home">
-        <span class="material-symbols-outlined">arrow_back</span>
+        <x-icon name="arrow_back" />
         Volver al Inicio
     </a>
     

@@ -16,7 +16,7 @@
             <div class="row align-items-center justify-content-center">
                 <!-- Soporte 24/7 -->
                 <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start py-2 py-md-0 feature-border-end">
-                    <span class="material-symbols-outlined text-warning me-3 fs-1">schedule</span>
+                    <x-icon name="schedule" class="text-warning me-3 fs-1" />
                     <div class="text-start">
                         <div class="feature-title text-white fw-bold">Soporte 24/7</div>
                         <div class="feature-subtitle text-white-50 small">Atención y asistencia técnica</div>
@@ -24,7 +24,7 @@
                 </div>
                 <!-- 32+ años de experiencia -->
                 <div class="col-12 col-md-4 d-flex align-items-center justify-content-center py-2 py-md-0 feature-border-end">
-                    <span class="material-symbols-outlined text-warning me-3 fs-1">workspace_premium</span>
+                    <x-icon name="workspace_premium" class="text-warning me-3 fs-1" />
                     <div class="text-start">
                         <div class="feature-title text-white fw-bold">32+ años de experiencia</div>
                         <div class="feature-subtitle text-white-50 small">Trayectoria y confianza</div>
@@ -32,7 +32,7 @@
                 </div>
                 <!-- Calidad garantizada -->
                 <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end py-2 py-md-0">
-                    <span class="material-symbols-outlined text-warning me-3 fs-1">verified_user</span>
+                    <x-icon name="verified_user" class="text-warning me-3 fs-1" />
                     <div class="text-start">
                         <div class="feature-title text-white fw-bold">Calidad garantizada</div>
                         <div class="feature-subtitle text-white-50 small">Compromiso en cada proyecto</div>
@@ -128,17 +128,17 @@
             <div class="col-12 col-lg-8">
                 <div class="premium-gallery-card gallery-card-lg" data-bs-toggle="modal" data-bs-target="#modal-excavadoras" style="cursor: pointer;">
                     <div class="gallery-badge">
-                        <span class="material-symbols-outlined">construction</span>
+                        <x-icon name="construction" />
                         <span>Pesada</span>
                     </div>
                     <img class="card-img" src="/img/excavadora2.webp" alt="retroexcavadora servicel" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-category">
                             <span>Excavadoras</span>
-                            <span class="material-symbols-outlined text-warning fs-3">arrow_forward</span>
+                            <x-icon name="arrow_forward" class="text-warning fs-3" />
                         </div>
                         <div class="gallery-action-text">
-                            Ver Alquiler <span class="material-symbols-outlined">chevron_right</span>
+                            Ver Alquiler <x-icon name="chevron_right" />
                         </div>
                     </div>
                 </div>
@@ -146,34 +146,34 @@
             <div class="col-12 col-lg-4 d-flex flex-column justify-content-between">
                 <div class="premium-gallery-card gallery-card-sm mb-4 mb-lg-0" data-bs-toggle="modal" data-bs-target="#modal-retroexcavadora" style="cursor: pointer;">
                     <div class="gallery-badge">
-                        <span class="material-symbols-outlined">engineering</span>
+                        <x-icon name="engineering" />
                         <span>Versátil</span>
                     </div>
                     <img class="card-img" src="/img/retroexcavadora.webp" alt="montacargas servicel" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-category">
                             <span>Retroexcavadoras</span>
-                            <span class="material-symbols-outlined text-warning fs-3">arrow_forward</span>
+                            <x-icon name="arrow_forward" class="text-warning fs-3" />
                         </div>
                         <div class="gallery-action-text">
-                            Ver Alquiler <span class="material-symbols-outlined">chevron_right</span>
+                            Ver Alquiler <x-icon name="chevron_right" />
                         </div>
                     </div>
                 </div>
                 
                 <div class="premium-gallery-card gallery-card-sm" data-bs-toggle="modal" data-bs-target="#modal-motoniveladoras" style="cursor: pointer;">
                     <div class="gallery-badge">
-                        <span class="material-symbols-outlined">precision_manufacturing</span>
+                        <x-icon name="precision_manufacturing" />
                         <span>Precisión</span>
                     </div>
                     <img class="card-img" src="/img/motoniveladora.webp" alt="motoniveladora servicel" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-category">
                             <span>Motoniveladoras</span>
-                            <span class="material-symbols-outlined text-warning fs-3">arrow_forward</span>
+                            <x-icon name="arrow_forward" class="text-warning fs-3" />
                         </div>
                         <div class="gallery-action-text">
-                            Ver Alquiler <span class="material-symbols-outlined">chevron_right</span>
+                            Ver Alquiler <x-icon name="chevron_right" />
                         </div>
                     </div>
                 </div>
@@ -181,17 +181,17 @@
             <div class="col-12 col-md-6 col-lg-6">           
                 <div class="premium-gallery-card gallery-card-sm" data-bs-toggle="modal" data-bs-target="#modal-tractores" style="cursor: pointer;">
                     <div class="gallery-badge">
-                        <span class="material-symbols-outlined">agriculture</span>
+                        <x-icon name="agriculture" />
                         <span>Potencia</span>
                     </div>
                     <img class="card-img" src="/img/tractores.webp" alt="motoniveladora servicel" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-category">
                             <span>Tractores</span>
-                            <span class="material-symbols-outlined text-warning fs-3">arrow_forward</span>
+                            <x-icon name="arrow_forward" class="text-warning fs-3" />
                         </div>
                         <div class="gallery-action-text">
-                            Ver Alquiler <span class="material-symbols-outlined">chevron_right</span>
+                            Ver Alquiler <x-icon name="chevron_right" />
                         </div>
                     </div>
                 </div>
@@ -199,17 +199,17 @@
             <div class="col-12 col-md-6 col-lg-6">           
                 <div class="premium-gallery-card gallery-card-sm" data-bs-toggle="modal" data-bs-target="#modal-miniexcavadoras" style="cursor: pointer;">
                     <div class="gallery-badge">
-                        <span class="material-symbols-outlined">hardware</span>
+                        <x-icon name="hardware" />
                         <span>Compacta</span>
                     </div>
                     <img class="card-img" src="/img/miniexcavadoras.webp" alt="miniexcavadoras servicel" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-category">
                             <span>Miniexcavadoras</span>
-                            <span class="material-symbols-outlined text-warning fs-3">arrow_forward</span>
+                            <x-icon name="arrow_forward" class="text-warning fs-3" />
                         </div>
                         <div class="gallery-action-text">
-                            Ver Alquiler <span class="material-symbols-outlined">chevron_right</span>
+                            Ver Alquiler <x-icon name="chevron_right" />
                         </div>
                     </div>
                 </div>
@@ -253,14 +253,10 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d969.2171858308552!2d-89.28018473048105!3d13.665744202309032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDM5JzU2LjciTiA4OcKwMTYnNDYuNCJX!5e0!3m2!1ses!2ssv!4v1691469682252!5m2!1ses!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="d-flex align-items-center justify-content-center pt-3 fs-5 fw-bold text-secondary" href="tel:+50322882451"> 
-                    <span class="material-symbols-outlined text-secondary">
-                        location_on
-                    </span>Santa Tecla, La Libertad
+                    <x-icon name="location_on" class="text-secondary me-1" />Santa Tecla, La Libertad
                 </div>
                 <a class="d-flex align-items-center justify-content-center pt-3 fs-5 fw-bold text-secondary text-decoration-none" href="tel:+50322882451"> 
-                    <span class="material-symbols-outlined text-secondary">
-                        call
-                    </span>+ 503 2288 - 2451
+                    <x-icon name="call" class="text-secondary me-1" />+ 503 2288 - 2451
                 </a>
             </div>
             <div class="col-12 col-lg-6 mt-5 mt-lg-0">
@@ -269,14 +265,10 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1933.7350366547232!2d-90.73635650632048!3d14.225778619049937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8588fcdd5acf3b99%3A0x42843213332f485b!2sParque%20Industrial%20Tecnopark!5e0!3m2!1ses!2ssv!4v1691471069036!5m2!1ses!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="d-flex align-items-center justify-content-center pt-3 fs-5 fw-bold text-secondary" href="tel:+50322882451"> 
-                    <span class="material-symbols-outlined text-secondary">
-                        location_on
-                    </span>Escuintla, Guatemala.
+                    <x-icon name="location_on" class="text-secondary me-1" />Escuintla, Guatemala.
                 </div>
                 <a class="d-flex align-items-center justify-content-center pt-3 fs-5 fw-bold text-secondary text-decoration-none" href="tel:+50254674528"> 
-                    <span class="material-symbols-outlined text-secondary">
-                        call
-                    </span>+ 502 5467 - 4528
+                    <x-icon name="call" class="text-secondary me-1" />+ 502 5467 - 4528
                 </a>
             </div>
         </div>
@@ -300,7 +292,7 @@
                             <h4 class="country-name">El Salvador</h4>
                             <div class="country-action-badge">
                                 <span>Seleccionar</span>
-                                <span class="material-symbols-outlined">chevron_right</span>
+                                <x-icon name="chevron_right" />
                             </div>
                         </a>
                     </div>
@@ -312,7 +304,7 @@
                             <h4 class="country-name">Guatemala</h4>
                             <div class="country-action-badge">
                                 <span>Seleccionar</span>
-                                <span class="material-symbols-outlined">chevron_right</span>
+                                <x-icon name="chevron_right" />
                             </div>
                         </a>
                     </div>
@@ -339,7 +331,7 @@
                             <h4 class="country-name">El Salvador</h4>
                             <div class="country-action-badge">
                                 <span>Seleccionar</span>
-                                <span class="material-symbols-outlined">chevron_right</span>
+                                <x-icon name="chevron_right" />
                             </div>
                         </a>
                     </div>
@@ -351,7 +343,7 @@
                             <h4 class="country-name">Guatemala</h4>
                             <div class="country-action-badge">
                                 <span>Seleccionar</span>
-                                <span class="material-symbols-outlined">chevron_right</span>
+                                <x-icon name="chevron_right" />
                             </div>
                         </a>
                     </div>
@@ -378,7 +370,7 @@
                             <h4 class="country-name">El Salvador</h4>
                             <div class="country-action-badge">
                                 <span>Seleccionar</span>
-                                <span class="material-symbols-outlined">chevron_right</span>
+                                <x-icon name="chevron_right" />
                             </div>
                         </a>
                     </div>
@@ -390,7 +382,7 @@
                             <h4 class="country-name">Guatemala</h4>
                             <div class="country-action-badge">
                                 <span>Seleccionar</span>
-                                <span class="material-symbols-outlined">chevron_right</span>
+                                <x-icon name="chevron_right" />
                             </div>
                         </a>
                     </div>
@@ -417,7 +409,7 @@
                             <h4 class="country-name">El Salvador</h4>
                             <div class="country-action-badge">
                                 <span>Seleccionar</span>
-                                <span class="material-symbols-outlined">chevron_right</span>
+                                <x-icon name="chevron_right" />
                             </div>
                         </a>
                     </div>
@@ -429,7 +421,7 @@
                             <h4 class="country-name">Guatemala</h4>
                             <div class="country-action-badge">
                                 <span>Seleccionar</span>
-                                <span class="material-symbols-outlined">chevron_right</span>
+                                <x-icon name="chevron_right" />
                             </div>
                         </a>
                     </div>
@@ -456,7 +448,7 @@
                             <h4 class="country-name">El Salvador</h4>
                             <div class="country-action-badge">
                                 <span>Seleccionar</span>
-                                <span class="material-symbols-outlined">chevron_right</span>
+                                <x-icon name="chevron_right" />
                             </div>
                         </a>
                     </div>
@@ -468,7 +460,7 @@
                             <h4 class="country-name">Guatemala</h4>
                             <div class="country-action-badge">
                                 <span>Seleccionar</span>
-                                <span class="material-symbols-outlined">chevron_right</span>
+                                <x-icon name="chevron_right" />
                             </div>
                         </a>
                     </div>
