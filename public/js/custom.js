@@ -15,6 +15,13 @@ $(document).ready(function() {
     // Almacenamiento local de imágenes para reordenamiento
     var currentImagenes = [];
 
+    // Iconos vectoriales SVG limpios
+    var SVG_ICONS = {
+        delete: '<svg class="svg-icon" viewBox="0 -960 960 960" fill="currentColor" width="1.1em" height="1.1em" aria-hidden="true"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm80-160h80v-360h-80v360Zm160 0h80v-360h-80v360Z"/></svg>',
+        star: '<svg class="svg-icon" viewBox="0 -960 960 960" fill="currentColor" width="1em" height="1em" aria-hidden="true"><path d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"/></svg>',
+        check_circle: '<svg class="svg-icon" viewBox="0 -960 960 960" fill="currentColor" width="1em" height="1em" aria-hidden="true"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>'
+    };
+
     // =========================================================================
     // GESTIÓN DE GALERÍA DE FOTOS (MODERNA)
     // =========================================================================
@@ -156,14 +163,14 @@ $(document).ready(function() {
                                 
                                 <div class="photo-badge-container position-absolute top-0 start-0 p-2 d-flex gap-1">
                                     ${isPrimary 
-                                        ? '<span class="badge bg-warning text-dark fw-bold shadow-sm d-inline-flex align-items-center gap-1"><span class="material-symbols-outlined fs-6">star</span> Portada (#1)</span>' 
+                                        ? '<span class="badge bg-warning text-dark fw-bold shadow-sm d-inline-flex align-items-center gap-1">' + SVG_ICONS.star + ' Portada (#1)</span>' 
                                         : `<span class="badge bg-dark bg-opacity-75 text-white fw-bold shadow-sm">#${index + 1}</span>`
                                     }
                                 </div>
 
                                 <div class="photo-delete-container position-absolute top-0 end-0 p-2">
                                     <button type="button" class="btn btn-sm btn-light bg-white text-danger rounded-circle shadow-sm btn-delete-photo" data-id="${imagen.id}" title="Eliminar foto">
-                                        <span class="material-symbols-outlined fs-6 d-block">delete</span>
+                                        ${SVG_ICONS.delete}
                                     </button>
                                 </div>
                             </div>
@@ -185,11 +192,11 @@ $(document).ready(function() {
 
                                     ${!isPrimary ? `
                                         <button type="button" class="btn btn-sm btn-outline-warning text-dark fw-bold btn-make-primary py-1 px-2 d-inline-flex align-items-center gap-1" data-id="${imagen.id}">
-                                            <span class="material-symbols-outlined fs-6">star</span> Hacer Portada
+                                            ${SVG_ICONS.star} Hacer Portada
                                         </button>
                                     ` : `
                                         <span class="small fw-bold text-success d-inline-flex align-items-center gap-1">
-                                            <span class="material-symbols-outlined fs-6">check_circle</span> Principal
+                                            ${SVG_ICONS.check_circle} Principal
                                         </span>
                                     `}
                                 </div>
@@ -382,7 +389,7 @@ $(document).ready(function() {
                     tr.append($('<td class="text-dark">').text(item.valor));
                     tr.append($('<td class="text-end">').html(`
                         <button type="button" class="btn btn-sm btn-outline-danger btn-delete-spec rounded-pill px-2 py-1" data-id="${item.id}" title="Eliminar">
-                            <span class="material-symbols-outlined fs-6 align-middle">delete</span>
+                            ${SVG_ICONS.delete}
                         </button>
                     `));
                     tbody.append(tr);
