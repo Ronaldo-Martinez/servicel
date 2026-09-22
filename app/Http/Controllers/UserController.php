@@ -111,23 +111,20 @@ class UserController extends Controller
         $mailSent = false;
         $mailError = null;
 
-        // Intentar enviar email con las credenciales
-        if ($request->mode === 'auto' || $request->has('send_email')) {
-            try {
-                Mail::to($user->email)->send(new TemporaryPasswordMail($user, $plainPassword));
-                $mailSent = true;
-            } catch (\Throwable $e) {
-                $mailError = $e->getMessage();
-            }
+        // Enviar email automáticamente con las credenciales
+        try {
+            Mail::to($user->email)->send(new TemporaryPasswordMail($user, $plainPassword));
+            $mailSent = true;
+        } catch (\Throwable $e) {
+            $mailError = $e->getMessage();
+            \Illuminate\Support\Facades\Log::error("Error al enviar email automático a {$user->email}: " . $e->getMessage());
         }
 
         $message = "Usuario '{$user->name}' creado exitosamente.";
-        if ($request->mode === 'auto') {
-            if ($mailSent) {
-                $message .= " Se envió un correo con la contraseña temporal ({$plainPassword}) a {$user->email}.";
-            } else {
-                $message .= " ⚠️ No se pudo enviar el correo automáticamente, pero su contraseña temporal es: {$plainPassword}";
-            }
+        if ($mailSent) {
+            $message .= " Se envió automáticamente un correo con las credenciales de acceso a {$user->email}.";
+        } else {
+            $message .= " ⚠️ No se pudo enviar el correo (revisa la configuración SMTP en .env), pero su contraseña temporal de acceso es: {$plainPassword}";
         }
 
         return redirect()->route('usuarios.index')
@@ -231,7 +228,7 @@ class UserController extends Controller
             Mail::to($usuario->email)->send(new TemporaryPasswordMail($usuario, $tempPassword));
             $mailSent = true;
         } catch (\Throwable $e) {
-            // Falla de envío registrada
+            \Illuminate\Support\Facades\Log::error("Error al reenviar email temporal a {$usuario->email}: " . $e->getMessage());
         }
 
         $msg = $mailSent
