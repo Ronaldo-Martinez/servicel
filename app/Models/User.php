@@ -21,6 +21,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
+        'status',
+        'must_change_password',
     ];
 
     /**
@@ -40,5 +43,31 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'status' => 'boolean',
+        'must_change_password' => 'boolean',
     ];
+
+    /**
+     * Check if user has administrator role.
+     */
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
+    /**
+     * Check if user account is active.
+     */
+    public function isActive(): bool
+    {
+        return (bool) $this->status;
+    }
+
+    /**
+     * Check if user must change password.
+     */
+    public function requiresPasswordChange(): bool
+    {
+        return (bool) $this->must_change_password;
+    }
 }

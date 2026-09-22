@@ -35,9 +35,9 @@
     <script src="{{ asset('js/custom.js') }}" defer></script>
 </head>
 
-<body class="{{ request()->routeIs('login') ? 'bg-login-clean' : '' }}">
+<body class="{{ request()->routeIs('login', 'password.force-change') ? 'bg-login-clean' : '' }}">
     <div id="app" class="min-vh-100 d-flex flex-column">
-        @if(!request()->routeIs('login'))
+        @if(!request()->routeIs('login', 'password.force-change'))
             <nav class="navbar-premium-admin navbar navbar-expand-md navbar-dark shadow-sm">
                 <div class="container">
                     <a class="navbar-brand d-flex align-items-center gap-2" href="{{ url('/') }}">
@@ -80,14 +80,25 @@
                                     href="{{ URL::to('tipo-maquinas') }}">Tipo de Maquinas</a>
                                 <a class="nav-link-dash {{ request()->routeIs('maquinas.index') ? 'active-dash' : '' }}"
                                     href="{{ URL::to('maquinas') }}">Maquinas</a>
+                                @if(Auth::user()->isAdmin())
+                                    <a class="nav-link-dash {{ request()->routeIs('usuarios.*') ? 'active-dash' : '' }}"
+                                        href="{{ route('usuarios.index') }}">Usuarios</a>
+                                @endif
                                 <li class="nav-item dropdown ms-2">
                                     <a id="navbarDropdown" class="nav-link-dash dropdown-toggle" href="#" role="button"
                                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }}
                                     </a>
 
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    <div class="dropdown-menu dropdown-menu-end shadow-sm border-0" aria-labelledby="navbarDropdown">
+                                        <div class="px-3 py-2 border-bottom">
+                                            <div class="fw-bold text-dark small">{{ Auth::user()->name }}</div>
+                                            <div class="text-muted text-truncate" style="font-size: 0.75rem;">{{ Auth::user()->email }}</div>
+                                            <span class="badge {{ Auth::user()->isAdmin() ? 'bg-primary' : 'bg-secondary' }} mt-1" style="font-size: 0.65rem;">
+                                                {{ ucfirst(Auth::user()->role) }}
+                                            </span>
+                                        </div>
+                                        <a class="dropdown-item py-2 text-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
                                             Cerrar sesión
                                         </a>
@@ -104,7 +115,7 @@
             </nav>
         @endif
 
-        <main class="{{ request()->routeIs('login') ? 'p-0' : 'py-4 flex-grow-1' }}">
+        <main class="{{ request()->routeIs('login', 'password.force-change') ? 'p-0' : 'py-4 flex-grow-1' }}">
             @yield('content')
         </main>
     </div>

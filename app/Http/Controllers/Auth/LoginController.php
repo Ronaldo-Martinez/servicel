@@ -37,4 +37,30 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    /**
+     * The user has been authenticated.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+    protected function authenticated(\Illuminate\Http\Request $request, $user)
+    {
+        if (!$user->status) {
+            $this->guard()->logout();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+
+            return redirect()->route('login')->withErrors([
+                'email' => 'Tu cuenta ha sido desactivada por un administrador.',
+            ]);
+        }
+
+        if ($user->must_change_password) {
+            return redirect()->route('password.force-change');
+        }
+
+        return redirect()->intended($this->redirectPath());
+    }
 }

@@ -76,6 +76,11 @@ Route::get('/maquinas/{id}/imagenes',[ImagenController::class, 'maquina'])->name
 Route::post('/imagenes', [ImagenController::class, 'store'])->name('imagenes.store')->middleware('auth');
 Route::delete('/imagenes/{id}',[ImagenController::class, 'destroy'])->name('imagenes.delete')->middleware('auth');
 Route::post('/imagenes/{id}/make-primary', [ImagenController::class, 'makePrimary'])->name('imagenes.make-primary')->middleware('auth');
-Route::post('/imagenes/reorder', [ImagenController::class, 'reorder'])->name('imagenes.reorder')->middleware('auth');
+// Cambio de contraseña obligatorio
+Route::get('password/force-change', [App\Http\Controllers\Auth\ForcePasswordChangeController::class, 'show'])->name('password.force-change')->middleware('auth');
+Route::post('password/force-change', [App\Http\Controllers\Auth\ForcePasswordChangeController::class, 'update'])->name('password.force-change.update')->middleware('auth');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Gestión de Usuarios (Sólo administradores)
+Route::resource('/usuarios', App\Http\Controllers\UserController::class)->middleware(['auth', 'admin']);
+Route::patch('/usuarios/{id}/toggle-status', [App\Http\Controllers\UserController::class, 'toggleStatus'])->name('usuarios.toggle-status')->middleware(['auth', 'admin']);
+Route::post('/usuarios/{id}/resend-temp-password', [App\Http\Controllers\UserController::class, 'resendTempPassword'])->name('usuarios.resend-temp-password')->middleware(['auth', 'admin']);
