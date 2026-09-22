@@ -160,7 +160,7 @@
                                     <div class="d-flex align-items-center gap-3">
                                         <div class="table-machine-avatar">
                                             @if($maquina->imagens && $maquina->imagens->count() > 0)
-                                                <img src="{{ asset($maquina->imagens->first()->url) }}" alt="{{ $maquina->modelo }}" class="w-100 h-100 object-fit-cover">
+                                                <img src="{{ asset(str_starts_with(ltrim($maquina->imagens->first()->url, '/'), 'storage/') ? ltrim($maquina->imagens->first()->url, '/') : 'storage/' . ltrim($maquina->imagens->first()->url, '/')) }}" alt="{{ $maquina->modelo }}" class="w-100 h-100 object-fit-cover">
                                             @else
                                                 <x-icon name="construction" />
                                             @endif
